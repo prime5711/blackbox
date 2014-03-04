@@ -1,0 +1,9 @@
+#// /opt/blackbox/power_reboot
+#// when usb power is unstable system will be reboot by Yun.
+cd /opt/blackbox
+./killall.sh
+umount /mnt/mmc
+
+sleep 2
+/sbin/reboot &
+

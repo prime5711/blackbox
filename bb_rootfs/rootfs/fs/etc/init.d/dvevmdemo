@@ -1,0 +1,36 @@
+#!/bin/sh
+
+
+DVEVMDIR=/opt/blackbox
+
+
+# Load the dsplink and cmem kernel modules
+cd $DVEVMDIR
+./loadmodules.sh
+./executeUpdate.sh
+
+# Start the web server
+
+# Start the demo application
+echo "sd Card mount confirm!!"
+echo "mount error is OK~!!"
+mount /mnt/mmc
+mount -t jffs2 /dev/mtdblock5 /mnt/nand
+sync
+
+mkdir -p /mnt/mmc/Info/
+
+cp -f /mnt/nand/Info/* /mnt/mmc/Info/
+
+sync
+umount /mnt/nand
+umount /mnt/mmc
+sync
+
+cd $DVEVMDIR
+sync
+
+sleep 1
+./autorun.sh
+
+

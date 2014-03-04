@@ -1,0 +1,8 @@
+# This line is required by ftpd(8).
+auth	sufficient	pam_ftp.so
+
+# Standard blurb.
+auth	required	pam_unix_auth.so shadow nullok use_first_pass
+auth	required	pam_shells.so
+account	required	pam_unix_acct.so
+session	required	pam_unix_session.so

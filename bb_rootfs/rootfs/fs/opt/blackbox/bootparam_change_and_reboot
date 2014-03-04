@@ -1,0 +1,17 @@
+#// /opt/blackbox/bootparam_change_and_reboot
+#// @2.6.10 -> 2.6.32
+cd /opt/blackbox
+./fw_setenv bootargs "mem=72M console=ttyS1,115200n8 root=/dev/mtdblock4 rootfstype=jffs2 v4l2_video_capture=:device=MT9M131 video=davincifb:vid1=720x576x16,2500K:osd0=320x240x16,2025K@100,100"
+./fw_setenv bootcmd  "nand read 0x80700000 0x200000 0x280000; bootm 0x80700000"
+./fw_printenv
+sleep 2
+./killall.sh
+# Disable CMOS Sendor for WiFi Power Comsumption
+# # generally, Navi does not provide 4.9V USB Power
+./execute_i2c 0x76 w 0x03 0x00
+./execute_i2c 0x76 w 0x4d 0xf8
+umount /mnt/mmc
+
+sleep 2
+/sbin/reboot &
+

@@ -1,0 +1,21 @@
+
+# 2.6.32 WiFi Copy
+
+flash_eraseall -j /dev/mtd4
+
+mkdir /mnt/mtd4
+
+mount -t jffs2 /dev/mtdblock4 /mnt/mtd4
+
+cd /mnt/mtd4
+
+tar xvf /mnt/mmc/shcho/navicam2.6.10_and_wifi_good_kernel_and_fs/wifi_mode/wifi_2632_final_fs.tar
+
+sync
+cd /
+umount /mnt/mtd4
+
+cd /opt/blackbox
+./bootparam_change_and_reboot
+
+
