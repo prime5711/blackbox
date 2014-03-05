@@ -1,0 +1,23 @@
+********************************************************************************
+TMS470 COFF/Hex Converter                                                 v4.1.3
+********************************************************************************
+
+INPUT FILE NAME: <UBL_OBJ\ublDM350.out>
+OUTPUT FORMAT:   ASCII-Hex
+
+PHYSICAL MEMORY PARAMETERS
+   Default data width   :   8
+   Default memory width :  32
+   Default output width :  32
+
+
+OUTPUT TRANSLATION MAP
+--------------------------------------------------------------------------------
+00000000..ffffffff  Page=0  Memory Width=32  ROM Width=32
+--------------------------------------------------------------------------------
+   OUTPUT FILES: ublDM350.a0 [b0..b31]
+
+   CONTENTS: 00000020..0000014f   .boot
+             00000150..0000232f   .text
+             00002b88..00002c67   .const
+             00002c68..00002c9b   .cinit

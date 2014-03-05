@@ -1,0 +1,1 @@
+#define CONFIG_DM355_SPI 1

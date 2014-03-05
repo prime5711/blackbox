@@ -1,0 +1,110 @@
+if ARCH_DAVINCI
+
+menu "TI DaVinci Implementations"
+
+comment "DaVinci Core Type"
+
+config ARCH_DAVINCI644x
+	default y
+	bool "DaVinci 644x based system"
+
+config ARCH_DAVINCI355
+	default n
+	bool "DaVinci DM355 based system"
+
+comment "DaVinci Board Type"
+
+config MACH_DAVINCI_EVM
+	bool "TI DaVinci EVM"
+	default y
+	depends on ARCH_DAVINCI644x
+	help
+	  Configure this option to specify the whether the board used
+	  for development is a DaVinci EVM
+
+config MACH_DAVINCI_DM355_EVM
+	bool "TI DM355 EVM"
+	default n
+	depends on ARCH_DAVINCI355
+	help
+	  Configure this option to specify the whether the board used
+	  for development is a DM355 EVM
+	  
+config MACH_DAVINCI_DM355_IPNC
+	bool "TI DM355 IPNC"
+	default n
+	depends on ARCH_DAVINCI355
+	help
+	  Configure this option to specify the whether the board used
+	  for development is a DM355 IPNC
+
+
+config MACH_DAVINCI_DM355_IPNC_WIFI_MTD
+	bool "TI DM355 IPNC MTD for WiFi 2_5M/1_5M"
+	default n
+	depends on ARCH_DAVINCI355
+	help
+	  Org Kernel partition 2M/2M however WiFi version is 2_5M/1_5M 
+
+
+config DAVINCI_I2C_EXPANDER
+	bool "TI DaVinci I2C Expander"
+	default y
+	depends on ARCH_DAVINCI644x
+	select I2C_DAVINCI
+	help
+	  Configure this option to specify whether the board used
+	  has I2C exapnder with ATA, USB, CF.
+
+config DAVINCI_MCBSP
+	bool
+        prompt "DaVinci McBSP Driver" if SOUND_DAVINCI=n
+	depends on ARCH_DAVINCI
+	default SOUND_DAVINCI
+	---help---
+	DaVinci McBSP driver.  Auto-enabled by DaVinci sound driver.
+
+comment "DaVinci Options"
+
+config DAVINCI_BLK_DEV_CF
+	bool "TI DaVinci CF Card Support"
+	default Y
+	depends on BLK_DEV_DAVINCI
+	help
+	  Configure this option to enable CF Card support.
+
+config DM355_NAND_256KB_BLOCKS
+	bool "NAND chip installed on DM355 EVM has 256KB blocks"
+	default y
+	depends on MACH_DAVINCI_DM355_EVM||MACH_DAVINCI_DM355_IPNC
+	help
+	  The boot firmware on the DM355 EVM assumes a default partition map
+	  for NAND flash based on erase block offsets.  Thus, the partition map
+	  varies based on the size of the erase blocks in the particular NAND
+	  flash component installed on the board.  Answer Y here if the NAND
+	  chip (e.g a 16 Gigabit Micron MT29F16G08QAA) installed on your board
+	  has 256KB blocks.  Answer N here if the NAND chip (e.g. a 4 Gigabit
+	  Micron MT29F4G08AAA) installed on your board has 128KB blocks.
+
+choice
+	prompt "Low-level debug console UART"
+	default DAVINCI_LL_DEBUG_UART0
+
+config DAVINCI_LL_DEBUG_UART0
+	bool "UART0"
+
+config DAVINCI_LL_DEBUG_UART1
+	bool "UART1"
+
+endchoice
+
+config DM355_SPI
+        bool "TI DM355 SPI device"
+        default y
+        help
+          Configure this option to specify whether the board used
+          has SPI device.
+
+endmenu
+
+endif

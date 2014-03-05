@@ -1,0 +1,36 @@
+
+!CONFIGURATION: 'com.ti.ccstudio.buildDefinitions.TMS470.Debug.768553799' [Sun Mar 02 21:57:42 KST 2014]
+
+	!TOOL: 'com.ti.ccstudio.buildDefinitions.TMS470_5.0.exe.compilerDebug.1103387418'
+
+		!WARNING: Unresolved option: com.ti.ccstudio.buildDefinitions.TMS470_5.0.exe.compilerDebug.1103387418::-ml
+
+		!WARNING: Unresolved option: com.ti.ccstudio.buildDefinitions.TMS470_5.0.exe.compilerDebug.1103387418::--abi=tiabi
+
+	!TOOL: 'com.ti.ccstudio.buildDefinitions.TMS470_5.0.exe.linkerDebug.2033052444.927505439'
+
+		!WARNING: Unresolved option: com.ti.ccstudio.buildDefinitions.TMS470_5.0.exe.linkerDebug.2033052444.927505439::-q
+
+	!TOOL: 'com.ti.ccstudio.buildDefinitions.TMS470_5.0.exe.linkerDebug.2033052444.703173465'
+
+		!WARNING: Unresolved option: com.ti.ccstudio.buildDefinitions.TMS470_5.0.exe.linkerDebug.2033052444.703173465::-q
+
+	!TOOL: 'com.ti.ccstudio.buildDefinitions.TMS470_5.0.exe.linkerDebug.2033052444.874435747'
+
+		!WARNING: Unresolved option: com.ti.ccstudio.buildDefinitions.TMS470_5.0.exe.linkerDebug.2033052444.874435747::-q
+
+
+!CONFIGURATION: 'com.ti.ccstudio.buildDefinitions.TMS470.Release.846409194' [Sun Mar 02 21:57:43 KST 2014]
+
+	!TOOL: 'com.ti.ccstudio.buildDefinitions.TMS470_5.0.exe.linkerRelease.1742967719.233519058'
+
+		!WARNING: Unresolved option: com.ti.ccstudio.buildDefinitions.TMS470_5.0.exe.linkerRelease.1742967719.233519058::-q
+
+	!TOOL: 'com.ti.ccstudio.buildDefinitions.TMS470_5.0.exe.linkerRelease.1742967719.1876227235'
+
+		!WARNING: Unresolved option: com.ti.ccstudio.buildDefinitions.TMS470_5.0.exe.linkerRelease.1742967719.1876227235::-q
+
+	!TOOL: 'com.ti.ccstudio.buildDefinitions.TMS470_5.0.exe.linkerRelease.1742967719.372938219'
+
+		!WARNING: Unresolved option: com.ti.ccstudio.buildDefinitions.TMS470_5.0.exe.linkerRelease.1742967719.372938219::-q
+

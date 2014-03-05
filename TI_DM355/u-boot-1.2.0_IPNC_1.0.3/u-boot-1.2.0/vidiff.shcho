@@ -1,0 +1,3 @@
+#!/bin/bash
+
+vi -d $1 /work_vol/svn_nasopat/TI_DM355/trunk/sdk/dvsdk_1_30_01_41/PSP_01_20_00_014/board_utilities/u-boot-1.2.0_IPNC_1.0.2/u-boot-1.2.0/$1

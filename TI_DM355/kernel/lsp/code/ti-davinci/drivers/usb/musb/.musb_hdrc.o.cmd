@@ -1,0 +1,1 @@
+cmd_drivers/usb/musb/musb_hdrc.o := /media/workspace/svn/TI_DM355_NC1000/trunk/cross_compiler/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin/arm_v5t_le-ld -EL   -r -o drivers/usb/musb/musb_hdrc.o drivers/usb/musb/plat_uds.o drivers/usb/musb/dm355.o drivers/usb/musb/virthub.o drivers/usb/musb/musb_host.o

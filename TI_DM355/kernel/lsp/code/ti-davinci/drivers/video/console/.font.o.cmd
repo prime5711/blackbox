@@ -1,0 +1,1 @@
+cmd_drivers/video/console/font.o := /media/workspace/svn/TI_DM355_NC1000/trunk/cross_compiler/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin/arm_v5t_le-ld -EL   -r -o drivers/video/console/font.o drivers/video/console/fonts.o drivers/video/console/font_8x8.o drivers/video/console/font_8x16.o

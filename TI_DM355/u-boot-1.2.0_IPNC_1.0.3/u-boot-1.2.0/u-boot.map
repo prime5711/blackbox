@@ -1,0 +1,1593 @@
+Archive member included because of file (symbol)
+
+board/dm355_ipnc/libdm355_ipnc.a(lowlevel_init.o)
+                              cpu/arm926ejs/start.o (lowlevel_init)
+board/dm355_ipnc/libdm355_ipnc.a(timer.o)
+                              board/dm355_ipnc/libdm355_ipnc.a(lowlevel_init.o) (reset_processor)
+cpu/arm926ejs/libarm926ejs.a(interrupts.o)
+                              cpu/arm926ejs/start.o (do_undefined_instruction)
+lib_arm/libarm.a(board.o)     cpu/arm926ejs/start.o (start_armboot)
+net/libnet.a(net.o)           lib_arm/libarm.a(board.o) (copy_filename)
+net/libnet.a(tftp.o)          net/libnet.a(net.o) (TftpStart)
+net/libnet.a(bootp.o)         net/libnet.a(net.o) (BootpRequest)
+net/libnet.a(rarp.o)          net/libnet.a(net.o) (RarpRequest)
+net/libnet.a(eth.o)           lib_arm/libarm.a(board.o) (eth_initialize)
+drivers/libdrivers.a(dm9000.o)
+                              net/libnet.a(net.o) (eth_halt)
+drivers/libdrivers.a(serial.o)
+                              lib_arm/libarm.a(board.o) (serial_init)
+drivers/libdrivers.a(ns16550.o)
+                              drivers/libdrivers.a(serial.o) (NS16550_init)
+drivers/nand/libnand.a(nand.o)
+                              lib_arm/libarm.a(board.o) (nand_init)
+drivers/nand/libnand.a(nand_base.o)
+                              drivers/nand/libnand.a(nand.o) (nand_scan)
+drivers/nand/libnand.a(nand_ids.o)
+                              drivers/nand/libnand.a(nand_base.o) (nand_manuf_ids)
+drivers/nand/libnand.a(nand_ecc.o)
+                              drivers/nand/libnand.a(nand_base.o) (nand_calculate_ecc)
+drivers/nand/libnand.a(nand_bbt.o)
+                              drivers/nand/libnand.a(nand_base.o) (nand_update_bbt)
+common/libcommon.a(main.o)    lib_arm/libarm.a(board.o) (main_loop)
+common/libcommon.a(cmd_autoscript.o)
+                              (__u_boot_cmd_autoscr)
+common/libcommon.a(cmd_bdinfo.o)
+                              (__u_boot_cmd_bdinfo)
+common/libcommon.a(cmd_boot.o)
+                              (__u_boot_cmd_reset)
+common/libcommon.a(cmd_bootm.o)
+                              (__u_boot_cmd_iminfo)
+common/libcommon.a(cmd_console.o)
+                              (__u_boot_cmd_coninfo)
+common/libcommon.a(cmd_load.o)
+                              (__u_boot_cmd_loady)
+common/libcommon.a(cmd_mem.o)
+                              (__u_boot_cmd_mtest)
+common/libcommon.a(cmd_misc.o)
+                              (__u_boot_cmd_sleep)
+common/libcommon.a(cmd_nand.o)
+                              (__u_boot_cmd_nboot)
+common/libcommon.a(cmd_net.o)
+                              (__u_boot_cmd_ping)
+common/libcommon.a(cmd_nvedit.o)
+                              (__u_boot_cmd_run)
+common/libcommon.a(command.o)
+                              (__u_boot_cmd_question_mark)
+common/libcommon.a(console.o)
+                              cpu/arm926ejs/libarm926ejs.a(interrupts.o) (printf)
+common/libcommon.a(devices.o)
+                              common/libcommon.a(cmd_console.o) (stdio_names)
+common/libcommon.a(dlmalloc.o)
+                              drivers/nand/libnand.a(nand_base.o) (free)
+common/libcommon.a(env_common.o)
+                              common/libcommon.a(cmd_nvedit.o) (env_get_char)
+common/libcommon.a(env_nand.o)
+                              common/libcommon.a(env_common.o) (env_ptr)
+common/libcommon.a(exports.o)
+                              lib_arm/libarm.a(board.o) (jumptable_init)
+common/libcommon.a(lists.o)   common/libcommon.a(devices.o) (ListCreate)
+common/libcommon.a(s_record.o)
+                              common/libcommon.a(cmd_load.o) (srec_decode)
+common/libcommon.a(xyzModem.o)
+                              common/libcommon.a(cmd_load.o) (xyzModem_stream_open)
+common/libcommon.a(crc16.o)   common/libcommon.a(xyzModem.o) (cyg_crc16)
+lib_generic/libgeneric.a(crc32.o)
+                              common/libcommon.a(cmd_autoscript.o) (crc32)
+lib_generic/libgeneric.a(display_options.o)
+                              lib_arm/libarm.a(board.o) (print_size)
+lib_generic/libgeneric.a(string.o)
+                              net/libnet.a(net.o) (strcpy)
+lib_generic/libgeneric.a(vsprintf.o)
+                              lib_arm/libarm.a(board.o) (simple_strtoul)
+lib_generic/libgeneric.a(zlib.o)
+                              common/libcommon.a(cmd_bootm.o) (inflateEnd)
+lib_generic/libgeneric.a(ctype.o)
+                              lib_generic/libgeneric.a(vsprintf.o) (_ctype)
+board/dm355_ipnc/libdm355_ipnc.a(dm355_ipnc.o)
+                              lib_arm/libarm.a(board.o) (board_init)
+board/dm355_ipnc/libdm355_ipnc.a(nand.o)
+                              drivers/nand/libnand.a(nand.o) (board_nand_init)
+cpu/arm926ejs/libarm926ejs.a(cpu.o)
+                              lib_arm/libarm.a(board.o) (cpu_init)
+lib_arm/libarm.a(_modsi3.o)   common/libcommon.a(cmd_load.o) (__modsi3)
+lib_arm/libarm.a(_umodsi3.o)  net/libnet.a(tftp.o) (__umodsi3)
+lib_arm/libarm.a(armlinux.o)  common/libcommon.a(cmd_bootm.o) (do_bootm_linux)
+lib_arm/libarm.a(cache.o)     common/libcommon.a(cmd_load.o) (flush_cache)
+lib_arm/libarm.a(div0.o)      lib_arm/libarm.a(_modsi3.o) (__div0)
+drivers/nand/libnand.a(nand_util.o)
+                              common/libcommon.a(cmd_nand.o) (nand_erase_opts)
+/another_disk/Project/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin/../lib/gcc/armv5tl-montavista-linuxeabi/3.4.3/libgcc.a(_udivsi3.oS)
+                              cpu/arm926ejs/libarm926ejs.a(interrupts.o) (__aeabi_uidiv)
+/another_disk/Project/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin/../lib/gcc/armv5tl-montavista-linuxeabi/3.4.3/libgcc.a(_divsi3.oS)
+                              common/libcommon.a(lists.o) (__aeabi_idiv)
+/another_disk/Project/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin/../lib/gcc/armv5tl-montavista-linuxeabi/3.4.3/libgcc.a(_ashrdi3.oS)
+                              drivers/nand/libnand.a(nand_base.o) (__aeabi_lasr)
+/another_disk/Project/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin/../lib/gcc/armv5tl-montavista-linuxeabi/3.4.3/libgcc.a(_ashldi3.oS)
+                              drivers/nand/libnand.a(nand_base.o) (__aeabi_llsl)
+/another_disk/Project/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin/../lib/gcc/armv5tl-montavista-linuxeabi/3.4.3/libgcc.a(_aeabi_uldivmod.oS)
+                              drivers/nand/libnand.a(nand_util.o) (__aeabi_uldivmod)
+/another_disk/Project/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin/../lib/gcc/armv5tl-montavista-linuxeabi/3.4.3/libgcc.a(bpabi.oS)
+                              /another_disk/Project/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin/../lib/gcc/armv5tl-montavista-linuxeabi/3.4.3/libgcc.a(_aeabi_uldivmod.oS) (__gnu_uldivmod_helper)
+/another_disk/Project/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin/../lib/gcc/armv5tl-montavista-linuxeabi/3.4.3/libgcc.a(_divdi3.oS)
+                              /another_disk/Project/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin/../lib/gcc/armv5tl-montavista-linuxeabi/3.4.3/libgcc.a(bpabi.oS) (__divdi3)
+/another_disk/Project/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin/../lib/gcc/armv5tl-montavista-linuxeabi/3.4.3/libgcc.a(_udivdi3.oS)
+                              /another_disk/Project/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin/../lib/gcc/armv5tl-montavista-linuxeabi/3.4.3/libgcc.a(bpabi.oS) (__udivdi3)
+/another_disk/Project/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin/../lib/gcc/armv5tl-montavista-linuxeabi/3.4.3/libgcc.a(_clz.oS)
+                              /another_disk/Project/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin/../lib/gcc/armv5tl-montavista-linuxeabi/3.4.3/libgcc.a(_divdi3.oS) (__clz_tab)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+                0x00000000                . = 0x0
+                0x00000000                . = ALIGN (0x4)
+
+.text           0x81080000    0x188c0
+ cpu/arm926ejs/start.o(.text)
+ .text          0x81080000      0x3a0 cpu/arm926ejs/start.o
+                0x81080048                _bss_start
+                0x8108004c                _bss_end
+                0x81080044                _armboot_start
+                0x81080000                _start
+ *(.text)
+ .text          0x810803a0      0x660 board/dm355_ipnc/libdm355_ipnc.a(lowlevel_init.o)
+                0x810803a8                lowlevel_init
+                0x810803a4                reset_cpu
+ .text          0x81080a00       0xb0 board/dm355_ipnc/libdm355_ipnc.a(timer.o)
+                0x81080a4c                reset_processor
+                0x81080a00                inittimer
+ .text          0x81080ab0      0x470 cpu/arm926ejs/libarm926ejs.a(interrupts.o)
+                0x81080dd0                set_timer
+                0x81080d64                reset_timer
+                0x81080cd4                do_fiq
+                0x81080d4c                interrupt_init
+                0x81080c20                do_undefined_instruction
+                0x81080ae0                show_regs
+                0x81080cf8                do_irq
+                0x81080f14                get_tbclk
+                0x81080dbc                get_timer
+                0x81080d1c                reset_timer_masked
+                0x81080abc                bad_mode
+                0x81080d68                get_timer_masked
+                0x81080de0                udelay
+                0x81080e74                udelay_masked
+                0x81080c68                do_prefetch_abort
+                0x81080ef4                get_ticks
+                0x81080ab4                disable_interrupts
+                0x81080cb0                do_not_used
+                0x81080c8c                do_data_abort
+                0x81080c44                do_software_interrupt
+                0x81080ab0                enable_interrupts
+ .text          0x81080f20      0x2fc lib_arm/libarm.a(board.o)
+                0x81081018                hang
+                0x81081028                start_armboot
+                0x81080f20                sbrk
+ .text          0x8108121c     0x1594 net/libnet.a(net.o)
+                0x81082210                getenv_IPaddr
+                0x81081a94                NetCksumOk
+                0x8108143c                NetSetTimeout
+                0x81081b08                copy_filename
+                0x81081ac4                NetEthHdrSize
+                0x81081b5c                ip_to_string
+                0x8108151c                ArpTimeoutCheck
+                0x81081bd8                NetReceive
+                0x81082188                string_to_ip
+                0x81081734                NetSendUDPPacket
+                0x81081bb4                print_IPaddr
+                0x8108121c                NetSetEther
+                0x81082300                NetLoop
+                0x810812e4                ArpRequest
+                0x81082228                VLAN_to_string
+                0x810822e8                getenv_VLAN
+                0x810815a8                NetCksum
+                0x810815f4                NetSetIP
+                0x81082284                string_to_VLAN
+                0x8108148c                NetStartAgain
+                0x8108147c                NetSetHandler
+                0x8108189c                PingSend
+                0x810815a4                NetSendPacket
+ .text          0x810827b0      0x6e4 net/libnet.a(tftp.o)
+                0x81082c70                TftpStart
+ .text          0x81082e94      0xacc net/libnet.a(bootp.o)
+                0x8108395c                DhcpRequest
+                0x81083158                BootpRequest
+ .text          0x81083960      0x1a8 net/libnet.a(rarp.o)
+                0x810839ac                RarpRequest
+ .text          0x81083b08        0x8 net/libnet.a(eth.o)
+                0x81083b08                eth_initialize
+ .text          0x81083b10      0x678 drivers/libdrivers.a(dm9000.o)
+                0x81083eb4                eth_halt
+                0x81083ef4                DM9000_get_enetaddr
+                0x81084050                eth_rx
+                0x81083f80                eth_init
+                0x8108411c                eth_send
+ .text          0x81084188      0x1a8 drivers/libdrivers.a(serial.o)
+                0x810842cc                _serial_setbrg
+                0x81084304                serial_putc_raw
+                0x81084328                serial_setbrg
+                0x810842b8                _serial_tstc
+                0x81084320                serial_tstc
+                0x810842f8                serial_putc
+                0x81084258                _serial_puts
+                0x81084238                _serial_putc_raw
+                0x810841a8                serial_init
+                0x81084310                serial_puts
+                0x81084294                _serial_getc
+                0x81084318                serial_getc
+                0x810841ec                _serial_putc
+ .text          0x81084330       0xb4 drivers/libdrivers.a(ns16550.o)
+                0x810843a8                NS16550_putc
+                0x81084330                NS16550_init
+                0x810843d8                NS16550_tstc
+                0x810843c0                NS16550_getc
+                0x8108436c                NS16550_reinit
+ .text          0x810843e4       0xa8 drivers/nand/libnand.a(nand.o)
+                0x810843e4                nand_init
+ .text          0x8108448c     0x3d34 drivers/nand/libnand.a(nand_base.o)
+                0x8108617c                nand_read_raw
+                0x81087630                nand_scan
+                0x81087218                nand_erase_nand
+                0x810850e8                nand_do_read_ecc
+                0x8108817c                nand_release
+ .text          0x810881c0      0x298 drivers/nand/libnand.a(nand_ecc.o)
+                0x810882d4                nand_correct_data
+                0x810881c0                nand_calculate_ecc
+ .text          0x81088458     0x1630 drivers/nand/libnand.a(nand_bbt.o)
+                0x81089a20                nand_isbad_bbt
+                0x81089958                nand_default_bbt
+                0x810891f0                nand_update_bbt
+                0x810894ec                nand_scan_bbt
+ .text          0x81089a88      0x958 common/libcommon.a(main.o)
+                0x81089d50                run_command
+                0x8108a358                do_run
+                0x81089b64                readline
+                0x8108a1c4                main_loop
+ .text          0x8108a3e0      0x270 common/libcommon.a(cmd_autoscript.o)
+                0x8108a60c                do_autoscript
+                0x8108a3e0                autoscript
+ .text          0x8108a650       0xf0 common/libcommon.a(cmd_bdinfo.o)
+                0x8108a668                do_bdinfo
+ .text          0x8108a740       0x88 common/libcommon.a(cmd_boot.o)
+                0x8108a740                do_go
+ .text          0x8108a7c8      0xd0c common/libcommon.a(cmd_bootm.o)
+                0x8108a7ec                print_image_hdr
+                0x8108a7c8                do_bootd
+                0x8108adbc                gunzip
+                0x8108af18                do_bootm
+                0x8108ad34                do_iminfo
+ .text          0x8108b4d4       0xdc common/libcommon.a(cmd_console.o)
+                0x8108b4d4                do_coninfo
+ .text          0x8108b5b0      0xe48 common/libcommon.a(cmd_load.o)
+                0x8108baa8                k_data_init
+                0x8108b91c                s1_sendpacket
+                0x8108bc10                handle_send_packet
+                0x8108bb3c                k_data_restore
+                0x8108b9bc                send_nack
+                0x8108be54                do_load_serial_bin
+                0x8108bba0                k_data_char
+                0x8108b8ec                chk1
+                0x8108bad8                k_data_save
+                0x8108b8c0                ktrans
+                0x8108b884                send_pad
+                0x8108b94c                send_ack
+                0x8108b5b0                do_load_serial
+ .text          0x8108c3f8      0xb28 common/libcommon.a(cmd_mem.o)
+                0x8108ca1c                do_mem_base
+                0x8108c68c                do_mem_mw
+                0x8108ce64                do_mem_crc
+                0x8108ce14                do_mem_nm
+                0x8108ce3c                do_mem_mm
+                0x8108c92c                do_mem_cp
+                0x8108cb70                do_mem_mtest
+                0x8108c764                do_mem_cmp
+                0x8108c3f8                cmd_get_data_size
+                0x8108ca68                do_mem_loop
+                0x8108c474                do_mem_md
+ .text          0x8108cf20       0xa4 common/libcommon.a(cmd_misc.o)
+                0x8108cf20                do_sleep
+ .text          0x8108cfc4      0xf78 common/libcommon.a(cmd_nand.o)
+                0x8108dc9c                do_nandboot
+                0x8108d0e8                do_nand
+ .text          0x8108df3c      0x3d8 common/libcommon.a(cmd_net.o)
+                0x8108e24c                do_rarpb
+                0x8108e270                do_ping
+                0x8108e258                do_tftpb
+                0x8108e240                do_dhcp
+                0x8108e264                do_bootp
+ .text          0x8108e314      0xa9c common/libcommon.a(cmd_nvedit.o)
+                0x8108ec28                getenv
+                0x8108e53c                _do_setenv
+                0x8108ea84                do_askenv
+                0x8108ecb0                getenv_r
+                0x8108e380                do_printenv
+                0x8108e9fc                setenv
+                0x8108ed7c                do_saveenv
+                0x8108ea38                do_setenv
+ .text          0x8108edb0      0x2a4 common/libcommon.a(command.o)
+                0x8108edd8                find_cmd
+                0x8108ee88                do_help
+                0x8108edb0                do_version
+ .text          0x8108f054      0x5ac common/libcommon.a(console.o)
+                0x8108f470                console_init_r
+                0x8108f2bc                printf
+                0x8108f3cc                console_assign
+                0x8108f240                getc
+                0x8108f298                puts
+                0x8108f3c0                dbg
+                0x8108f100                serial_printf
+                0x8108f16c                ftstc
+                0x8108f200                fprintf
+                0x8108f258                tstc
+                0x8108f2f8                vprintf
+                0x8108f324                ctrlc
+                0x8108f270                putc
+                0x8108f384                disable_ctrlc
+                0x8108f13c                fgetc
+                0x8108f39c                had_ctrlc
+                0x8108f19c                fputc
+                0x8108f460                console_init_f
+                0x8108f3ac                clear_ctrlc
+                0x8108f1d0                fputs
+ .text          0x8108f600      0x104 common/libcommon.a(devices.o)
+                0x8108f600                device_register
+                0x8108f6e0                devices_done
+                0x8108f630                devices_init
+ .text          0x8108f704     0x10d4 common/libcommon.a(dlmalloc.o)
+                0x8108fa50                malloc
+                0x81090630                pvalloc
+                0x81090648                calloc
+                0x81090724                malloc_usable_size
+                0x810900a0                realloc
+                0x8108f738                malloc_trim
+                0x8108f704                malloc_bin_reloc
+                0x81090760                mallopt
+                0x8109050c                memalign
+                0x81090720                cfree
+                0x81090624                valloc
+                0x8108f820                free
+ .text          0x810907d8      0x13c common/libcommon.a(env_common.o)
+                0x81090854                env_get_addr
+                0x81090874                env_relocate
+                0x810907d8                env_crc_update
+                0x81090834                env_get_char_memory
+ .text          0x81090914      0x22c common/libcommon.a(env_nand.o)
+                0x81090ab0                env_relocate_spec
+                0x8109093c                saveenv
+                0x81090914                env_get_char_spec
+                0x81090920                env_init
+ .text          0x81090b40       0xc8 common/libcommon.a(exports.o)
+                0x81090b4c                jumptable_init
+                0x81090b44                get_version
+ .text          0x81090c08      0x3d4 common/libcommon.a(lists.o)
+                0x81090c6c                DisposeHandle
+                0x81090d80                ListDispose
+                0x81090d84                ListInsertItems
+                0x81090d6c                ListSetAllocationPolicy
+                0x81090fc4                ListGetItemSize
+                0x81090fb8                ListGetDataPtr
+                0x81090c08                NewHandle
+                0x81090c98                SetHandleSize
+                0x81090f38                ListInsertItem
+                0x81090c90                GetHandleSize
+                0x81090fd0                ListNumItems
+                0x81090f88                ListGetPtrToItem
+                0x81090d0c                ListCreate
+                0x81090f40                ListGetItems
+ .text          0x81090fdc      0x318 common/libcommon.a(s_record.o)
+                0x81091058                srec_decode
+ .text          0x810912f4      0xa54 common/libcommon.a(xyzModem.o)
+                0x81091cac                xyzModem_error
+                0x81091b80                xyzModem_stream_close
+                0x810912f4                CYGACC_COMM_IF_GETC_TIMEOUT
+                0x81091364                parse_num
+                0x81091bd8                xyzModem_stream_terminate
+                0x8109177c                xyzModem_stream_open
+                0x8109135c                CYGACC_COMM_IF_PUTC
+                0x810918e4                xyzModem_stream_read
+ .text          0x81091d48       0x4c common/libcommon.a(crc16.o)
+                0x81091d48                cyg_crc16
+ .text          0x81091d94      0x1f0 lib_generic/libgeneric.a(crc32.o)
+                0x81091d94                crc32
+                0x81091e90                crc32_no_comp
+ .text          0x81091f84       0xc0 lib_generic/libgeneric.a(display_options.o)
+                0x81091f84                display_options
+                0x81091fac                print_size
+ .text          0x81092044      0x5d4 lib_generic/libgeneric.a(string.o)
+                0x81092044                strcpy
+                0x81092550                memscan
+                0x810924bc                memmove
+                0x81092494                memcpy
+                0x810923e8                strswab
+                0x810921fc                strnlen
+                0x810921bc                strrchr
+                0x81092084                strcat
+                0x810925e8                memchr
+                0x81092574                strstr
+                0x81092120                strncmp
+                0x81092060                strncpy
+                0x81092468                bcopy
+                0x8109231c                strtok
+                0x8109251c                memcmp
+                0x810920b0                strncat
+                0x81092234                strdup
+                0x81092444                memset
+                0x810920f0                strcmp
+                0x810923a8                strsep
+                0x8109227c                strspn
+                0x81092198                strlen
+                0x81092168                strchr
+                0x810922dc                strpbrk
+ .text          0x81092618      0x7c4 lib_generic/libgeneric.a(vsprintf.o)
+                0x81092988                vsprintf
+                0x810926d0                simple_strtol
+                0x81092d8c                panic
+                0x81092d6c                sprintf
+                0x81092618                simple_strtoul
+ .text          0x81092ddc     0x2a34 lib_generic/libgeneric.a(zlib.o)
+                0x81093b7c                inflate
+                0x8109313c                inflateInit2
+                0x810932fc                inflateIncomp
+                0x8109569c                adler32
+                0x81092fc4                inflateReset
+                0x8109302c                inflateSync
+                0x810932a0                inflateInit
+                0x81092f20                inflateEnd
+ .text          0x81095810      0x67c board/dm355_ipnc/libdm355_ipnc.a(dm355_ipnc.o)
+                0x81095b7c                dram_init
+                0x81095bdc                UARTSendData
+                0x81095990                davinci_psc_all_enable
+                0x81095810                board_init
+                0x810958d8                board_setup_psc_on
+                0x81095cfc                MSP430_getReg
+                0x81095b9c                GetStringLen
+                0x81095ae0                misc_init_r
+                0x81095c6c                UARTSendInt
+ .text          0x81095e8c      0x498 board/dm355_ipnc/libdm355_ipnc.a(nand.o)
+                0x8109628c                board_nand_init
+ .text          0x81096324       0xec cpu/arm926ejs/libarm926ejs.a(cpu.o)
+                0x81096364                cleanup_before_linux
+                0x8109635c                cpu_init
+                0x810963b4                icache_enable
+                0x81096394                do_reset
+                0x810963d4                icache_disable
+                0x810963f4                icache_status
+ *fill*         0x81096410       0x10 00
+ .text          0x81096420      0x100 lib_arm/libarm.a(_modsi3.o)
+                0x81096420                __modsi3
+ .text          0x81096520       0xb4 lib_arm/libarm.a(_umodsi3.o)
+                0x81096520                __umodsi3
+ .text          0x810965d4      0x474 lib_arm/libarm.a(armlinux.o)
+                0x810965d4                do_bootm_linux
+ .text          0x81096a48        0x4 lib_arm/libarm.a(cache.o)
+                0x81096a48                flush_cache
+ .text          0x81096a4c        0x4 lib_arm/libarm.a(div0.o)
+                0x81096a4c                __div0
+ .text          0x81096a50      0xe88 drivers/nand/libnand.a(nand_util.o)
+                0x8109769c                nand_lock
+                0x810977a4                nand_unlock
+                0x81097710                nand_get_lock_status
+                0x81096a58                nand_erase_opts
+                0x81097308                nand_read_opts
+                0x81096dfc                nand_write_opts
+ .text          0x810978d8      0x208 /another_disk/Project/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin/../lib/gcc/armv5tl-montavista-linuxeabi/3.4.3/libgcc.a(_udivsi3.oS)
+                0x810978d8                __udivsi3
+                0x810978d8                __aeabi_uidiv
+                0x81097ac8                __aeabi_uidivmod
+ .text          0x81097ae0      0x238 /another_disk/Project/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin/../lib/gcc/armv5tl-montavista-linuxeabi/3.4.3/libgcc.a(_divsi3.oS)
+                0x81097ae0                __aeabi_idiv
+                0x81097ae0                __divsi3
+                0x81097d00                __aeabi_idivmod
+ .text          0x81097d18       0x1c /another_disk/Project/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin/../lib/gcc/armv5tl-montavista-linuxeabi/3.4.3/libgcc.a(_ashrdi3.oS)
+                0x81097d18                __ashrdi3
+                0x81097d18                __aeabi_lasr
+ .text          0x81097d34       0x1c /another_disk/Project/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin/../lib/gcc/armv5tl-montavista-linuxeabi/3.4.3/libgcc.a(_ashldi3.oS)
+                0x81097d34                __ashldi3
+                0x81097d34                __aeabi_llsl
+ .text          0x81097d50       0x1c /another_disk/Project/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin/../lib/gcc/armv5tl-montavista-linuxeabi/3.4.3/libgcc.a(_aeabi_uldivmod.oS)
+                0x81097d50                __aeabi_uldivmod
+ .text          0x81097d6c       0x70 /another_disk/Project/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin/../lib/gcc/armv5tl-montavista-linuxeabi/3.4.3/libgcc.a(bpabi.oS)
+                0x81097da4                __gnu_uldivmod_helper
+                0x81097d6c                __gnu_ldivmod_helper
+ .text          0x81097ddc      0x5a0 /another_disk/Project/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin/../lib/gcc/armv5tl-montavista-linuxeabi/3.4.3/libgcc.a(_divdi3.oS)
+                0x81097ddc                __divdi3
+ .text          0x8109837c      0x544 /another_disk/Project/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin/../lib/gcc/armv5tl-montavista-linuxeabi/3.4.3/libgcc.a(_udivdi3.oS)
+                0x8109837c                __udivdi3
+
+.glue_7         0x810988c0        0x0
+
+.glue_7t        0x810988c0        0x0
+                0x810988c0                . = ALIGN (0x4)
+
+.rodata         0x810988c0      0x954
+ *(.rodata)
+ .rodata        0x810988c0       0x80 cpu/arm926ejs/libarm926ejs.a(interrupts.o)
+ .rodata        0x81098940       0x40 lib_arm/libarm.a(board.o)
+                0x81098940                version_string
+ .rodata        0x81098980        0x8 net/libnet.a(net.o)
+ .rodata        0x81098988        0x8 drivers/nand/libnand.a(nand.o)
+ .rodata        0x81098990       0x70 drivers/nand/libnand.a(nand_base.o)
+ .rodata        0x81098a00      0x100 drivers/nand/libnand.a(nand_ecc.o)
+ .rodata        0x81098b00       0x14 common/libcommon.a(cmd_nvedit.o)
+ .rodata        0x81098b14      0x200 common/libcommon.a(crc16.o)
+ .rodata        0x81098d14      0x400 lib_generic/libgeneric.a(crc32.o)
+ .rodata        0x81099114      0x100 /another_disk/Project/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin/../lib/gcc/armv5tl-montavista-linuxeabi/3.4.3/libgcc.a(_clz.oS)
+                0x81099114                __clz_tab
+
+.rodata.str1.4  0x81099214     0x4abb
+ .rodata.str1.4
+                0x81099214      0x293 cpu/arm926ejs/libarm926ejs.a(interrupts.o)
+                                0x29c (size before relaxing)
+ *fill*         0x810994a7        0x1 00
+ .rodata.str1.4
+                0x810994a8       0x75 lib_arm/libarm.a(board.o)
+                                 0x7c (size before relaxing)
+ *fill*         0x8109951d        0x3 00
+ .rodata.str1.4
+                0x81099520      0x1ed net/libnet.a(net.o)
+                                0x1f0 (size before relaxing)
+ *fill*         0x8109970d        0x3 00
+ .rodata.str1.4
+                0x81099710      0x1c7 net/libnet.a(tftp.o)
+                                0x1d4 (size before relaxing)
+ *fill*         0x810998d7        0x1 00
+ .rodata.str1.4
+                0x810998d8      0x11d net/libnet.a(bootp.o)
+                                0x154 (size before relaxing)
+ *fill*         0x810999f5        0x3 00
+ .rodata.str1.4
+                0x810999f8       0x13 net/libnet.a(rarp.o)
+                                 0x48 (size before relaxing)
+ *fill*         0x81099a0b        0x1 00
+ .rodata.str1.4
+                0x81099a0c      0x11f drivers/libdrivers.a(dm9000.o)
+                                0x124 (size before relaxing)
+ *fill*         0x81099b2b        0x1 00
+ .rodata.str1.4
+                0x81099b2c        0x9 drivers/nand/libnand.a(nand.o)
+                                  0xc (size before relaxing)
+ *fill*         0x81099b35        0x3 00
+ .rodata.str1.4
+                0x81099b38      0x6ce drivers/nand/libnand.a(nand_base.o)
+                                0x6d0 (size before relaxing)
+ *fill*         0x8109a206        0x2 00
+ .rodata.str1.4
+                0x8109a208      0x44a drivers/nand/libnand.a(nand_ids.o)
+                                0x44c (size before relaxing)
+ *fill*         0x8109a652        0x2 00
+ .rodata.str1.4
+                0x8109a654      0x308 drivers/nand/libnand.a(nand_bbt.o)
+ .rodata.str1.4
+                0x8109a95c      0x108 common/libcommon.a(main.o)
+ .rodata.str1.4
+                0x8109aa64       0xf6 common/libcommon.a(cmd_autoscript.o)
+                                 0xf8 (size before relaxing)
+ *fill*         0x8109ab5a        0x2 00
+ .rodata.str1.4
+                0x8109ab5c       0xbf common/libcommon.a(cmd_bdinfo.o)
+                                 0xc0 (size before relaxing)
+ *fill*         0x8109ac1b        0x1 00
+ .rodata.str1.4
+                0x8109ac1c      0x10b common/libcommon.a(cmd_boot.o)
+                                0x118 (size before relaxing)
+ *fill*         0x8109ad27        0x1 00
+ .rodata.str1.4
+                0x8109ad28      0x7dd common/libcommon.a(cmd_bootm.o)
+                                0x814 (size before relaxing)
+ *fill*         0x8109b505        0x3 00
+ .rodata.str1.4
+                0x8109b508       0x70 common/libcommon.a(cmd_console.o)
+                                 0x74 (size before relaxing)
+ .rodata.str1.4
+                0x8109b578      0x378 common/libcommon.a(cmd_load.o)
+                                0x398 (size before relaxing)
+ .rodata.str1.4
+                0x8109b8f0      0x60d common/libcommon.a(cmd_mem.o)
+                                0x62c (size before relaxing)
+ *fill*         0x8109befd        0x3 00
+ .rodata.str1.4
+                0x8109bf00       0x70 common/libcommon.a(cmd_misc.o)
+                                 0x7c (size before relaxing)
+ .rodata.str1.4
+                0x8109bf70      0x96d common/libcommon.a(cmd_nand.o)
+                                0x99c (size before relaxing)
+ *fill*         0x8109c8dd        0x3 00
+ .rodata.str1.4
+                0x8109c8e0      0x1fe common/libcommon.a(cmd_net.o)
+                                0x260 (size before relaxing)
+ *fill*         0x8109cade        0x2 00
+ .rodata.str1.4
+                0x8109cae0      0x4d1 common/libcommon.a(cmd_nvedit.o)
+                                0x564 (size before relaxing)
+ *fill*         0x8109cfb1        0x3 00
+ .rodata.str1.4
+                0x8109cfb4      0x21a common/libcommon.a(command.o)
+                                0x21c (size before relaxing)
+ *fill*         0x8109d1ce        0x2 00
+ .rodata.str1.4
+                0x8109d1d0       0x75 common/libcommon.a(console.o)
+                                 0x7c (size before relaxing)
+ *fill*         0x8109d245        0x3 00
+ .rodata.str1.4
+                0x8109d248       0x2f common/libcommon.a(devices.o)
+                                 0x48 (size before relaxing)
+ *fill*         0x8109d277        0x1 00
+ .rodata.str1.4
+                0x8109d278       0x33 common/libcommon.a(env_common.o)
+                                 0x34 (size before relaxing)
+ *fill*         0x8109d2ab        0x1 00
+ .rodata.str1.4
+                0x8109d2ac       0x9f common/libcommon.a(env_nand.o)
+                                 0xa0 (size before relaxing)
+ *fill*         0x8109d34b        0x1 00
+ .rodata.str1.4
+                0x8109d34c       0xf2 common/libcommon.a(xyzModem.o)
+                                 0xf8 (size before relaxing)
+ *fill*         0x8109d43e        0x2 00
+ .rodata.str1.4
+                0x8109d440       0x17 lib_generic/libgeneric.a(display_options.o)
+                                 0x20 (size before relaxing)
+ *fill*         0x8109d457        0x1 00
+ .rodata.str1.4
+                0x8109d458       0x57 lib_generic/libgeneric.a(vsprintf.o)
+                                 0x58 (size before relaxing)
+ *fill*         0x8109d4af        0x1 00
+ .rodata.str1.4
+                0x8109d4b0      0x20d lib_generic/libgeneric.a(zlib.o)
+                                0x214 (size before relaxing)
+ *fill*         0x8109d6bd        0x3 00
+ .rodata.str1.4
+                0x8109d6c0       0x28 board/dm355_ipnc/libdm355_ipnc.a(dm355_ipnc.o)
+ .rodata.str1.4
+                0x8109d6e8       0x21 board/dm355_ipnc/libdm355_ipnc.a(nand.o)
+                                 0x24 (size before relaxing)
+ *fill*         0x8109d709        0x3 00
+ .rodata.str1.4
+                0x8109d70c       0x6b lib_arm/libarm.a(armlinux.o)
+                                 0xc4 (size before relaxing)
+ *fill*         0x8109d777        0x1 00
+ .rodata.str1.4
+                0x8109d778      0x557 drivers/nand/libnand.a(nand_util.o)
+                                0x55c (size before relaxing)
+
+.eh_frame       0x8109dcd0       0x48
+ .eh_frame      0x8109dcd0       0x30 /another_disk/Project/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin/../lib/gcc/armv5tl-montavista-linuxeabi/3.4.3/libgcc.a(_udivsi3.oS)
+ .eh_frame      0x8109dd00       0x18 /another_disk/Project/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin/../lib/gcc/armv5tl-montavista-linuxeabi/3.4.3/libgcc.a(_divsi3.oS)
+                                 0x30 (size before relaxing)
+
+.ARM.extab      0x8109dd18        0x0
+
+.ARM.exidx      0x8109dd18       0x10
+ .ARM.exidx     0x8109dd18        0x8 /another_disk/Project/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin/../lib/gcc/armv5tl-montavista-linuxeabi/3.4.3/libgcc.a(_divdi3.oS)
+ .ARM.exidx     0x8109dd20        0x8 /another_disk/Project/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin/../lib/gcc/armv5tl-montavista-linuxeabi/3.4.3/libgcc.a(_udivdi3.oS)
+                0x8109dd28                . = ALIGN (0x4)
+
+.data           0x8109dd28     0x168c
+ *(.data)
+ .data          0x8109dd28        0x4 board/dm355_ipnc/libdm355_ipnc.a(timer.o)
+                0x8109dd28                dm350_timer
+ .data          0x8109dd2c       0x2c lib_arm/libarm.a(board.o)
+                0x8109dd2c                init_sequence
+ .data          0x8109dd58        0xa net/libnet.a(net.o)
+                0x8109dd5c                NetBcastAddr
+                0x8109dd58                NetOurNativeVLAN
+                0x8109dd5a                NetOurVLAN
+ *fill*         0x8109dd62        0x2 00
+ .data          0x8109dd64       0x10 drivers/libdrivers.a(serial.o)
+ .data          0x8109dd74        0x8 drivers/nand/libnand.a(nand.o)
+                0x8109dd74                nand_curr_device
+ .data          0x8109dd7c      0x258 drivers/nand/libnand.a(nand_base.o)
+ .data          0x8109dfd4      0x5e8 drivers/nand/libnand.a(nand_ids.o)
+                0x8109dfd4                nand_manuf_ids
+                0x8109e01c                nand_flash_ids
+ .data          0x8109e5bc      0x110 drivers/nand/libnand.a(nand_bbt.o)
+ .data          0x8109e6cc       0x10 common/libcommon.a(main.o)
+ .data          0x8109e6dc        0x4 common/libcommon.a(cmd_bootm.o)
+                0x8109e6dc                load_addr
+ .data          0x8109e6e0        0x4 common/libcommon.a(cmd_load.o)
+ .data          0x8109e6e4        0x4 common/libcommon.a(cmd_mem.o)
+                0x8109e6e4                dp_last_length
+ .data          0x8109e6e8        0xc common/libcommon.a(devices.o)
+                0x8109e6e8                stdio_names
+ .data          0x8109e6f4      0x414 common/libcommon.a(dlmalloc.o)
+ .data          0x8109eb08      0x14c common/libcommon.a(env_common.o)
+                0x8109ec50                env_get_char
+                0x8109eb0c                default_environment
+                0x8109eb08                default_environment_size
+ .data          0x8109ec54        0x4 common/libcommon.a(env_nand.o)
+                0x8109ec54                env_name_spec
+ .data          0x8109ec58      0x2a0 lib_generic/libgeneric.a(zlib.o)
+                0x8109ec78                zlib_version
+                0x8109ec58                z_errmsg
+ .data          0x8109eef8      0x100 lib_generic/libgeneric.a(ctype.o)
+                0x8109eef8                _ctype
+ .data          0x8109eff8        0x4 board/dm355_ipnc/libdm355_ipnc.a(dm355_ipnc.o)
+                0x8109eff8                i2c_timeout
+ .data          0x8109effc      0x160 board/dm355_ipnc/libdm355_ipnc.a(nand.o)
+ .data          0x8109f15c      0x258 drivers/nand/libnand.a(nand_util.o)
+
+.got.plt        0x8109f3b4        0xc
+ .got.plt       0x8109f3b4        0xc /another_disk/Project/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin/../lib/gcc/armv5tl-montavista-linuxeabi/3.4.3/libgcc.a(_divdi3.oS)
+                0x8109f3b4                _GLOBAL_OFFSET_TABLE_
+                0x8109f3c0                . = ALIGN (0x4)
+
+.got            0x8109f3c0        0x0
+ *(.got)
+                0x8109f3c0                . = .
+                0x8109f3c0                __u_boot_cmd_start = .
+
+.u_boot_cmd     0x8109f3c0      0x390
+ *(.u_boot_cmd)
+ .u_boot_cmd    0x8109f3c0       0x18 common/libcommon.a(cmd_autoscript.o)
+                0x8109f3c0                __u_boot_cmd_autoscr
+ .u_boot_cmd    0x8109f3d8       0x18 common/libcommon.a(cmd_bdinfo.o)
+                0x8109f3d8                __u_boot_cmd_bdinfo
+ .u_boot_cmd    0x8109f3f0       0x30 common/libcommon.a(cmd_boot.o)
+                0x8109f3f0                __u_boot_cmd_reset
+                0x8109f408                __u_boot_cmd_go
+ .u_boot_cmd    0x8109f420       0x60 common/libcommon.a(cmd_bootm.o)
+                0x8109f468                __u_boot_cmd_bootm
+                0x8109f420                __u_boot_cmd_iminfo
+                0x8109f438                __u_boot_cmd_bootd
+                0x8109f450                __u_boot_cmd_boot
+ .u_boot_cmd    0x8109f480       0x18 common/libcommon.a(cmd_console.o)
+                0x8109f480                __u_boot_cmd_coninfo
+ .u_boot_cmd    0x8109f498       0x48 common/libcommon.a(cmd_load.o)
+                0x8109f498                __u_boot_cmd_loady
+                0x8109f4b0                __u_boot_cmd_loadb
+                0x8109f4c8                __u_boot_cmd_loads
+ .u_boot_cmd    0x8109f4e0       0xf0 common/libcommon.a(cmd_mem.o)
+                0x8109f5b8                __u_boot_cmd_md
+                0x8109f540                __u_boot_cmd_cmp
+                0x8109f570                __u_boot_cmd_mw
+                0x8109f4f8                __u_boot_cmd_loop
+                0x8109f510                __u_boot_cmd_base
+                0x8109f5a0                __u_boot_cmd_mm
+                0x8109f528                __u_boot_cmd_crc32
+                0x8109f588                __u_boot_cmd_nm
+                0x8109f4e0                __u_boot_cmd_mtest
+                0x8109f558                __u_boot_cmd_cp
+ .u_boot_cmd    0x8109f5d0       0x18 common/libcommon.a(cmd_misc.o)
+                0x8109f5d0                __u_boot_cmd_sleep
+ .u_boot_cmd    0x8109f5e8       0x30 common/libcommon.a(cmd_nand.o)
+                0x8109f600                __u_boot_cmd_nand
+                0x8109f5e8                __u_boot_cmd_nboot
+ .u_boot_cmd    0x8109f618       0x78 common/libcommon.a(cmd_net.o)
+                0x8109f618                __u_boot_cmd_ping
+                0x8109f648                __u_boot_cmd_rarpboot
+                0x8109f660                __u_boot_cmd_tftpboot
+                0x8109f678                __u_boot_cmd_bootp
+                0x8109f630                __u_boot_cmd_dhcp
+ .u_boot_cmd    0x8109f690       0x78 common/libcommon.a(cmd_nvedit.o)
+                0x8109f690                __u_boot_cmd_run
+                0x8109f6c0                __u_boot_cmd_saveenv
+                0x8109f6a8                __u_boot_cmd_askenv
+                0x8109f6f0                __u_boot_cmd_printenv
+                0x8109f6d8                __u_boot_cmd_setenv
+ .u_boot_cmd    0x8109f708       0x48 common/libcommon.a(command.o)
+                0x8109f708                __u_boot_cmd_question_mark
+                0x8109f738                __u_boot_cmd_version
+                0x8109f720                __u_boot_cmd_help
+                0x8109f750                __u_boot_cmd_end = .
+                0x8109f750                . = ALIGN (0x4)
+                0x8109f750                __bss_start = .
+
+.bss            0x8109f750     0x5778
+ *(.bss)
+ .bss           0x8109f750        0x8 cpu/arm926ejs/libarm926ejs.a(interrupts.o)
+ .bss           0x8109f758       0x10 lib_arm/libarm.a(board.o)
+                0x8109f758                monitor_flash_len
+ .bss           0x8109f768     0x25d4 net/libnet.a(net.o)
+                0x810a1d1c                NetArpWaitTry
+                0x810a16ec                NetArpWaitPacketMAC
+                0x8109f810                NetOurEther
+                0x8109f818                NetOurIP
+                0x8109f8c0                NetPingIP
+                0x8109f81c                NetServerIP
+                0x810a16f4                NetArpWaitTxPacketSize
+                0x810a16e8                NetArpWaitReplyIP
+                0x8109f820                NetRxPackets
+                0x810a16f0                NetArpWaitTxPacket
+                0x8109f7da                NetOurNISDomain
+                0x810a16e4                NetArpWaitPacketIP
+                0x8109f83c                NetState
+                0x8109f840                BootFile
+                0x8109f772                NetServerEther
+                0x8109f808                NetOurSubnetMask
+                0x8109f778                NetBootFileSize
+                0x8109f838                NetIPID
+                0x8109f7ba                NetOurHostName
+                0x8109f830                NetRxPkt
+                0x8109f7fc                NetOurDNS2IP
+                0x8109f804                NetOurGatewayIP
+                0x8109f76c                NetEtherNullAddr
+                0x810a16f8                NetArpWaitPacketBuf
+                0x8109f834                NetRxPktLen
+                0x8109f768                NetTxPacket
+                0x8109f80c                NetBootFileXferSize
+                0x8109f800                NetOurDNSIP
+                0x8109f8c4                PktBuf
+                0x8109f77a                NetOurRootPath
+                0x810a1d18                NetArpWaitTimerStart
+ .bss           0x810a1d3c       0x34 net/libnet.a(tftp.o)
+ .bss           0x810a1d70       0x14 net/libnet.a(bootp.o)
+                0x810a1d70                NetDHCPServerIP
+                0x810a1d78                dhcp_state
+                0x810a1d80                BootpTry
+                0x810a1d7c                BootpID
+                0x810a1d74                dhcp_leasetime
+ .bss           0x810a1d84        0x4 net/libnet.a(rarp.o)
+                0x810a1d84                RarpTry
+ .bss           0x810a1d88        0x4 drivers/libdrivers.a(dm9000.o)
+                0x810a1d88                MoveData
+ .bss           0x810a1d8c      0x210 drivers/nand/libnand.a(nand.o)
+                0x810a1d8c                nand_info
+ .bss           0x810a1f9c      0x801 drivers/nand/libnand.a(nand_base.o)
+ .bss           0x810a279d      0x800 common/libcommon.a(main.o)
+                0x810a279d                console_buffer
+ *fill*         0x810a2f9d        0x3 00
+ .bss           0x810a2fa0       0x40 common/libcommon.a(cmd_bootm.o)
+                0x810a2fa0                header
+ .bss           0x810a2fe0       0x88 common/libcommon.a(cmd_load.o)
+                0x810a300c                his_pad_char
+                0x810a2fe0                os_data_count
+                0x810a3010                os_data_init
+                0x810a302c                send_ptr
+                0x810a2fe4                os_data_header
+                0x810a3014                os_data_char
+                0x810a3004                his_eol
+                0x810a300d                his_quote
+                0x810a3018                send_parms
+                0x810a3008                his_pad_count
+ .bss           0x810a3068       0x14 common/libcommon.a(cmd_mem.o)
+                0x810a306c                dp_last_size
+                0x810a3068                dp_last_addr
+                0x810a3074                mm_last_size
+                0x810a3070                mm_last_addr
+ .bss           0x810a307c        0x8 common/libcommon.a(console.o)
+ .bss           0x810a3084       0x10 common/libcommon.a(devices.o)
+                0x810a3090                devlist
+                0x810a3084                stdio_devices
+ .bss           0x810a3094       0x3c common/libcommon.a(dlmalloc.o)
+ .bss           0x810a30d0        0x4 common/libcommon.a(env_nand.o)
+                0x810a30d0                env_ptr
+ .bss           0x810a30d4      0x43c common/libcommon.a(xyzModem.o)
+ .bss           0x810a3510        0x4 lib_generic/libgeneric.a(string.o)
+                0x810a3510                ___strtok
+ .bss           0x810a3514     0x10a8 lib_generic/libgeneric.a(zlib.o)
+ .bss           0x810a45bc        0x4 lib_arm/libarm.a(armlinux.o)
+ .bss           0x810a45c0      0x908 drivers/nand/libnand.a(nand_util.o)
+                0x810a4ec8                _end = .
+
+.rel.dyn
+Address of section .text set to 0x81080000
+LOAD cpu/arm926ejs/start.o
+START GROUP
+LOAD lib_generic/libgeneric.a
+LOAD board/dm355_ipnc/libdm355_ipnc.a
+LOAD cpu/arm926ejs/libarm926ejs.a
+LOAD lib_arm/libarm.a
+LOAD fs/cramfs/libcramfs.a
+LOAD fs/fat/libfat.a
+LOAD fs/fdos/libfdos.a
+LOAD fs/jffs2/libjffs2.a
+LOAD fs/reiserfs/libreiserfs.a
+LOAD fs/ext2/libext2fs.a
+LOAD net/libnet.a
+LOAD disk/libdisk.a
+LOAD rtc/librtc.a
+LOAD dtt/libdtt.a
+LOAD drivers/libdrivers.a
+LOAD drivers/nand/libnand.a
+LOAD drivers/nand_legacy/libnand_legacy.a
+LOAD drivers/sk98lin/libsk98lin.a
+LOAD post/libpost.a
+LOAD post/cpu/libcpu.a
+LOAD common/libcommon.a
+END GROUP
+LOAD /another_disk/Project/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin/../lib/gcc/armv5tl-montavista-linuxeabi/3.4.3/libgcc.a
+OUTPUT(u-boot elf32-littlearm)
+
+.note.gnu.arm.ident
+                0x00000000       0x1c
+ .note.gnu.arm.ident
+                0x00000000       0x1c cpu/arm926ejs/start.o
+
+.debug_line     0x00000000     0x9d43
+ .debug_line    0x00000000       0x94 cpu/arm926ejs/start.o
+ .debug_line    0x00000094      0x167 board/dm355_ipnc/libdm355_ipnc.a(lowlevel_init.o)
+ .debug_line    0x000001fb       0x52 board/dm355_ipnc/libdm355_ipnc.a(timer.o)
+ .debug_line    0x0000024d      0x200 cpu/arm926ejs/libarm926ejs.a(interrupts.o)
+ .debug_line    0x0000044d      0x2bd lib_arm/libarm.a(board.o)
+ .debug_line    0x0000070a      0x87d net/libnet.a(net.o)
+ .debug_line    0x00000f87      0x3eb net/libnet.a(tftp.o)
+ .debug_line    0x00001372      0x583 net/libnet.a(bootp.o)
+ .debug_line    0x000018f5      0x1aa net/libnet.a(rarp.o)
+ .debug_line    0x00001a9f      0x165 net/libnet.a(eth.o)
+ .debug_line    0x00001c04      0x30a drivers/libdrivers.a(dm9000.o)
+ .debug_line    0x00001f0e      0x258 drivers/libdrivers.a(serial.o)
+ .debug_line    0x00002166       0xee drivers/libdrivers.a(ns16550.o)
+ .debug_line    0x00002254      0x2da drivers/nand/libnand.a(nand.o)
+ .debug_line    0x0000252e      0xaa7 drivers/nand/libnand.a(nand_base.o)
+ .debug_line    0x00002fd5       0xc4 drivers/nand/libnand.a(nand_ids.o)
+ .debug_line    0x00003099      0x2bd drivers/nand/libnand.a(nand_ecc.o)
+ .debug_line    0x00003356      0x54e drivers/nand/libnand.a(nand_bbt.o)
+ .debug_line    0x000038a4      0x255 common/libcommon.a(main.o)
+ .debug_line    0x00003af9      0x353 common/libcommon.a(cmd_autoscript.o)
+ .debug_line    0x00003e4c      0x22d common/libcommon.a(cmd_bdinfo.o)
+ .debug_line    0x00004079      0x182 common/libcommon.a(cmd_boot.o)
+ .debug_line    0x000041fb      0x579 common/libcommon.a(cmd_bootm.o)
+ .debug_line    0x00004774      0x100 common/libcommon.a(cmd_console.o)
+ .debug_line    0x00004874      0x4b9 common/libcommon.a(cmd_load.o)
+ .debug_line    0x00004d2d      0x355 common/libcommon.a(cmd_mem.o)
+ .debug_line    0x00005082      0x175 common/libcommon.a(cmd_misc.o)
+ .debug_line    0x000051f7      0x57c common/libcommon.a(cmd_nand.o)
+ .debug_line    0x00005773      0x1e8 common/libcommon.a(cmd_net.o)
+ .debug_line    0x0000595b      0x448 common/libcommon.a(cmd_nvedit.o)
+ .debug_line    0x00005da3      0x14a common/libcommon.a(command.o)
+ .debug_line    0x00005eed      0x39f common/libcommon.a(console.o)
+ .debug_line    0x0000628c      0x250 common/libcommon.a(devices.o)
+ .debug_line    0x000064dc      0x4bb common/libcommon.a(dlmalloc.o)
+ .debug_line    0x00006997      0x25a common/libcommon.a(env_common.o)
+ .debug_line    0x00006bf1      0x3a4 common/libcommon.a(env_nand.o)
+ .debug_line    0x00006f95      0x187 common/libcommon.a(exports.o)
+ .debug_line    0x0000711c      0x155 common/libcommon.a(lists.o)
+ .debug_line    0x00007271      0x154 common/libcommon.a(s_record.o)
+ .debug_line    0x000073c5      0x274 common/libcommon.a(xyzModem.o)
+ .debug_line    0x00007639      0x16d common/libcommon.a(crc16.o)
+ .debug_line    0x000077a6       0xee lib_generic/libgeneric.a(crc32.o)
+ .debug_line    0x00007894       0xf5 lib_generic/libgeneric.a(display_options.o)
+ .debug_line    0x00007989      0x266 lib_generic/libgeneric.a(string.o)
+ .debug_line    0x00007bef      0x262 lib_generic/libgeneric.a(vsprintf.o)
+ .debug_line    0x00007e51      0x650 lib_generic/libgeneric.a(zlib.o)
+ .debug_line    0x000084a1       0x25 lib_generic/libgeneric.a(ctype.o)
+ .debug_line    0x000084c6      0x2a2 board/dm355_ipnc/libdm355_ipnc.a(dm355_ipnc.o)
+ .debug_line    0x00008768      0x3a5 board/dm355_ipnc/libdm355_ipnc.a(nand.o)
+ .debug_line    0x00008b0d      0x185 cpu/arm926ejs/libarm926ejs.a(cpu.o)
+ .debug_line    0x00008c92       0x51 lib_arm/libarm.a(_modsi3.o)
+ .debug_line    0x00008ce3       0x63 lib_arm/libarm.a(_umodsi3.o)
+ .debug_line    0x00008d46      0x3e2 lib_arm/libarm.a(armlinux.o)
+ .debug_line    0x00009128       0x34 lib_arm/libarm.a(cache.o)
+ .debug_line    0x0000915c       0x33 lib_arm/libarm.a(div0.o)
+ .debug_line    0x0000918f      0x569 drivers/nand/libnand.a(nand_util.o)
+ .debug_line    0x000096f8       0x70 /another_disk/Project/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin/../lib/gcc/armv5tl-montavista-linuxeabi/3.4.3/libgcc.a(_udivsi3.oS)
+ .debug_line    0x00009768       0x7c /another_disk/Project/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin/../lib/gcc/armv5tl-montavista-linuxeabi/3.4.3/libgcc.a(_divsi3.oS)
+ .debug_line    0x000097e4       0x56 /another_disk/Project/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin/../lib/gcc/armv5tl-montavista-linuxeabi/3.4.3/libgcc.a(_ashrdi3.oS)
+ .debug_line    0x0000983a       0x56 /another_disk/Project/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin/../lib/gcc/armv5tl-montavista-linuxeabi/3.4.3/libgcc.a(_ashldi3.oS)
+ .debug_line    0x00009890       0x50 /another_disk/Project/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin/../lib/gcc/armv5tl-montavista-linuxeabi/3.4.3/libgcc.a(_aeabi_uldivmod.oS)
+ .debug_line    0x000098e0       0x52 /another_disk/Project/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin/../lib/gcc/armv5tl-montavista-linuxeabi/3.4.3/libgcc.a(bpabi.oS)
+ .debug_line    0x00009932      0x19f /another_disk/Project/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin/../lib/gcc/armv5tl-montavista-linuxeabi/3.4.3/libgcc.a(_divdi3.oS)
+ .debug_line    0x00009ad1      0x18e /another_disk/Project/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin/../lib/gcc/armv5tl-montavista-linuxeabi/3.4.3/libgcc.a(_udivdi3.oS)
+ .debug_line    0x00009c5f       0xe4 /another_disk/Project/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin/../lib/gcc/armv5tl-montavista-linuxeabi/3.4.3/libgcc.a(_clz.oS)
+
+.debug_info     0x00000000    0x1abfe
+ .debug_info    0x00000000       0xbf cpu/arm926ejs/start.o
+ .debug_info    0x000000bf       0xca board/dm355_ipnc/libdm355_ipnc.a(lowlevel_init.o)
+ .debug_info    0x00000189      0x145 board/dm355_ipnc/libdm355_ipnc.a(timer.o)
+ .debug_info    0x000002ce      0x411 cpu/arm926ejs/libarm926ejs.a(interrupts.o)
+ .debug_info    0x000006df      0x4a4 lib_arm/libarm.a(board.o)
+ .debug_info    0x00000b83     0x16a7 net/libnet.a(net.o)
+ .debug_info    0x0000222a      0x41a net/libnet.a(tftp.o)
+ .debug_info    0x00002644      0xbf4 net/libnet.a(bootp.o)
+ .debug_info    0x00003238      0x245 net/libnet.a(rarp.o)
+ .debug_info    0x0000347d      0x17d net/libnet.a(eth.o)
+ .debug_info    0x000035fa      0x5e3 drivers/libdrivers.a(dm9000.o)
+ .debug_info    0x00003bdd      0x4e1 drivers/libdrivers.a(serial.o)
+ .debug_info    0x000040be      0x1b0 drivers/libdrivers.a(ns16550.o)
+ .debug_info    0x0000426e      0xd08 drivers/nand/libnand.a(nand.o)
+ .debug_info    0x00004f76     0x28a9 drivers/nand/libnand.a(nand_base.o)
+ .debug_info    0x0000781f      0x156 drivers/nand/libnand.a(nand_ids.o)
+ .debug_info    0x00007975      0x7e0 drivers/nand/libnand.a(nand_ecc.o)
+ .debug_info    0x00008155     0x183a drivers/nand/libnand.a(nand_bbt.o)
+ .debug_info    0x0000998f      0x64a common/libcommon.a(main.o)
+ .debug_info    0x00009fd9      0x3fc common/libcommon.a(cmd_autoscript.o)
+ .debug_info    0x0000a3d5      0x368 common/libcommon.a(cmd_bdinfo.o)
+ .debug_info    0x0000a73d      0x1c8 common/libcommon.a(cmd_boot.o)
+ .debug_info    0x0000a905      0xe9c common/libcommon.a(cmd_bootm.o)
+ .debug_info    0x0000b7a1      0x37d common/libcommon.a(cmd_console.o)
+ .debug_info    0x0000bb1e      0xcfb common/libcommon.a(cmd_load.o)
+ .debug_info    0x0000c819      0xa01 common/libcommon.a(cmd_mem.o)
+ .debug_info    0x0000d21a      0x1aa common/libcommon.a(cmd_misc.o)
+ .debug_info    0x0000d3c4     0x1621 common/libcommon.a(cmd_nand.o)
+ .debug_info    0x0000e9e5      0x543 common/libcommon.a(cmd_net.o)
+ .debug_info    0x0000ef28      0x90c common/libcommon.a(cmd_nvedit.o)
+ .debug_info    0x0000f834      0x35a common/libcommon.a(command.o)
+ .debug_info    0x0000fb8e      0x855 common/libcommon.a(console.o)
+ .debug_info    0x000103e3      0x485 common/libcommon.a(devices.o)
+ .debug_info    0x00010868      0xb5d common/libcommon.a(dlmalloc.o)
+ .debug_info    0x000113c5      0x375 common/libcommon.a(env_common.o)
+ .debug_info    0x0001173a      0xa2f common/libcommon.a(env_nand.o)
+ .debug_info    0x00012169      0x255 common/libcommon.a(exports.o)
+ .debug_info    0x000123be      0x4df common/libcommon.a(lists.o)
+ .debug_info    0x0001289d      0x17a common/libcommon.a(s_record.o)
+ .debug_info    0x00012a17      0x62b common/libcommon.a(xyzModem.o)
+ .debug_info    0x00013042      0x10f common/libcommon.a(crc16.o)
+ .debug_info    0x00013151      0x16d lib_generic/libgeneric.a(crc32.o)
+ .debug_info    0x000132be      0x120 lib_generic/libgeneric.a(display_options.o)
+ .debug_info    0x000133de      0x828 lib_generic/libgeneric.a(string.o)
+ .debug_info    0x00013c06      0x402 lib_generic/libgeneric.a(vsprintf.o)
+ .debug_info    0x00014008     0x16d4 lib_generic/libgeneric.a(zlib.o)
+ .debug_info    0x000156dc       0x56 lib_generic/libgeneric.a(ctype.o)
+ .debug_info    0x00015732      0x6da board/dm355_ipnc/libdm355_ipnc.a(dm355_ipnc.o)
+ .debug_info    0x00015e0c     0x12ac board/dm355_ipnc/libdm355_ipnc.a(nand.o)
+ .debug_info    0x000170b8      0x291 cpu/arm926ejs/libarm926ejs.a(cpu.o)
+ .debug_info    0x00017349       0xbb lib_arm/libarm.a(_modsi3.o)
+ .debug_info    0x00017404       0xbc lib_arm/libarm.a(_umodsi3.o)
+ .debug_info    0x000174c0      0xb27 lib_arm/libarm.a(armlinux.o)
+ .debug_info    0x00017fe7       0xa8 lib_arm/libarm.a(cache.o)
+ .debug_info    0x0001808f       0x44 lib_arm/libarm.a(div0.o)
+ .debug_info    0x000180d3     0x13e8 drivers/nand/libnand.a(nand_util.o)
+ .debug_info    0x000194bb       0x73 /another_disk/Project/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin/../lib/gcc/armv5tl-montavista-linuxeabi/3.4.3/libgcc.a(_udivsi3.oS)
+ .debug_info    0x0001952e       0x73 /another_disk/Project/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin/../lib/gcc/armv5tl-montavista-linuxeabi/3.4.3/libgcc.a(_divsi3.oS)
+ .debug_info    0x000195a1       0x73 /another_disk/Project/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin/../lib/gcc/armv5tl-montavista-linuxeabi/3.4.3/libgcc.a(_ashrdi3.oS)
+ .debug_info    0x00019614       0x73 /another_disk/Project/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin/../lib/gcc/armv5tl-montavista-linuxeabi/3.4.3/libgcc.a(_ashldi3.oS)
+ .debug_info    0x00019687       0x6d /another_disk/Project/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin/../lib/gcc/armv5tl-montavista-linuxeabi/3.4.3/libgcc.a(_aeabi_uldivmod.oS)
+ .debug_info    0x000196f4       0xf6 /another_disk/Project/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin/../lib/gcc/armv5tl-montavista-linuxeabi/3.4.3/libgcc.a(bpabi.oS)
+ .debug_info    0x000197ea      0x8b1 /another_disk/Project/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin/../lib/gcc/armv5tl-montavista-linuxeabi/3.4.3/libgcc.a(_divdi3.oS)
+ .debug_info    0x0001a09b      0x868 /another_disk/Project/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin/../lib/gcc/armv5tl-montavista-linuxeabi/3.4.3/libgcc.a(_udivdi3.oS)
+ .debug_info    0x0001a903      0x2fb /another_disk/Project/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin/../lib/gcc/armv5tl-montavista-linuxeabi/3.4.3/libgcc.a(_clz.oS)
+
+.debug_abbrev   0x00000000     0x57e8
+ .debug_abbrev  0x00000000       0x14 cpu/arm926ejs/start.o
+ .debug_abbrev  0x00000014       0x14 board/dm355_ipnc/libdm355_ipnc.a(lowlevel_init.o)
+ .debug_abbrev  0x00000028       0xa8 board/dm355_ipnc/libdm355_ipnc.a(timer.o)
+ .debug_abbrev  0x000000d0      0x1ae cpu/arm926ejs/libarm926ejs.a(interrupts.o)
+ .debug_abbrev  0x0000027e      0x1e8 lib_arm/libarm.a(board.o)
+ .debug_abbrev  0x00000466      0x2fc net/libnet.a(net.o)
+ .debug_abbrev  0x00000762      0x19e net/libnet.a(tftp.o)
+ .debug_abbrev  0x00000900      0x2d4 net/libnet.a(bootp.o)
+ .debug_abbrev  0x00000bd4      0x108 net/libnet.a(rarp.o)
+ .debug_abbrev  0x00000cdc       0xac net/libnet.a(eth.o)
+ .debug_abbrev  0x00000d88      0x26f drivers/libdrivers.a(dm9000.o)
+ .debug_abbrev  0x00000ff7      0x17f drivers/libdrivers.a(serial.o)
+ .debug_abbrev  0x00001176       0xca drivers/libdrivers.a(ns16550.o)
+ .debug_abbrev  0x00001240      0x193 drivers/nand/libnand.a(nand.o)
+ .debug_abbrev  0x000013d3      0x34c drivers/nand/libnand.a(nand_base.o)
+ .debug_abbrev  0x0000171f       0x83 drivers/nand/libnand.a(nand_ids.o)
+ .debug_abbrev  0x000017a2      0x16f drivers/nand/libnand.a(nand_ecc.o)
+ .debug_abbrev  0x00001911      0x2c7 drivers/nand/libnand.a(nand_bbt.o)
+ .debug_abbrev  0x00001bd8      0x232 common/libcommon.a(main.o)
+ .debug_abbrev  0x00001e0a      0x141 common/libcommon.a(cmd_autoscript.o)
+ .debug_abbrev  0x00001f4b      0x119 common/libcommon.a(cmd_bdinfo.o)
+ .debug_abbrev  0x00002064       0xd6 common/libcommon.a(cmd_boot.o)
+ .debug_abbrev  0x0000213a      0x29f common/libcommon.a(cmd_bootm.o)
+ .debug_abbrev  0x000023d9      0x134 common/libcommon.a(cmd_console.o)
+ .debug_abbrev  0x0000250d      0x2fc common/libcommon.a(cmd_load.o)
+ .debug_abbrev  0x00002809      0x1b3 common/libcommon.a(cmd_mem.o)
+ .debug_abbrev  0x000029bc       0xc7 common/libcommon.a(cmd_misc.o)
+ .debug_abbrev  0x00002a83      0x2f8 common/libcommon.a(cmd_nand.o)
+ .debug_abbrev  0x00002d7b      0x18a common/libcommon.a(cmd_net.o)
+ .debug_abbrev  0x00002f05      0x214 common/libcommon.a(cmd_nvedit.o)
+ .debug_abbrev  0x00003119      0x182 common/libcommon.a(command.o)
+ .debug_abbrev  0x0000329b      0x23a common/libcommon.a(console.o)
+ .debug_abbrev  0x000034d5      0x15b common/libcommon.a(devices.o)
+ .debug_abbrev  0x00003630      0x1d6 common/libcommon.a(dlmalloc.o)
+ .debug_abbrev  0x00003806      0x149 common/libcommon.a(env_common.o)
+ .debug_abbrev  0x0000394f      0x21d common/libcommon.a(env_nand.o)
+ .debug_abbrev  0x00003b6c       0xf3 common/libcommon.a(exports.o)
+ .debug_abbrev  0x00003c5f      0x18e common/libcommon.a(lists.o)
+ .debug_abbrev  0x00003ded       0xac common/libcommon.a(s_record.o)
+ .debug_abbrev  0x00003e99      0x207 common/libcommon.a(xyzModem.o)
+ .debug_abbrev  0x000040a0       0x9f common/libcommon.a(crc16.o)
+ .debug_abbrev  0x0000413f       0x90 lib_generic/libgeneric.a(crc32.o)
+ .debug_abbrev  0x000041cf       0xc3 lib_generic/libgeneric.a(display_options.o)
+ .debug_abbrev  0x00004292      0x136 lib_generic/libgeneric.a(string.o)
+ .debug_abbrev  0x000043c8      0x1a0 lib_generic/libgeneric.a(vsprintf.o)
+ .debug_abbrev  0x00004568      0x27c lib_generic/libgeneric.a(zlib.o)
+ .debug_abbrev  0x000047e4       0x42 lib_generic/libgeneric.a(ctype.o)
+ .debug_abbrev  0x00004826      0x274 board/dm355_ipnc/libdm355_ipnc.a(dm355_ipnc.o)
+ .debug_abbrev  0x00004a9a      0x25e board/dm355_ipnc/libdm355_ipnc.a(nand.o)
+ .debug_abbrev  0x00004cf8      0x126 cpu/arm926ejs/libarm926ejs.a(cpu.o)
+ .debug_abbrev  0x00004e1e       0x14 lib_arm/libarm.a(_modsi3.o)
+ .debug_abbrev  0x00004e32       0x14 lib_arm/libarm.a(_umodsi3.o)
+ .debug_abbrev  0x00004e46      0x1ef lib_arm/libarm.a(armlinux.o)
+ .debug_abbrev  0x00005035       0x4e lib_arm/libarm.a(cache.o)
+ .debug_abbrev  0x00005083       0x3a lib_arm/libarm.a(div0.o)
+ .debug_abbrev  0x000050bd      0x21c drivers/nand/libnand.a(nand_util.o)
+ .debug_abbrev  0x000052d9       0x14 /another_disk/Project/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin/../lib/gcc/armv5tl-montavista-linuxeabi/3.4.3/libgcc.a(_udivsi3.oS)
+ .debug_abbrev  0x000052ed       0x14 /another_disk/Project/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin/../lib/gcc/armv5tl-montavista-linuxeabi/3.4.3/libgcc.a(_divsi3.oS)
+ .debug_abbrev  0x00005301       0x14 /another_disk/Project/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin/../lib/gcc/armv5tl-montavista-linuxeabi/3.4.3/libgcc.a(_ashrdi3.oS)
+ .debug_abbrev  0x00005315       0x14 /another_disk/Project/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin/../lib/gcc/armv5tl-montavista-linuxeabi/3.4.3/libgcc.a(_ashldi3.oS)
+ .debug_abbrev  0x00005329       0x14 /another_disk/Project/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin/../lib/gcc/armv5tl-montavista-linuxeabi/3.4.3/libgcc.a(_aeabi_uldivmod.oS)
+ .debug_abbrev  0x0000533d       0x6e /another_disk/Project/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin/../lib/gcc/armv5tl-montavista-linuxeabi/3.4.3/libgcc.a(bpabi.oS)
+ .debug_abbrev  0x000053ab      0x1c9 /another_disk/Project/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin/../lib/gcc/armv5tl-montavista-linuxeabi/3.4.3/libgcc.a(_divdi3.oS)
+ .debug_abbrev  0x00005574      0x1ba /another_disk/Project/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin/../lib/gcc/armv5tl-montavista-linuxeabi/3.4.3/libgcc.a(_udivdi3.oS)
+ .debug_abbrev  0x0000572e       0xba /another_disk/Project/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin/../lib/gcc/armv5tl-montavista-linuxeabi/3.4.3/libgcc.a(_clz.oS)
+
+.debug_aranges  0x00000000      0x7c0
+ .debug_aranges
+                0x00000000       0x20 cpu/arm926ejs/start.o
+ .debug_aranges
+                0x00000020       0x20 board/dm355_ipnc/libdm355_ipnc.a(lowlevel_init.o)
+ .debug_aranges
+                0x00000040       0x20 board/dm355_ipnc/libdm355_ipnc.a(timer.o)
+ .debug_aranges
+                0x00000060       0x20 cpu/arm926ejs/libarm926ejs.a(interrupts.o)
+ .debug_aranges
+                0x00000080       0x20 lib_arm/libarm.a(board.o)
+ .debug_aranges
+                0x000000a0       0x20 net/libnet.a(net.o)
+ .debug_aranges
+                0x000000c0       0x20 net/libnet.a(tftp.o)
+ .debug_aranges
+                0x000000e0       0x20 net/libnet.a(bootp.o)
+ .debug_aranges
+                0x00000100       0x20 net/libnet.a(rarp.o)
+ .debug_aranges
+                0x00000120       0x20 net/libnet.a(eth.o)
+ .debug_aranges
+                0x00000140       0x20 drivers/libdrivers.a(dm9000.o)
+ .debug_aranges
+                0x00000160       0x20 drivers/libdrivers.a(serial.o)
+ .debug_aranges
+                0x00000180       0x20 drivers/libdrivers.a(ns16550.o)
+ .debug_aranges
+                0x000001a0       0x20 drivers/nand/libnand.a(nand.o)
+ .debug_aranges
+                0x000001c0       0x20 drivers/nand/libnand.a(nand_base.o)
+ .debug_aranges
+                0x000001e0       0x20 drivers/nand/libnand.a(nand_ecc.o)
+ .debug_aranges
+                0x00000200       0x20 drivers/nand/libnand.a(nand_bbt.o)
+ .debug_aranges
+                0x00000220       0x20 common/libcommon.a(main.o)
+ .debug_aranges
+                0x00000240       0x20 common/libcommon.a(cmd_autoscript.o)
+ .debug_aranges
+                0x00000260       0x20 common/libcommon.a(cmd_bdinfo.o)
+ .debug_aranges
+                0x00000280       0x20 common/libcommon.a(cmd_boot.o)
+ .debug_aranges
+                0x000002a0       0x20 common/libcommon.a(cmd_bootm.o)
+ .debug_aranges
+                0x000002c0       0x20 common/libcommon.a(cmd_console.o)
+ .debug_aranges
+                0x000002e0       0x20 common/libcommon.a(cmd_load.o)
+ .debug_aranges
+                0x00000300       0x20 common/libcommon.a(cmd_mem.o)
+ .debug_aranges
+                0x00000320       0x20 common/libcommon.a(cmd_misc.o)
+ .debug_aranges
+                0x00000340       0x20 common/libcommon.a(cmd_nand.o)
+ .debug_aranges
+                0x00000360       0x20 common/libcommon.a(cmd_net.o)
+ .debug_aranges
+                0x00000380       0x20 common/libcommon.a(cmd_nvedit.o)
+ .debug_aranges
+                0x000003a0       0x20 common/libcommon.a(command.o)
+ .debug_aranges
+                0x000003c0       0x20 common/libcommon.a(console.o)
+ .debug_aranges
+                0x000003e0       0x20 common/libcommon.a(devices.o)
+ .debug_aranges
+                0x00000400       0x20 common/libcommon.a(dlmalloc.o)
+ .debug_aranges
+                0x00000420       0x20 common/libcommon.a(env_common.o)
+ .debug_aranges
+                0x00000440       0x20 common/libcommon.a(env_nand.o)
+ .debug_aranges
+                0x00000460       0x20 common/libcommon.a(exports.o)
+ .debug_aranges
+                0x00000480       0x20 common/libcommon.a(lists.o)
+ .debug_aranges
+                0x000004a0       0x20 common/libcommon.a(s_record.o)
+ .debug_aranges
+                0x000004c0       0x20 common/libcommon.a(xyzModem.o)
+ .debug_aranges
+                0x000004e0       0x20 common/libcommon.a(crc16.o)
+ .debug_aranges
+                0x00000500       0x20 lib_generic/libgeneric.a(crc32.o)
+ .debug_aranges
+                0x00000520       0x20 lib_generic/libgeneric.a(display_options.o)
+ .debug_aranges
+                0x00000540       0x20 lib_generic/libgeneric.a(string.o)
+ .debug_aranges
+                0x00000560       0x20 lib_generic/libgeneric.a(vsprintf.o)
+ .debug_aranges
+                0x00000580       0x20 lib_generic/libgeneric.a(zlib.o)
+ .debug_aranges
+                0x000005a0       0x20 board/dm355_ipnc/libdm355_ipnc.a(dm355_ipnc.o)
+ .debug_aranges
+                0x000005c0       0x20 board/dm355_ipnc/libdm355_ipnc.a(nand.o)
+ .debug_aranges
+                0x000005e0       0x20 cpu/arm926ejs/libarm926ejs.a(cpu.o)
+ .debug_aranges
+                0x00000600       0x20 lib_arm/libarm.a(_modsi3.o)
+ .debug_aranges
+                0x00000620       0x20 lib_arm/libarm.a(_umodsi3.o)
+ .debug_aranges
+                0x00000640       0x20 lib_arm/libarm.a(armlinux.o)
+ .debug_aranges
+                0x00000660       0x20 lib_arm/libarm.a(cache.o)
+ .debug_aranges
+                0x00000680       0x20 lib_arm/libarm.a(div0.o)
+ .debug_aranges
+                0x000006a0       0x20 drivers/nand/libnand.a(nand_util.o)
+ .debug_aranges
+                0x000006c0       0x20 /another_disk/Project/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin/../lib/gcc/armv5tl-montavista-linuxeabi/3.4.3/libgcc.a(_udivsi3.oS)
+ .debug_aranges
+                0x000006e0       0x20 /another_disk/Project/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin/../lib/gcc/armv5tl-montavista-linuxeabi/3.4.3/libgcc.a(_divsi3.oS)
+ .debug_aranges
+                0x00000700       0x20 /another_disk/Project/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin/../lib/gcc/armv5tl-montavista-linuxeabi/3.4.3/libgcc.a(_ashrdi3.oS)
+ .debug_aranges
+                0x00000720       0x20 /another_disk/Project/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin/../lib/gcc/armv5tl-montavista-linuxeabi/3.4.3/libgcc.a(_ashldi3.oS)
+ .debug_aranges
+                0x00000740       0x20 /another_disk/Project/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin/../lib/gcc/armv5tl-montavista-linuxeabi/3.4.3/libgcc.a(_aeabi_uldivmod.oS)
+ .debug_aranges
+                0x00000760       0x20 /another_disk/Project/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin/../lib/gcc/armv5tl-montavista-linuxeabi/3.4.3/libgcc.a(bpabi.oS)
+ .debug_aranges
+                0x00000780       0x20 /another_disk/Project/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin/../lib/gcc/armv5tl-montavista-linuxeabi/3.4.3/libgcc.a(_divdi3.oS)
+ .debug_aranges
+                0x000007a0       0x20 /another_disk/Project/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin/../lib/gcc/armv5tl-montavista-linuxeabi/3.4.3/libgcc.a(_udivdi3.oS)
+
+.debug_frame    0x00000000     0x2b5c
+ .debug_frame   0x00000000       0x30 board/dm355_ipnc/libdm355_ipnc.a(timer.o)
+ .debug_frame   0x00000030      0x1d8 cpu/arm926ejs/libarm926ejs.a(interrupts.o)
+ .debug_frame   0x00000208       0x9c lib_arm/libarm.a(board.o)
+ .debug_frame   0x000002a4      0x2c0 net/libnet.a(net.o)
+ .debug_frame   0x00000564       0x8c net/libnet.a(tftp.o)
+ .debug_frame   0x000005f0      0x100 net/libnet.a(bootp.o)
+ .debug_frame   0x000006f0       0x60 net/libnet.a(rarp.o)
+ .debug_frame   0x00000750       0x20 net/libnet.a(eth.o)
+ .debug_frame   0x00000770      0x130 drivers/libdrivers.a(dm9000.o)
+ .debug_frame   0x000008a0      0x128 drivers/libdrivers.a(serial.o)
+ .debug_frame   0x000009c8       0x60 drivers/libdrivers.a(ns16550.o)
+ .debug_frame   0x00000a28       0x2c drivers/nand/libnand.a(nand.o)
+ .debug_frame   0x00000a54      0x4ac drivers/nand/libnand.a(nand_base.o)
+ .debug_frame   0x00000f00       0x54 drivers/nand/libnand.a(nand_ecc.o)
+ .debug_frame   0x00000f54      0x194 drivers/nand/libnand.a(nand_bbt.o)
+ .debug_frame   0x000010e8       0xbc common/libcommon.a(main.o)
+ .debug_frame   0x000011a4       0x4c common/libcommon.a(cmd_autoscript.o)
+ .debug_frame   0x000011f0       0x3c common/libcommon.a(cmd_bdinfo.o)
+ .debug_frame   0x0000122c       0x2c common/libcommon.a(cmd_boot.o)
+ .debug_frame   0x00001258       0xf8 common/libcommon.a(cmd_bootm.o)
+ .debug_frame   0x00001350       0x30 common/libcommon.a(cmd_console.o)
+ .debug_frame   0x00001380      0x19c common/libcommon.a(cmd_load.o)
+ .debug_frame   0x0000151c      0x184 common/libcommon.a(cmd_mem.o)
+ .debug_frame   0x000016a0       0x30 common/libcommon.a(cmd_misc.o)
+ .debug_frame   0x000016d0       0x88 common/libcommon.a(cmd_nand.o)
+ .debug_frame   0x00001758       0x90 common/libcommon.a(cmd_net.o)
+ .debug_frame   0x000017e8      0x134 common/libcommon.a(cmd_nvedit.o)
+ .debug_frame   0x0000191c       0x78 common/libcommon.a(command.o)
+ .debug_frame   0x00001994      0x214 common/libcommon.a(console.o)
+ .debug_frame   0x00001ba8       0x5c common/libcommon.a(devices.o)
+ .debug_frame   0x00001c04      0x13c common/libcommon.a(dlmalloc.o)
+ .debug_frame   0x00001d40       0x7c common/libcommon.a(env_common.o)
+ .debug_frame   0x00001dbc       0x84 common/libcommon.a(env_nand.o)
+ .debug_frame   0x00001e40       0x48 common/libcommon.a(exports.o)
+ .debug_frame   0x00001e88      0x134 common/libcommon.a(lists.o)
+ .debug_frame   0x00001fbc       0x64 common/libcommon.a(s_record.o)
+ .debug_frame   0x00002020      0x128 common/libcommon.a(xyzModem.o)
+ .debug_frame   0x00002148       0x28 common/libcommon.a(crc16.o)
+ .debug_frame   0x00002170       0x40 lib_generic/libgeneric.a(crc32.o)
+ .debug_frame   0x000021b0       0x48 lib_generic/libgeneric.a(display_options.o)
+ .debug_frame   0x000021f8      0x1e0 lib_generic/libgeneric.a(string.o)
+ .debug_frame   0x000023d8       0xe4 lib_generic/libgeneric.a(vsprintf.o)
+ .debug_frame   0x000024bc      0x1f8 lib_generic/libgeneric.a(zlib.o)
+ .debug_frame   0x000026b4       0xfc board/dm355_ipnc/libdm355_ipnc.a(dm355_ipnc.o)
+ .debug_frame   0x000027b0       0xb4 board/dm355_ipnc/libdm355_ipnc.a(nand.o)
+ .debug_frame   0x00002864       0xcc cpu/arm926ejs/libarm926ejs.a(cpu.o)
+ .debug_frame   0x00002930       0x38 lib_arm/libarm.a(armlinux.o)
+ .debug_frame   0x00002968       0x20 lib_arm/libarm.a(cache.o)
+ .debug_frame   0x00002988       0x20 lib_arm/libarm.a(div0.o)
+ .debug_frame   0x000029a8       0xf4 drivers/nand/libnand.a(nand_util.o)
+ .debug_frame   0x00002a9c       0x50 /another_disk/Project/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin/../lib/gcc/armv5tl-montavista-linuxeabi/3.4.3/libgcc.a(bpabi.oS)
+ .debug_frame   0x00002aec       0x38 /another_disk/Project/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin/../lib/gcc/armv5tl-montavista-linuxeabi/3.4.3/libgcc.a(_divdi3.oS)
+ .debug_frame   0x00002b24       0x38 /another_disk/Project/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin/../lib/gcc/armv5tl-montavista-linuxeabi/3.4.3/libgcc.a(_udivdi3.oS)
+
+.debug_pubnames
+                0x00000000     0x1e8d
+ .debug_pubnames
+                0x00000000       0x44 board/dm355_ipnc/libdm355_ipnc.a(timer.o)
+ .debug_pubnames
+                0x00000044      0x183 cpu/arm926ejs/libarm926ejs.a(interrupts.o)
+ .debug_pubnames
+                0x000001c7       0x71 lib_arm/libarm.a(board.o)
+ .debug_pubnames
+                0x00000238      0x403 net/libnet.a(net.o)
+ .debug_pubnames
+                0x0000063b       0x20 net/libnet.a(tftp.o)
+ .debug_pubnames
+                0x0000065b       0x82 net/libnet.a(bootp.o)
+ .debug_pubnames
+                0x000006dd       0x2e net/libnet.a(rarp.o)
+ .debug_pubnames
+                0x0000070b       0x25 net/libnet.a(eth.o)
+ .debug_pubnames
+                0x00000730       0x69 drivers/libdrivers.a(dm9000.o)
+ .debug_pubnames
+                0x00000799       0xf4 drivers/libdrivers.a(serial.o)
+ .debug_pubnames
+                0x0000088d       0x69 drivers/libdrivers.a(ns16550.o)
+ .debug_pubnames
+                0x000008f6       0x43 drivers/nand/libnand.a(nand.o)
+ .debug_pubnames
+                0x00000939       0x6c drivers/nand/libnand.a(nand_base.o)
+ .debug_pubnames
+                0x000009a5       0x38 drivers/nand/libnand.a(nand_ids.o)
+ .debug_pubnames
+                0x000009dd       0x3f drivers/nand/libnand.a(nand_ecc.o)
+ .debug_pubnames
+                0x00000a1c       0x60 drivers/nand/libnand.a(nand_bbt.o)
+ .debug_pubnames
+                0x00000a7c       0x5b common/libcommon.a(main.o)
+ .debug_pubnames
+                0x00000ad7       0x4c common/libcommon.a(cmd_autoscript.o)
+ .debug_pubnames
+                0x00000b23       0x38 common/libcommon.a(cmd_bdinfo.o)
+ .debug_pubnames
+                0x00000b5b       0x47 common/libcommon.a(cmd_boot.o)
+ .debug_pubnames
+                0x00000ba2       0xce common/libcommon.a(cmd_bootm.o)
+ .debug_pubnames
+                0x00000c70       0x3a common/libcommon.a(cmd_console.o)
+ .debug_pubnames
+                0x00000caa      0x1c9 common/libcommon.a(cmd_load.o)
+ .debug_pubnames
+                0x00000e73      0x1e7 common/libcommon.a(cmd_mem.o)
+ .debug_pubnames
+                0x0000105a       0x36 common/libcommon.a(cmd_misc.o)
+ .debug_pubnames
+                0x00001090       0x5b common/libcommon.a(cmd_nand.o)
+ .debug_pubnames
+                0x000010eb       0xc8 common/libcommon.a(cmd_net.o)
+ .debug_pubnames
+                0x000011b3       0xf7 common/libcommon.a(cmd_nvedit.o)
+ .debug_pubnames
+                0x000012aa       0x88 common/libcommon.a(command.o)
+ .debug_pubnames
+                0x00001332      0x10e common/libcommon.a(console.o)
+ .debug_pubnames
+                0x00001440       0x76 common/libcommon.a(devices.o)
+ .debug_pubnames
+                0x000014b6       0xb3 common/libcommon.a(dlmalloc.o)
+ .debug_pubnames
+                0x00001569       0xa5 common/libcommon.a(env_common.o)
+ .debug_pubnames
+                0x0000160e       0x75 common/libcommon.a(env_nand.o)
+ .debug_pubnames
+                0x00001683       0x35 common/libcommon.a(exports.o)
+ .debug_pubnames
+                0x000016b8      0x116 common/libcommon.a(lists.o)
+ .debug_pubnames
+                0x000017ce       0x22 common/libcommon.a(s_record.o)
+ .debug_pubnames
+                0x000017f0       0xd5 common/libcommon.a(xyzModem.o)
+ .debug_pubnames
+                0x000018c5       0x20 common/libcommon.a(crc16.o)
+ .debug_pubnames
+                0x000018e5       0x2e lib_generic/libgeneric.a(crc32.o)
+ .debug_pubnames
+                0x00001913       0x35 lib_generic/libgeneric.a(display_options.o)
+ .debug_pubnames
+                0x00001948      0x130 lib_generic/libgeneric.a(string.o)
+ .debug_pubnames
+                0x00001a78       0x5a lib_generic/libgeneric.a(vsprintf.o)
+ .debug_pubnames
+                0x00001ad2       0xab lib_generic/libgeneric.a(zlib.o)
+ .debug_pubnames
+                0x00001b7d       0x1d lib_generic/libgeneric.a(ctype.o)
+ .debug_pubnames
+                0x00001b9a       0xc5 board/dm355_ipnc/libdm355_ipnc.a(dm355_ipnc.o)
+ .debug_pubnames
+                0x00001c5f       0x26 board/dm355_ipnc/libdm355_ipnc.a(nand.o)
+ .debug_pubnames
+                0x00001c85       0x7c cpu/arm926ejs/libarm926ejs.a(cpu.o)
+ .debug_pubnames
+                0x00001d01       0x25 lib_arm/libarm.a(armlinux.o)
+ .debug_pubnames
+                0x00001d26       0x22 lib_arm/libarm.a(cache.o)
+ .debug_pubnames
+                0x00001d48       0x1d lib_arm/libarm.a(div0.o)
+ .debug_pubnames
+                0x00001d65       0x84 drivers/nand/libnand.a(nand_util.o)
+ .debug_pubnames
+                0x00001de9       0x45 /another_disk/Project/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin/../lib/gcc/armv5tl-montavista-linuxeabi/3.4.3/libgcc.a(bpabi.oS)
+ .debug_pubnames
+                0x00001e2e       0x1f /another_disk/Project/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin/../lib/gcc/armv5tl-montavista-linuxeabi/3.4.3/libgcc.a(_divdi3.oS)
+ .debug_pubnames
+                0x00001e4d       0x20 /another_disk/Project/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin/../lib/gcc/armv5tl-montavista-linuxeabi/3.4.3/libgcc.a(_udivdi3.oS)
+ .debug_pubnames
+                0x00001e6d       0x20 /another_disk/Project/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin/../lib/gcc/armv5tl-montavista-linuxeabi/3.4.3/libgcc.a(_clz.oS)
+
+.debug_str      0x00000000     0x473f
+ .debug_str     0x00000000      0x16b board/dm355_ipnc/libdm355_ipnc.a(timer.o)
+                                0x178 (size before relaxing)
+ .debug_str     0x0000016b      0x246 cpu/arm926ejs/libarm926ejs.a(interrupts.o)
+                                0x2da (size before relaxing)
+ .debug_str     0x000003b1      0x259 lib_arm/libarm.a(board.o)
+                                0x34f (size before relaxing)
+ .debug_str     0x0000060a      0x659 net/libnet.a(net.o)
+                                0x851 (size before relaxing)
+ .debug_str     0x00000c63       0xec net/libnet.a(tftp.o)
+                                0x303 (size before relaxing)
+ .debug_str     0x00000d4f      0x267 net/libnet.a(bootp.o)
+                                0x4df (size before relaxing)
+ .debug_str     0x00000fb6       0x4c net/libnet.a(rarp.o)
+                                0x21f (size before relaxing)
+ .debug_str     0x00001002       0x15 net/libnet.a(eth.o)
+                                0x1d9 (size before relaxing)
+ .debug_str     0x00001017      0x16a drivers/libdrivers.a(dm9000.o)
+                                0x2ef (size before relaxing)
+ .debug_str     0x00001181       0xa3 drivers/libdrivers.a(serial.o)
+                                0x310 (size before relaxing)
+ .debug_str     0x00001224       0x63 drivers/libdrivers.a(ns16550.o)
+                                0x14f (size before relaxing)
+ .debug_str     0x00001287      0x3f3 drivers/nand/libnand.a(nand.o)
+                                0x685 (size before relaxing)
+ .debug_str     0x0000167a      0x555 drivers/nand/libnand.a(nand_base.o)
+                                0xbb6 (size before relaxing)
+ .debug_str     0x00001bcf        0xb drivers/nand/libnand.a(nand_ids.o)
+                                0x1c5 (size before relaxing)
+ .debug_str     0x00001bda       0x7b drivers/nand/libnand.a(nand_ecc.o)
+                                0x403 (size before relaxing)
+ .debug_str     0x00001c55      0x22e drivers/nand/libnand.a(nand_bbt.o)
+                                0x894 (size before relaxing)
+ .debug_str     0x00001e83      0x1ce common/libcommon.a(main.o)
+                                0x2d3 (size before relaxing)
+ .debug_str     0x00002051       0xbc common/libcommon.a(cmd_autoscript.o)
+                                0x2ab (size before relaxing)
+ .debug_str     0x0000210d       0x35 common/libcommon.a(cmd_bdinfo.o)
+                                0x2a0 (size before relaxing)
+ .debug_str     0x00002142       0x34 common/libcommon.a(cmd_boot.o)
+                                0x1dc (size before relaxing)
+ .debug_str     0x00002176      0x1c7 common/libcommon.a(cmd_bootm.o)
+                                0x52c (size before relaxing)
+ .debug_str     0x0000233d       0xc5 common/libcommon.a(cmd_console.o)
+                                0x27b (size before relaxing)
+ .debug_str     0x00002402      0x32b common/libcommon.a(cmd_load.o)
+                                0x618 (size before relaxing)
+ .debug_str     0x0000272d      0x208 common/libcommon.a(cmd_mem.o)
+                                0x410 (size before relaxing)
+ .debug_str     0x00002935       0x27 common/libcommon.a(cmd_misc.o)
+                                0x1d0 (size before relaxing)
+ .debug_str     0x0000295c      0x161 common/libcommon.a(cmd_nand.o)
+                                0x8db (size before relaxing)
+ .debug_str     0x00002abd       0xba common/libcommon.a(cmd_net.o)
+                                0x345 (size before relaxing)
+ .debug_str     0x00002b77      0x102 common/libcommon.a(cmd_nvedit.o)
+                                0x3da (size before relaxing)
+ .debug_str     0x00002c79       0xb9 common/libcommon.a(command.o)
+                                0x265 (size before relaxing)
+ .debug_str     0x00002d32       0xee common/libcommon.a(console.o)
+                                0x408 (size before relaxing)
+ .debug_str     0x00002e20       0x44 common/libcommon.a(devices.o)
+                                0x312 (size before relaxing)
+ .debug_str     0x00002e64      0x2a3 common/libcommon.a(dlmalloc.o)
+                                0x52d (size before relaxing)
+ .debug_str     0x00003107       0x97 common/libcommon.a(env_common.o)
+                                0x2ce (size before relaxing)
+ .debug_str     0x0000319e       0x44 common/libcommon.a(env_nand.o)
+                                0x523 (size before relaxing)
+ .debug_str     0x000031e2       0x25 common/libcommon.a(exports.o)
+                                0x244 (size before relaxing)
+ .debug_str     0x00003207      0x1dc common/libcommon.a(lists.o)
+                                0x39f (size before relaxing)
+ .debug_str     0x000033e3       0x3a common/libcommon.a(s_record.o)
+                                0x1a1 (size before relaxing)
+ .debug_str     0x0000341d      0x1b1 common/libcommon.a(xyzModem.o)
+                                0x362 (size before relaxing)
+ .debug_str     0x000035ce       0x25 common/libcommon.a(crc16.o)
+                                0x17c (size before relaxing)
+ .debug_str     0x000035f3       0xb3 lib_generic/libgeneric.a(crc32.o)
+                                0x193 (size before relaxing)
+ .debug_str     0x000036a6       0x2d lib_generic/libgeneric.a(display_options.o)
+                                0x197 (size before relaxing)
+ .debug_str     0x000036d3       0xd7 lib_generic/libgeneric.a(string.o)
+                                0x25f (size before relaxing)
+ .debug_str     0x000037aa       0x79 lib_generic/libgeneric.a(vsprintf.o)
+                                0x22d (size before relaxing)
+ .debug_str     0x00003823      0x3b8 lib_generic/libgeneric.a(zlib.o)
+                                0x63f (size before relaxing)
+ .debug_str     0x00003bdb        0x8 lib_generic/libgeneric.a(ctype.o)
+                                 0xf1 (size before relaxing)
+ .debug_str     0x00003be3      0x150 board/dm355_ipnc/libdm355_ipnc.a(dm355_ipnc.o)
+                                0x3ab (size before relaxing)
+ .debug_str     0x00003d33      0x2bc board/dm355_ipnc/libdm355_ipnc.a(nand.o)
+                                0x948 (size before relaxing)
+ .debug_str     0x00003fef       0x7a cpu/arm926ejs/libarm926ejs.a(cpu.o)
+                                0x224 (size before relaxing)
+ .debug_str     0x00004069      0x25c lib_arm/libarm.a(armlinux.o)
+                                0x5ed (size before relaxing)
+ .debug_str     0x000042c5       0x22 lib_arm/libarm.a(cache.o)
+                                0x16e (size before relaxing)
+ .debug_str     0x000042e7        0xe lib_arm/libarm.a(div0.o)
+                                 0xd6 (size before relaxing)
+ .debug_str     0x000042f5      0x1d2 drivers/nand/libnand.a(nand_util.o)
+                                0x921 (size before relaxing)
+ .debug_str     0x000044c7       0x78 /another_disk/Project/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin/../lib/gcc/armv5tl-montavista-linuxeabi/3.4.3/libgcc.a(bpabi.oS)
+                                 0xe2 (size before relaxing)
+ .debug_str     0x0000453f      0x1f6 /another_disk/Project/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin/../lib/gcc/armv5tl-montavista-linuxeabi/3.4.3/libgcc.a(_divdi3.oS)
+                                0x30d (size before relaxing)
+ .debug_str     0x00004735        0xa /another_disk/Project/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin/../lib/gcc/armv5tl-montavista-linuxeabi/3.4.3/libgcc.a(_udivdi3.oS)
+                                0x304 (size before relaxing)
+ .debug_str     0x0000473f        0x0 /another_disk/Project/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin/../lib/gcc/armv5tl-montavista-linuxeabi/3.4.3/libgcc.a(_clz.oS)
+                                0x287 (size before relaxing)
+
+.comment        0x00000000      0xe38
+ .comment       0x00000000       0x41 board/dm355_ipnc/libdm355_ipnc.a(timer.o)
+ .comment       0x00000041       0x41 cpu/arm926ejs/libarm926ejs.a(interrupts.o)
+ .comment       0x00000082       0x41 lib_arm/libarm.a(board.o)
+ .comment       0x000000c3       0x41 net/libnet.a(net.o)
+ .comment       0x00000104       0x41 net/libnet.a(tftp.o)
+ .comment       0x00000145       0x41 net/libnet.a(bootp.o)
+ .comment       0x00000186       0x41 net/libnet.a(rarp.o)
+ .comment       0x000001c7       0x41 net/libnet.a(eth.o)
+ .comment       0x00000208       0x41 drivers/libdrivers.a(dm9000.o)
+ .comment       0x00000249       0x41 drivers/libdrivers.a(serial.o)
+ .comment       0x0000028a       0x41 drivers/libdrivers.a(ns16550.o)
+ .comment       0x000002cb       0x41 drivers/nand/libnand.a(nand.o)
+ .comment       0x0000030c       0x41 drivers/nand/libnand.a(nand_base.o)
+ .comment       0x0000034d       0x41 drivers/nand/libnand.a(nand_ids.o)
+ .comment       0x0000038e       0x41 drivers/nand/libnand.a(nand_ecc.o)
+ .comment       0x000003cf       0x41 drivers/nand/libnand.a(nand_bbt.o)
+ .comment       0x00000410       0x41 common/libcommon.a(main.o)
+ .comment       0x00000451       0x41 common/libcommon.a(cmd_autoscript.o)
+ .comment       0x00000492       0x41 common/libcommon.a(cmd_bdinfo.o)
+ .comment       0x000004d3       0x41 common/libcommon.a(cmd_boot.o)
+ .comment       0x00000514       0x41 common/libcommon.a(cmd_bootm.o)
+ .comment       0x00000555       0x41 common/libcommon.a(cmd_console.o)
+ .comment       0x00000596       0x41 common/libcommon.a(cmd_load.o)
+ .comment       0x000005d7       0x41 common/libcommon.a(cmd_mem.o)
+ .comment       0x00000618       0x41 common/libcommon.a(cmd_misc.o)
+ .comment       0x00000659       0x41 common/libcommon.a(cmd_nand.o)
+ .comment       0x0000069a       0x41 common/libcommon.a(cmd_net.o)
+ .comment       0x000006db       0x41 common/libcommon.a(cmd_nvedit.o)
+ .comment       0x0000071c       0x41 common/libcommon.a(command.o)
+ .comment       0x0000075d       0x41 common/libcommon.a(console.o)
+ .comment       0x0000079e       0x41 common/libcommon.a(devices.o)
+ .comment       0x000007df       0x41 common/libcommon.a(dlmalloc.o)
+ .comment       0x00000820       0x41 common/libcommon.a(env_common.o)
+ .comment       0x00000861       0x41 common/libcommon.a(env_nand.o)
+ .comment       0x000008a2       0x41 common/libcommon.a(exports.o)
+ .comment       0x000008e3       0x41 common/libcommon.a(lists.o)
+ .comment       0x00000924       0x41 common/libcommon.a(s_record.o)
+ .comment       0x00000965       0x41 common/libcommon.a(xyzModem.o)
+ .comment       0x000009a6       0x41 common/libcommon.a(crc16.o)
+ .comment       0x000009e7       0x41 lib_generic/libgeneric.a(crc32.o)
+ .comment       0x00000a28       0x41 lib_generic/libgeneric.a(display_options.o)
+ .comment       0x00000a69       0x41 lib_generic/libgeneric.a(string.o)
+ .comment       0x00000aaa       0x41 lib_generic/libgeneric.a(vsprintf.o)
+ .comment       0x00000aeb       0x41 lib_generic/libgeneric.a(zlib.o)
+ .comment       0x00000b2c       0x41 lib_generic/libgeneric.a(ctype.o)
+ .comment       0x00000b6d       0x41 board/dm355_ipnc/libdm355_ipnc.a(dm355_ipnc.o)
+ .comment       0x00000bae       0x41 board/dm355_ipnc/libdm355_ipnc.a(nand.o)
+ .comment       0x00000bef       0x41 cpu/arm926ejs/libarm926ejs.a(cpu.o)
+ .comment       0x00000c30       0x41 lib_arm/libarm.a(armlinux.o)
+ .comment       0x00000c71       0x41 lib_arm/libarm.a(cache.o)
+ .comment       0x00000cb2       0x41 lib_arm/libarm.a(div0.o)
+ .comment       0x00000cf3       0x41 drivers/nand/libnand.a(nand_util.o)
+ .comment       0x00000d34       0x41 /another_disk/Project/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin/../lib/gcc/armv5tl-montavista-linuxeabi/3.4.3/libgcc.a(bpabi.oS)
+ .comment       0x00000d75       0x41 /another_disk/Project/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin/../lib/gcc/armv5tl-montavista-linuxeabi/3.4.3/libgcc.a(_divdi3.oS)
+ .comment       0x00000db6       0x41 /another_disk/Project/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin/../lib/gcc/armv5tl-montavista-linuxeabi/3.4.3/libgcc.a(_udivdi3.oS)
+ .comment       0x00000df7       0x41 /another_disk/Project/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin/../lib/gcc/armv5tl-montavista-linuxeabi/3.4.3/libgcc.a(_clz.oS)
+
+.debug_ranges   0x00000000      0x8e8
+ .debug_ranges  0x00000000       0x20 lib_arm/libarm.a(board.o)
+ .debug_ranges  0x00000020       0xd0 net/libnet.a(net.o)
+ .debug_ranges  0x000000f0       0x20 net/libnet.a(tftp.o)
+ .debug_ranges  0x00000110       0x60 net/libnet.a(bootp.o)
+ .debug_ranges  0x00000170       0xe8 drivers/nand/libnand.a(nand_base.o)
+ .debug_ranges  0x00000258       0x18 drivers/nand/libnand.a(nand_ecc.o)
+ .debug_ranges  0x00000270       0x60 drivers/nand/libnand.a(nand_bbt.o)
+ .debug_ranges  0x000002d0       0x58 common/libcommon.a(main.o)
+ .debug_ranges  0x00000328       0x18 common/libcommon.a(cmd_autoscript.o)
+ .debug_ranges  0x00000340       0x48 common/libcommon.a(cmd_load.o)
+ .debug_ranges  0x00000388       0x30 common/libcommon.a(cmd_mem.o)
+ .debug_ranges  0x000003b8       0x58 common/libcommon.a(cmd_nand.o)
+ .debug_ranges  0x00000410       0x18 common/libcommon.a(cmd_nvedit.o)
+ .debug_ranges  0x00000428       0x38 common/libcommon.a(command.o)
+ .debug_ranges  0x00000460       0x38 common/libcommon.a(console.o)
+ .debug_ranges  0x00000498       0x18 common/libcommon.a(devices.o)
+ .debug_ranges  0x000004b0       0x50 common/libcommon.a(dlmalloc.o)
+ .debug_ranges  0x00000500       0x18 common/libcommon.a(xyzModem.o)
+ .debug_ranges  0x00000518       0x20 lib_generic/libgeneric.a(vsprintf.o)
+ .debug_ranges  0x00000538      0x110 lib_generic/libgeneric.a(zlib.o)
+ .debug_ranges  0x00000648       0x28 board/dm355_ipnc/libdm355_ipnc.a(dm355_ipnc.o)
+ .debug_ranges  0x00000670       0x18 board/dm355_ipnc/libdm355_ipnc.a(nand.o)
+ .debug_ranges  0x00000688       0x30 lib_arm/libarm.a(armlinux.o)
+ .debug_ranges  0x000006b8       0x80 drivers/nand/libnand.a(nand_util.o)
+ .debug_ranges  0x00000738       0xd8 /another_disk/Project/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin/../lib/gcc/armv5tl-montavista-linuxeabi/3.4.3/libgcc.a(_divdi3.oS)
+ .debug_ranges  0x00000810       0xd8 /another_disk/Project/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin/../lib/gcc/armv5tl-montavista-linuxeabi/3.4.3/libgcc.a(_udivdi3.oS)

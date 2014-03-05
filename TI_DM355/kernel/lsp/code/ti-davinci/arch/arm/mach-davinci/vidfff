@@ -1,0 +1,4 @@
+#!/bin/bash
+
+/usr/bin/vim -d $1 ../mach-davinci_bad_during_1G08_modify/$1
+

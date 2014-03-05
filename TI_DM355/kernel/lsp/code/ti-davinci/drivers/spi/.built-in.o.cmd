@@ -1,0 +1,1 @@
+cmd_drivers/spi/built-in.o :=  /media/workspace/svn/TI_DM355_NC1000/trunk/cross_compiler/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin/arm_v5t_le-ld -EL   -r -o drivers/spi/built-in.o drivers/spi/spi.o drivers/spi/dm355_spi_master.o drivers/spi/dm355_spi_bitbang.o drivers/spi/spi_bitbang.o

@@ -1,0 +1,1 @@
+#define CONFIG_FB_DAVINCI_DM355 1

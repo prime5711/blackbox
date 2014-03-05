@@ -1,0 +1,1 @@
+cmd_fs/proc/proc.o := /media/workspace/svn/TI_DM355_NC1000/trunk/cross_compiler/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin/arm_v5t_le-ld -EL   -r -o fs/proc/proc.o fs/proc/task_mmu.o fs/proc/inode.o fs/proc/root.o fs/proc/base.o fs/proc/generic.o fs/proc/array.o fs/proc/kmsg.o fs/proc/proc_tty.o fs/proc/proc_misc.o

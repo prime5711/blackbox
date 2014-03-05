@@ -1,0 +1,474 @@
+UBL: booting to U-Boot
+
+
+U-Boot 1.2.0 (Jul 21 2010 - 11:21:27) IPNC-U-1.0.3
+
+DRAM:  128 MB
+NAND:  NAND device: Manufacturer ID: 0xec, Chip ID: 0x75 (Samsung NAND 32MiB 3,3V 8-bit)
+Bad block table found at page 65504, version 0x01
+Bad block table found at page 65472, version 0x01
+32 MiB
+In:    serial
+Out:   serial
+Err:   serial
+ARM Clock :- 216MHz
+DDR Clock :- 216MHz
+Hit any key to stop autoboot:  0
+
+NAND read: device 0 offset 0x1000000, size 0xa00000
+ 10485760 bytes read: OK
+
+NAND read: device 0 offset 0x400000, size 0x400000
+ 4194304 bytes read: OK
+## Booting image at 80700000 ...
+OK
+
+Starting kernel ...
+
+UBL: detected valid U-BOOT magic number.................................................................. done, booting thek
+UBL: booting to U-Boot
+
+
+U-Boot 1.2.0 (Jul 21 2010 - 11:21:27) IPNC-U-1.0.3
+
+DRAM:  128 MB
+NAND:  NAND device: Manufacturer ID: 0xec, Chip ID: 0x75 (Samsung NAND 32MiB 3,3V 8-bit)
+Bad block table found at page 65504, version 0x01
+Bad block table found at page 65472, version 0x01
+32 MiB
+In:    serial
+Out:   serial
+Err:   serial
+ARM Clock :- 216MHz
+DDR Clock :- 216MHz
+Hit any key to stop autoboot:  0
+
+NAND read: device 0 offset 0x1000000, size 0xa00000
+ 10485760 bytes read: OK
+
+NAND read: device 0 offset 0x400000, size 0x400000
+ 4194304 bytes read: OK
+## Booting image at 80700000 ...
+OK
+
+Starting kernel ...
+
+Linux version 2.6.10_mvl401_NC100M (nasopat@nasopat-VirtualBox) (gcc version 3.4.3 (MontaVista 3.4.3-25.0.104.0600975 2006-07-06)) #273 Wed Feb 20 23:28:35 KST 2013
+CPU: ARM926EJ-Sid(wb) [41069265] revision 5 (ARMv5TEJ)
+CPU0: D VIVT write-back cache
+CPU0: I cache: 16384 bytes, associativity 4, 32 byte lines, 128 sets
+CPU0: D cache: 8192 bytes, associativity 4, 32 byte lines, 64 sets
+Machine: DaVinci DM355 IPNetCam
+Memory policy: ECC disabled, Data cache writeback
+DM0350
+Built 1 zonelists
+Kernel command line: mem=72M console=ttyS1,115200n8 root=/dev/ram0 rw initrd=0x82000000,10M ip=off v4l2_video_capture=:device=MT9M131 video=davincifb:vid1=720x576x16,2500K:osd0=720x576x16,2025K
+MT9M131 selected
+PID hash table entries: 512 (order: 9, 8192 bytes)
+Console: colour dummy device 80x30
+Dentry cache hash table entries: 16384 (order: 4, 65536 bytes)
+Inode-cache hash table entries: 8192 (order: 3, 32768 bytes)
+Memory: 72MB = 72MB total
+Memory: 59904KB available (2185K code, 501K data, 136K init)
+Mount-cache hash table entries: 512 (order: 0, 4096 bytes)
+CPU: Testing write buffer coherency: ok
+spawn_desched_task(00000000)
+desched cpu_callback 3/00000000
+ksoftirqd started up.
+desched cpu_callback 2/00000000
+checking if image is initramfs...desched thread 0 started up.
+it isn't (no cpio magic); looks like an initrd
+Freeing initrd memory: 10240K
+NET: Registered protocol family 16
+Registering platform device 'serial8250.0'. Parent at platform
+Registering platform device 'nand_davinci.0'. Parent at platform
+Registering platform device 'mmc.0'. Parent at platform
+DaVinci I2C DEBUG: 11:12:20 Nov 26 2012
+Registering platform device 'i2c'. Parent at platform
+SCSI subsystem initialized
+usbcore: registered new driver hub
+musb_hdrc: version 2.2a/db-0.4.8 [pio] [host] [debug=0]
+Registering platform device 'musb_hdrc'. Parent at platform
+musb_hdrc: USB Host mode controller at c5000000 using PIO, IRQ 12
+musb_hdrc musb_hdrc: new USB bus registered, assigned bus number 1
+hub 1-0:1.0: USB hub found
+hub 1-0:1.0: 1 port detected
+Registering platform device 'dm_spi.0'. Parent at platform
+NetWinder Floating Point Emulator V0.97 (double precision)
+JFFS2 version 2.2. (NAND) (C) 2001-2003 Red Hat, Inc.
+Initializing Cryptographic API
+Registering platform device 'dm355fb.0'. Parent at platform
+Console: switching to colour frame buffer device 90x30
+watchdog: TI DaVinci Watchdog Timer: timer margin 64 sec
+Serial: 8250/16550 driver $Revision: 1.90 $ 3 ports, IRQ sharing disabled
+Registering platform device 'serial8250'. Parent at platform
+ttyS0 at MMIO 0x1c20000 (irq = 40) is a 16550A
+ttyS1 at MMIO 0x1c20400 (irq = 41) is a 16550A
+ttyS2 at MMIO 0x1e06000 (irq = 14) is a 16550A
+io scheduler noop registered
+io scheduler anticipatory registered
+RAMDISK driver initialized: 16 RAM disks of 32768K size 1024 blocksize
+loop: loaded (max 8 devices)
+elevator: using anticipatory as default io scheduler
+ sbulla: unknown partition table
+i2c /dev entries driver
+Linux video capture interface: v1.00
+Registering platform device 'vpfe.1'. Parent at platform
+
+PLL1 DIV4 : [0x8003]=======>[0x8002]
+MT9M131_INIT
+OK to register MT9M131 I2C client.
+First Addr = 0x0048 Checking Camera ID is = 0x1915 0x1C00
+First Addr = 0x0048 Checking Camera ID is = 0x1915 0x1C00
+First Addr = 0x0048 Checking Camera ID is = 0x1915 0x1C00
+vpfe vpfe.1: DaVinci v4l2 capture driver V1.0 loaded
+ipipe major#: 254, minor# 0
+Registering platform device 'dm355_ipipe.2'. Parent at platform
+ipipe driver registered
+nand_davinci nand_davinci.0: Using 4-bit hardware ECC
+NAND device: Manufacturer ID: 0xec, Chip ID: 0x75 (Samsung NAND 32MiB 3,3V 8-bit)
+Creating 6 MTD partitions on "nand_davinci.0":
+0x00000000-0x00200000 : "bootloader"
+0x00200000-0x00400000 : "kernel_0"
+0x00400000-0x00600000 : "kernel_1"
+0x00600000-0x01000000 : "filesystem_0"
+0x01000000-0x01a00000 : "filesystem_1"
+0x01a00000-0x02000000 : "data"
+nand_davinci nand_davinci.0: hardware revision: 2.3
+drivers/spi/spi.c:scan_boardinfo:304
+ modias AIC26 irq 0 max_speed 2000000 bus_num 65535 chip_select 0 mode 0
+dm_spi.0: dm355 SPI Controller driver at 0xc50d6000 (irq = 42)
+mmc mmc.0: Supporting 4-bit mode
+mmc mmc.0: Using DMA mode
+Acquired channel num = [15]
+mmc mmc.0: max_phys_segs=16
+mmc mmc.0: max_hw_segs=16
+mmc mmc.0: max_seg_size=2097120
+Registering platform device 'davinci-audio.0'. Parent at platform
+mmc0: Problem switching card into high-speed mode!
+MMC: selected 50.000MHz transfer rate
+NET: Registered protocol family 2
+mmcblk0: mmc0:e624 SD04G 3872256KiB
+ mmcblk0: p1
+IP: routing cache hash table of 512 buckets, 4Kbytes
+TCP: Hash tables configured (established 8192 bind 16384)
+NET: Registered protocol family 1
+NET: Registered protocol family 17
+RAMDISK: Compressed image found at block 0
+EXT2-fs warning: mounting unchecked fs, running e2fsck is recommended
+VFS: Mounted root (ext2 filesystem).
+Freeing init memory: 136K
+INIT: version 2.85 booting
+0
+mknod: /dev/ptmx: File exists
+Mounting a tmpfs over /dev...done.
+Creating initial device nodes...done.
+Mounting local filesystems: mount none on /dev/shm type tmpfs (rw,size=5M)
+none on /var/run type tmpfs (rw)
+none on /tmp type tmpfs (rw,sync)
+INIT: Entering runlevel: 3
+rmmod: cmemk.ko: No such file or directory
+rmmod: dm350mmap.ko: No such file or directory
+rmmod: user_gpio.ko: No such file or directory
+ioremap_nocache(0x84e00000, 52428800)=0xc5100000
+allocated heap buffer 0xc5100000 of size 0xcf000
+cmem initialized 12 pools between 0x84e00000 and 0x88000000
+rmmod: csl: No such file or directory
+CSL: Module install successful, device major num = 250
+CSL: Build date/time : Jun  4 2012 12:45:40
+CSL: Version 1.00
+OLD Version==============================
+OLD Version==============================
+Checking Update...
+Current Kernel Version : 0.120
+Current Root File System Version : 0.109
+Version control file : version_ctrl_0.109.sh
+Check update information...
+Update Type : blackbox_kernel
+There is no kernel image file
+sd Card mount confirm!!
+mount error is OK~!!
+mount: special device dev/mtdblock5 does not exist
+cp: /mnt/nand/Info/*: No such file or directory
+umount: /mnt/nand: Invalid argument
+SD Mount Error...[16]avi file interval =60
+./encode_stream -r 1280x720 -m 2 -b 4000000 -f 7 -y 0 -z 9.000000 &
+CBR
+NEW OPTION :0
+P 1280x720 MODE
+@@@@@@@@@*** capture
+id ==> 1280x720p
+Width = 1280, caMT9M131 Set STD...
+ptureHeight = 720, resolution : 4
+
+
+Open Successfully Video Device, FD = [21]
+Camera I2C Addr = 0x0048
+Camera I2C Addr = 0x0048
+Camera I2C Addr = 0x0048
+TOTAL_MEM_SIZE = 37879808
+HD 1280 x 720 15fps
+framerateflag : 0
+BITRATE_CTRL : CBR(LOW_DELAY)
+CPU MIPS = 107.720001
+CPU is 216Mhz
+BITRATE = [4000000]
+intraFrameInterval =15
+Overlay_Info=7
+Microphone recorder davinci-McBSP: McBSP2  io_base: 0xe1204000
+selected
+MT9M131_MODE_P1280_720 in mt9m131.c
+pixfmt->width : 1280
+vpfe->vwin.left : 0
+vpfe->bounds.width : 1280
+pixfmt->height : 720
+vpfe->vwin.top : 0
+vpfe->bounds.height : 720
+
+PLL1 DIV4 : [0x8002]=======>[0x8002]
+MT9M131 bt656 diabled
+capture driver intialization sucessfully completed--3
+[GPSControlThrFxn] Timezone Info = [9.000000]
+cmd ./Appro_avi_save /mnt/mmc/media/C20120912141607N.avi 60 11 15 1 0 0 75 -1 999
+
+======================
+=====>Gpio key event thread
+======================
+
+============================================
+=====>[UsbVBusCheckthread] key event thread
+============================================
+=======================
+--> Led GPIO control thread
+=======================
+
+============================================
+=====>[ResetBtnthread]Gpio key event thread
+============================================
+Could not GetVideoInfo()
+cmd ./Appro_avi_save /mnt/mmc/media/C20120912141607N.avi 60 11 15 1 0 0 75 -1 999
+Could not GetVideoInfo()
+cmd ./Appro_avi_save /mnt/mmc/media/C20120912141607N.avi 60 11 15 1 0 0 75 -1 999
+Could not GetVideoInfo()
+Stop Stroage Management
+Shared Memory Removed
+
+MontaVista(R) Linux(R) Professional Edition 4.0.1 (0502020)
+
+(none) login: Log: 2012/09/12_14:16:08.282 -> SERIAL <-
+Log:    Default Log file get stat() error
+sh: cannot create /mnt/mmc/media/.log: Directory nonexistent
+sh: cannot create /mnt/mmc/media/.log: Directory nonexistent
+avi file interval =60
+./encode_stream -r 1280x720 -m 2 -b 4000000 -f 7 -y 0 -z 9.000000 &
+CBR
+NEW OPTION :0
+P 1280x720 MODE
+@@@@@@@@@*** capture
+id ==> 1280x720p
+Width = 1280, caMT9M131 Set STD...
+ptureHeight = 720, resolution : 4
+
+
+Open Successfully Video Device, FD = [21]
+Camera I2C Addr = 0x0048
+Camera I2C Addr = 0x0048
+Camera I2C Addr = 0x0048
+TOTAL_MEM_SIZE = 37879808
+HD 1280 x 720 15fps
+framerateflag : 0
+BITRATE_CTRL : CBR(LOW_DELAY)
+CPU MIPS = 107.720001
+CPU is 216Mhz
+BITRATE = [4000000]
+intraFrameInterval =15
+Overlay_Info=7
+Microphone recorder selected
+MT9M131_MODE_P1280_720 in mt9m131.c
+pixfmt->width : 1280
+vpfe->vwin.left : 0
+vpfe->bounds.width : 1280
+pixfmt->height : 720
+vpfe->vwin.top : 0
+vpfe->bounds.height : 720
+
+PLL1 DIV4 : [0x8002]=======>[0x8002]
+MT9M131 bt656 diabled
+capture driver intialization sucessfully completed--3
+[GPSControlThrFxn] Timezone Info = [9.000000]
+cmd ./Appro_avi_save /mnt/mmc/media/C20120912141611N.avi 60 11 15 1 0 0 75 -1 1046
+
+======================
+=====>Gpio key event thread
+======================
+
+============================================
+=====>[UsbVBusCheckthread] key event thread
+============================================
+=======================
+--> Led GPIO control thread
+=======================
+
+============================================
+=====>[ResetBtnthread]Gpio key event thread
+============================================
+Could not GetVideoInfo()
+cmd ./Appro_avi_save /mnt/mmc/media/C20120912141611N.avi 60 11 15 1 0 0 75 -1 1046
+Could not GetVideoInfo()
+cmd ./Appro_avi_save /mnt/mmc/media/C20120912141611N.avi 60 11 15 1 0 0 75 -1 1046
+Could not GetVideoInfo()
+Stop Stroage Management
+Shared Memory Removed
+Log: 2012/09/12_14:16:12.371 -> SERIAL <-
+Log:    Default Log file get stat() error
+sh: cannot create /mnt/mmc/media/.log: Directory nonexistent
+sh: cannot create /mnt/mmc/media/.log: Directory nonexistent
+avi file interval =60
+./encode_stream -r 1280x720 -m 2 -b 4000000 -f 7 -y 0 -z 9.000000 &
+CBR
+NEW OPTION :0
+P 1280x720 MODE
+@@@@@@@@@*** capture
+id ==> 1280x720p
+Width = 1280, caMT9M131 Set STD...
+ptureHeight = 720, resolution : 4
+
+
+Open Successfully Video Device, FD = [21]
+Camera I2C Addr = 0x0048
+Camera I2C Addr = 0x0048
+Camera I2C Addr = 0x0048
+TOTAL_MEM_SIZE = 37879808
+HD 1280 x 720 15fps
+framerateflag : 0
+BITRATE_CTRL : CBR(LOW_DELAY)
+CPU MIPS = 107.720001
+CPU is 216Mhz
+BITRATE = [4000000]
+intraFrameInterval =15
+Overlay_Info=7
+Microphone recorder selected
+MT9M131_MODE_P1280_720 in mt9m131.c
+pixfmt->width : 1280
+vpfe->vwin.left : 0
+vpfe->bounds.width : 1280
+pixfmt->height : 720
+vpfe->vwin.top : 0
+vpfe->bounds.height : 720
+
+PLL1 DIV4 : [0x8002]=======>[0x8002]
+MT9M131 bt656 diabled
+capture driver intialization sucessfully completed--3
+[GPSControlThrFxn] Timezone Info = [9.000000]
+cmd ./Appro_avi_save /mnt/mmc/media/C20120912141615N.avi 60 11 15 1 0 0 75 -1 1086
+
+======================
+=====>Gpio key event thread
+======================
+
+============================================
+=====>[UsbVBusCheckthread] key event thread
+============================================
+=======================
+--> Led GPIO control thread
+=======================
+
+============================================
+=====>[ResetBtnthread]Gpio key event thread
+============================================
+Could not GetVideoInfo()
+cmd ./Appro_avi_save /mnt/mmc/media/C20120912141615N.avi 60 11 15 1 0 0 75 -1 1086
+Could not GetVideoInfo()
+cmd ./Appro_avi_save /mnt/mmc/media/C20120912141615N.avi 60 11 15 1 0 0 75 -1 1086
+Could not GetVideoInfo()
+Stop Stroage Management
+Shared Memory Removed
+Log: 2012/09/12_14:16:16.349 -> SERIAL <-
+Log:    Default Log file get stat() error
+sh: cannot create /mnt/mmc/media/.log: Directory nonexistent
+sh: cannot create /mnt/mmc/media/.log: Directory nonexistent
+avi file interval =60
+./encode_stream -r 1280x720 -m 2 -b 4000000 -f 7 -y 0 -z 9.000000 &
+CBR
+NEW OPTION :0
+P 1280x720 MODE
+@@@@@@@@@*** capture
+id ==> 1280x720p
+Width = 1280, caMT9M131 Set STD...
+ptureHeight = 720, resolution : 4
+
+
+Open Successfully Video Device, FD = [21]
+Camera I2C Addr = 0x0048
+Camera I2C Addr = 0x0048
+Camera I2C Addr = 0x0048
+TOTAL_MEM_SIZE = 37879808
+HD 1280 x 720 15fps
+framerateflag : 0
+BITRATE_CTRL : CBR(LOW_DELAY)
+CPU MIPS = 107.720001
+CPU is 216Mhz
+BITRATE = [4000000]
+intraFrameInterval =15
+Overlay_Info=7
+Microphone recorder selected
+MT9M131_MODE_P1280_720 in mt9m131.c
+pixfmt->width : 1280
+vpfe->vwin.left : 0
+vpfe->bounds.width : 1280
+pixfmt->height : 720
+vpfe->vwin.top : 0
+vpfe->bounds.height : 720
+
+PLL1 DIV4 : [0x8002]=======>[0x8002]
+MT9M131 bt656 diabled
+capture driver intialization sucessfully completed--3
+[GPSControlThrFxn] Timezone Info = [9.000000]
+cmd ./Appro_avi_save /mnt/mmc/media/C20120912141619N.avi 60 11 15 1 0 0 75 -1 1126
+
+======================
+=====>Gpio key event thread
+======================
+Could not GetVideoInfo()
+
+============================================
+=====>[UsbVBusCheckthread] key event thread
+============================================
+=======================
+--> Led GPIO control thread
+=======================
+
+============================================
+=====>[ResetBtnthread]Gpio key event thread
+============================================
+cmd ./Appro_avi_save /mnt/mmc/media/C20120912141619N.avi 60 11 15 1 0 0 75 -1 1126
+Could not GetVideoInfo()
+cmd ./Appro_avi_save /mnt/mmc/media/C20120912141619N.avi 60 11 15 1 0 0 75 -1 1126
+Could not GetVideoInfo()
+Stop Stroage Management
+Shared Memory Removed
+Log: 2012/09/12_14:16:20.319 -> SERIAL <-
+Log:    Default Log file get stat() error
+sh: cannot create /mnt/mmc/media/.log: Directory nonexistent
+sh: cannot create /mnt/mmc/media/.log: Directory nonexistent
+INIT: Switching to VBUS_ERR
+
+Log: 2012/09/12_14:16:21.239 -> SERIAL <-
+Log:    Default Log file get stat() error
+sh: cannot create /mnt/mmc/media/.log: Directory nonexistent
+sh: cannot create /mnt/mmc/media/.log: Directory nonexistent
+Log: 2012/09/12_14:16:21.293 -> SERIAL <-
+Log:    Default Log file get stat() error
+sh: cannot create /mnt/mmc/media/.log: Directory nonexistent
+sh: cannot create /mnt/mmc/media/.log: Directory nonexistent
+SendVBUS_ERR
+
+ing all processes the TERM signal... done.
+VBUS_ERR
+
+VBUS_ERR
+
+MMC: selected 50.000MHz transfer rate
+Sending all processes the KILL signal... done.
+Starting reboot command: reboot
+Rebooting.

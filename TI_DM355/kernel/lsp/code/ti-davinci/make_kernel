@@ -1,0 +1,24 @@
+#!/bin/bash
+
+
+
+make $1 $2 $3 $4 
+
+
+if [ "$1" = "uImage" ] ;  then
+    #rm ./uImage*
+
+    WIFI=`cat .config | grep "CONFIG_MACH_DAVINCI_DM355_IPNC_WIFI_MTD=y" `
+
+	cp .config config_ver_`cat .version`
+
+	if [ -z "$WIFI" ] ;  then
+    	cp arch/arm/boot/uImage uImage_NC1000S_2.0M_2.0M_`date +%Y_%m%d_%H%M`_rev`cat .version`
+		md5sum arch/arm/boot/uImage uImage_NC1000S_2.0M_2.0M_`date +%Y_%m%d_%H%M`_rev`cat .version`
+	else
+    	cp arch/arm/boot/uImage uImage_NC1000W_blackbox_2.5M_1.5M_`date +%Y_%m%d_%H%M`_rev`cat .version`
+		md5sum arch/arm/boot/uImage uImage_NC1000W_blackbox_2.5M_1.5M_`date +%Y_%m%d_%H%M`_rev`cat .version`
+	fi
+
+fi
+

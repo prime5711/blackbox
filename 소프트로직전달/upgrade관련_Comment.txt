@@ -1,0 +1,8 @@
+mtd5에 있던 Kernel_Version/Rootfs_Version/PC_Viewer를
+rootfs에 포함시킨다
+1. /mnt/nand jffs2로 mount하던 것을 rootfs에 포함시켜야 한다.
+2. rootfs /etc/ init script에서 jffs2로  mount하던 것을 없애야 한다
+3. update script에서도 없애야 한다.
+4. 이제는 반드시 Kernel/rootfs를 모두 Update하는 방식으로 고정해야 한다.
+   4.1 Kernel을 바꾸어도 Kernel Version정보는 Rootfs에 예전 것으로 그래도 남아있다.
+

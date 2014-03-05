@@ -1,0 +1,1 @@
+cmd_crypto/built-in.o :=  /media/workspace/svn/TI_DM355_NC1000/trunk/cross_compiler/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin/arm_v5t_le-ld -EL   -r -o crypto/built-in.o crypto/api.o crypto/scatterwalk.o crypto/cipher.o crypto/digest.o crypto/compress.o crypto/proc.o crypto/hmac.o crypto/md5.o crypto/sha1.o crypto/des.o crypto/deflate.o

@@ -1,0 +1,3 @@
+#PATH=/opt/mv_pro_4.0.1/montavista/pro/devkit/arm/v5t_le/bin:$PATH
+PATH=/work_vol/svn_nasopat/TI_DM36x/trunk/arm-2009q1/bin:$PATH
+make $1 $2 $3 $3 $4

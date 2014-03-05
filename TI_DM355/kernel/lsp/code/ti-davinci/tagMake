@@ -1,0 +1,52 @@
+#!/bin/sh
+Remove_cscopeAndTags() {
+    echo "clean tags & cscope files"
+    rm -vf cscope.* tags
+}
+
+Find_source() {
+    echo -n "Find ..."
+    find ./ \
+        -name "*.[chxsS]" > ./cscope.files
+
+
+# 	find /home/nasopat/workspace/NC1000_Series/trunk/sdk/dvsdk_1_30_01_41/demos/dm355/utils/include \
+#    	-name "*.[chxsS]" >> ./cscope.files
+#
+#	find /home/nasopat/workspace/NC1000_Series/trunk/sdk/dvsdk_1_30_01_41/codec_engine_2_00_01/packages \
+#     -name "*.[chxsS]" >> ./cscope.files
+
+
+    echo "done"
+}
+
+Create_cscope() {
+  echo -n "cscope ..."
+  cscope -b -q -R -k
+  echo "done"
+}
+
+Create_tags() {
+  echo -n "ctags ..."
+  ctags -L cscope.files
+#  ctags -R
+  echo "done"
+}
+
+if [ -z $1 ]; then 
+    START=`date +%s`
+    Remove_cscopeAndTags
+    Find_source
+    Create_cscope
+    Create_tags
+    END=`date +%s`
+    let Time=END-START
+    echo "Elapsed time :$Time seconds"
+elif [ "clean"= $2 ]; then 
+    START=`date +%s`
+    Remove_cscopeAndTags
+    END=`date +%s`
+    let Time=END-START
+    echo "Elapsed time :$Time seconds"
+fi
+

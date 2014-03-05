@@ -1,0 +1,1 @@
+#define CONFIG_DM355_IPNC_RTC 1
