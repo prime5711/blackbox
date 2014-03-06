@@ -38,14 +38,20 @@
 /* Flash Boot info */
 /*============================================================================*/
 //#define CFG_ENV_IS_IN_FLASH 	1		/* U-Boot env in NOR Flash   */
+#define NAND_IS_1G08U0B 	    1		/* U-Boot env in NOR Flash   */
 
 #define CFG_NO_FLASH    1
 
 #ifndef CFG_ENV_IS_IN_FLASH
 	#define CONFIG_INITRD_TAG  	1
 	#define CFG_ENV_IS_IN_NAND 	1               /* U-Boot env in NAND Flash  */
-	#define CFG_ENV_SECT_SIZE	0x40000		    /* Env sector Size */
-	#define CFG_ENV_SIZE		(16 * 1024)
+	#ifdef NAND_IS_1G08U0B
+		#define CFG_ENV_SECT_SIZE	0x20000		    /* Env sector Size */
+		#define CFG_ENV_SIZE		0x4000
+	#else
+		#define CFG_ENV_SECT_SIZE	0x40000		    /* Env sector Size */
+		#define CFG_ENV_SIZE		(16 * 1024)
+	#endif
 	
 //// if use K9F1G08 Samsung 1Gb NAND
 // shcho :strange after several boot : No space left ????
@@ -55,8 +61,21 @@
 #define CONFIG_INITRD_TAG  	1
 #define CFG_ENV_SECT_SIZE	CFG_FLASH_SECT_SZ	/* Env sector Size */
 #define CFG_ENV_SIZE		CFG_FLASH_SECT_SZ
-#define CFG_ENV_ADDR		(CFG_FLASH_BASE + 0x40000)
+
+	#ifdef NAND_IS_1G08U0B
+		#define CFG_ENV_ADDR		(CFG_FLASH_BASE + 0x01C0000)
+	#else
+		#define CFG_ENV_ADDR		(CFG_FLASH_BASE + 0x40000)
+	#endif
 #endif
+
+
+/* No command line, one static partition */
+#undef CONFIG_JFFS2_CMDLINE
+#define CONFIG_JFFS2_DEV		"nand0"
+#define CONFIG_JFFS2_PART_SIZE		0x00A00000
+#define CONFIG_JFFS2_PART_OFFSET	0x01A00000
+
 
 
 /*
@@ -219,7 +238,8 @@
 
 #define CFG_MAX_NAND_DEVICE     1	/* Max number of NAND devices */
 
-#ifdef CONFIG_DM355_NAND_128KB_BLOCK
+//  #ifdef CONFIG_DM355_NAND_128KB_BLOCK
+#ifdef NAND_IS_1G08U0B
 #define SECTORSIZE              2048
 #else
 #define SECTORSIZE              512 //(2048 * 2)

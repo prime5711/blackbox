@@ -1,0 +1,15 @@
+------------------------  NAND_programmer.pjt - Debug  ------------------------
+[nand.c] "C:\CCStudio_v3.3\tms470\cgtools\bin\cl470" -g -q -fr"D:/IPNC_UBL_nandprogramer/nand_programmer/Debug" -i"../include" -i"../include/common" -i"../csl/include" -d"_DEBUG" -mc -me -ml --abi=tiabi -@"../Debug.lkf" "nand.c"
+"nand.c", line 343: warning: variable "temp" was set but never used
+"nand.c", line 385: warning: variable "temp" was set but never used
+
+[nandProg.c] "C:\CCStudio_v3.3\tms470\cgtools\bin\cl470" -g -q -fr"D:/IPNC_UBL_nandprogramer/nand_programmer/Debug" -i"../include" -i"../include/common" -i"../csl/include" -d"_DEBUG" -mc -me -ml --abi=tiabi -@"../Debug.lkf" "nandProg.c"
+"nandProg.c", line 122: warning: variable "error" was set but never used
+
+[nandProg_main.c] "C:\CCStudio_v3.3\tms470\cgtools\bin\cl470" -g -q -fr"D:/IPNC_UBL_nandprogramer/nand_programmer/Debug" -i"../include" -i"../include/common" -i"../csl/include" -d"_DEBUG" -mc -me -ml --abi=tiabi -@"../Debug.lkf" "nandProg_main.c"
+
+[Linking...] "C:\CCStudio_v3.3\tms470\cgtools\bin\cl470" -@"Debug.lkf"
+<Linking>
+
+Build Complete,
+  0 Errors, 3 Warnings, 0 Remarks.

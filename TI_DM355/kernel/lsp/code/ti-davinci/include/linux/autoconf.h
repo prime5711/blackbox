@@ -1,7 +1,7 @@
 /*
  * Automatically generated C config: don't edit
  * Linux kernel version: 2.6.10_mvl401
- * Mon Sep  9 00:14:01 2013
+ * Thu Mar  6 22:53:48 2014
  */
 #define AUTOCONF_INCLUDED
 #define CONFIG_ARM 1
@@ -771,7 +771,9 @@
 #define CONFIG_VFAT_FS 1
 #define CONFIG_FAT_DEFAULT_CODEPAGE 437
 #define CONFIG_FAT_DEFAULT_IOCHARSET "iso8859-1"
-#undef CONFIG_NTFS_FS
+#define CONFIG_NTFS_FS_MODULE 1
+#define CONFIG_NTFS_DEBUG 1
+#define CONFIG_NTFS_RW 1
 
 /*
  * Pseudo filesystems

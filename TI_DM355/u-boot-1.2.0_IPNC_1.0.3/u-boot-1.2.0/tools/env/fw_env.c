@@ -461,9 +461,9 @@ static int flash_io (int mode)
 		erase.length = DEVESIZE (otherdev);
 		erase.start = DEVOFFSET (otherdev);
 		if (ioctl (fdr, MEMERASE, &erase) != 0) {
-			fprintf (stderr, "MTD erase error on %s: %s\n",
+			fprintf (stderr, "MTD erase error on %s: %s (len=0x%08x, start=0x%08x)\n",
 				DEVNAME (otherdev),
-				strerror (errno));
+				strerror (errno), erase.length, erase.start);
 			return (-1);
 		}
 

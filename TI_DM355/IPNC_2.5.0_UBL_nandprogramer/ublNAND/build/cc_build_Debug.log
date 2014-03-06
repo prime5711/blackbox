@@ -1,0 +1,24 @@
+-------------------------  ubldm355_debug.pjt - Debug  -------------------------
+[Linking...] "C:\CCStudio_v3.3\tms470\cgtools\bin\cl470" -@"Debug.lkf"
+<Linking>
+>> warning: entry point other than _c_int00 specified
+
+make.bat
+
+D:\IPNC_UBL_nandprogramer\ublNAND\build>bin\hex470 -a  -romwidth 32  -datawidth 8  -memwidth 32  -order MS  -map UBL_OBJ\ublDM350.hexmap UBL_OBJ\ublDM350.out 
+Translating UBL_OBJ\ublDM350.out to ASCII-Hex format...
+   "UBL_OBJ\ublDM350.out"   ==> .boot
+   "UBL_OBJ\ublDM350.out"   ==> .text
+   "UBL_OBJ\ublDM350.out"   ==> .const
+   "UBL_OBJ\ublDM350.out"   ==> .cinit
+
+D:\IPNC_UBL_nandprogramer\ublNAND\build>.\bin\ascii2bin P 
+
+D:\IPNC_UBL_nandprogramer\ublNAND\build>copy ublDM350.bin ublDM355-nand.bin 
+        1개 파일이 복사되었습니다.
+
+D:\IPNC_UBL_nandprogramer\ublNAND\build>del ublDM350.a0 
+
+Build Complete,
+  0 Errors, 1 Warnings, 0 Remarks.
+  Please view the build output for errors and warnings for any custom steps.

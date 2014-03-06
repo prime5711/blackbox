@@ -11,14 +11,17 @@
 
 #define _UBLFILE_		// write ubl binary file to nand flash. #define UBL must be uncommented
 #define _APPFILE_		//write application bin file to flash. You will require to uncomment #define APP
-#define _DIAGFILE_		//write application bin file to flash. You will require to uncomment #define APP
+//  #define _DIAGFILE_		//write application bin file to flash. You will require to uncomment #define APP
 
 #define UBL				// writes UBL to NAND.
 #define APP				// writes UBOOT (application) to NAND
-#define DIAG			// Diagnostic mode
+//  #define DIAG			// Diagnostic mode
 
 extern NAND_INFO gNandInfo;
 extern Uint32 gTotalBlocks;
+extern Uint8 gMakeBBT;
+
+char gMakeBBT_yes_no[10];
 
 #define UBL_START_BLOCK_NUM 1 
 #define UBL_END_BLOCK_NUM   7
@@ -185,12 +188,29 @@ Uint8 NANDProg() {
 	while (1);
 #endif
 
+//  	printf("shcho : Use NANDEraser_DM35x_RevC for NAND bbt generation \n", count);
+	printf("shcho : Choose Option(선택) \n");
+	printf("shcho : make new bbt          : yes \n");
+	printf("shcho : UBL/u-bbot write only : no \n");
+	printf("shcho : If make Bad Block Table, erase All Contents in Nand Memory : yes | no \n");
+	// shcho
+	memset(gMakeBBT_yes_no, 0 , sizeof(gMakeBBT_yes_no));
+	scanf("%s", gMakeBBT_yes_no );
+	if( !strncmp(gMakeBBT_yes_no, "yes", 3) )
+		gMakeBBT = 1;
+	else
+		gMakeBBT = 0;
+
+	if( gMakeBBT == 1 )
+	{
 #if 1
 	for (count = 0; count < NAND_TOTAL_BLOCKS; count++)
 	{
-		error = NANDEraseBlock(count);  
+		error = NANDEraseBlock(count);
     }
+	printf ("NandEraseBlock\n"); 
 #endif
+	}
 
 
 #ifdef _UBLFILE_
@@ -233,20 +253,29 @@ Uint8 NANDProg() {
 	///////////////////////////////////////////////////////////////
 #endif	//_UBLFILE_
 
-    if ( ! gTotalBlocks )
-    {
-        gTotalBlocks = NAND_TOTAL_BLOCKS;
-    }
-//	for (count = 0; count < gTotalBlocks; count++)
-	for (count = 0; count < 40; count++)
+	if( gMakeBBT == 1 )
 	{
-		if((error=NANDCheckBadBlock(count, pageSize)) == E_FAIL)
-			printf("Block %d is a bad block\n", count);
+	    if ( ! gTotalBlocks )
+	    {
+	        gTotalBlocks = NAND_TOTAL_BLOCKS;
+	    }
+		//shcho
+		for (count = 0; count < gTotalBlocks; count++)
+		//ipnc 2.5.0
+//  		for (count = 0; count < 40; count++)
+		{
+			if((error=NANDCheckBadBlock(count, pageSize)) == E_FAIL)
+				printf("Block %d is a bad block\n", count);
+		}
+//  		for (count = 2040; count < 2048; count++)
+//  		{
+//  			if((error=NANDCheckBadBlock(count, pageSize)) == E_FAIL)
+//  				printf("Block %d is a bad block\n", count);
+//  		}
 	}
-	for (count = 2040; count < 2048; count++)
+	else
 	{
-		if((error=NANDCheckBadBlock(count, pageSize)) == E_FAIL)
-			printf("Block %d is a bad block\n", count);
+		printf("\n\n Skip make BBT Table : use previous BBT. \n");
 	}
 #ifdef UBL 
 	memset(nandTx, 0, PAGE_SIZE_SPARE);

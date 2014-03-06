@@ -1,0 +1,7 @@
+-z -q -c -e_c_intDM355 -m"./UBL_OBJ/ublDM350.map" -o"./UBL_OBJ/ublDM350.out" -x -i"C:/CCStudio_v3.3/TMS470/cgtools/lib"
+"D:\IPNC_UBL_nandprogramer\ublNAND\build\ublDM355.cmd"
+"D:\IPNC_UBL_nandprogramer\ublNAND\build\UBL_OBJ\armboot_main.obj"
+"D:\IPNC_UBL_nandprogramer\ublNAND\build\UBL_OBJ\dm355Init.obj"
+"D:\IPNC_UBL_nandprogramer\ublNAND\build\UBL_OBJ\nand.obj"
+"D:\IPNC_UBL_nandprogramer\ublNAND\build\UBL_OBJ\nandboot.obj"
+"D:\IPNC_UBL_nandprogramer\ublNAND\build\UBL_OBJ\ublboot.obj"

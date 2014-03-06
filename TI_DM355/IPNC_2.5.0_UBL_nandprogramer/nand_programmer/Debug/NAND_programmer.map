@@ -1,0 +1,555 @@
+******************************************************************************
+             TMS470 COFF Linker PC v4.1.4                      
+******************************************************************************
+>> Linked Mon Mar 03 00:23:44 2014
+
+OUTPUT FILE NAME:   <./Debug/NAND_programmer.out>
+ENTRY POINT SYMBOL: "_c_int00"  address: 800571f0
+
+
+MEMORY CONFIGURATION
+
+                  name            origin    length      used    attr    fill
+         ----------------------  --------  ---------  --------  ----  --------
+         IRAM                    00000000   00007fff  00000000  RWIX
+         ENTRY_POINT             80000000   00000200  00000000  RWIX
+         DDR_EMIF                80000200   10000000  000592ac  RWIX
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+.entryPoint 
+*          0    80000000    00000000     UNINITIALIZED
+
+.data      0    80000200    00000000     UNINITIALIZED
+
+.sstack    0    80000200    00000000     UNINITIALIZED
+
+.istack    0    80000200    00000000     UNINITIALIZED
+
+.fstack    0    80000200    00000000     UNINITIALIZED
+
+.ustack    0    80000200    00000000     UNINITIALIZED
+
+.ystack    0    80000200    00000000     UNINITIALIZED
+
+.astack    0    80000200    00000000     UNINITIALIZED
+
+.sysmem    0    80000200    00040000     UNINITIALIZED
+                  80000200    00000040     rts16e.lib : sysmem.obj (.sysmem)
+
+.stack     0    80040200    00010000     UNINITIALIZED
+
+.text      0    80050200    00007c40     
+                  80050200    0000206c     nandProg.obj (.text)
+                  8005226c    00001c28     nand.obj (.text)
+                  80053e94    00000a7d     rts16e.lib : _printfi.obj (.text)
+                  80054911    00000003     --HOLE-- [fill = 00000000]
+                  80054914    0000089c                : _scanfi.obj (.text)
+                  800551b0    00000398                : memory.obj (.text)
+                  80055548    00000394                : lowlev.obj (.text)
+                  800558dc    00000320                : trgdrv.obj (.text)
+                  80055bfc    00000220                : strtod.obj (.text)
+                  80055e1c    00000220                : strtold.obj (.text)
+                  8005603c    000001b4                : ecvt.obj (.text)
+                  800561f0    0000019c                : fcvt.obj (.text)
+                  8005638c    00000190                : fopen.obj (.text)
+                  8005651c    00000180                : memcpy32.obj (.text)
+                  8005669c    0000013e                : fd_add16.obj (.text)
+                  800567da    00000002     --HOLE-- [fill = 00000000]
+                  800567dc    0000011c                : strtol.obj (.text)
+                  800568f8    00000118                : strtoul.obj (.text)
+                  80056a10    00000114                : fscanf.obj (.text)
+                  80056b24    0000010c                : fd_div16.obj (.text)
+                  80056c30    00000100                : fputs.obj (.text)
+                  80056d30    000000f0                : i_div32.obj (.text)
+                  80056e20    000000d6                : fd_mul16.obj (.text)
+                  80056ef6    00000002     --HOLE-- [fill = 00000000]
+                  80056ef8    000000d4                : u_div32.obj (.text)
+                  80056fcc    000000c2                : fread.obj (.text)
+                  8005708e    00000002     --HOLE-- [fill = 00000000]
+                  80057090    000000b8     nandProg_main.obj (.text)
+                  80057148    000000a8     rts16e.lib : setvbuf.obj (.text)
+                  800571f0    000000a0                : boot.obj (.text)
+                  80057290    000000a0                : _io_perm.obj (.text)
+                  80057330    0000009a                : memcpy16.obj (.text)
+                  800573ca    00000002     --HOLE-- [fill = 00000000]
+                  800573cc    00000098                : memset32.obj (.text)
+                  80057464    00000096                : u_div16.obj (.text)
+                  800574fa    00000002     --HOLE-- [fill = 00000000]
+                  800574fc    00000094                : exit.obj (.text)
+                  80057590    0000008c                : fputc.obj (.text)
+                  8005761c    0000008c                : fflush.obj (.text)
+                  800576a8    00000088                : fgetc.obj (.text)
+                  80057730    00000078                : fd_cmp16.obj (.text)
+                  800577a8    00000074                : ungetc.obj (.text)
+                  8005781c    00000070                : _bufread.obj (.text)
+                  8005788c    00000064                : trgmsg.obj (.text)
+                  800578f0    00000064                : fclose.obj (.text)
+                  80057954    00000062                : memset16.obj (.text)
+                  800579b6    0000005c                : ltoa.obj (.text)
+                  80057a12    00000002     --HOLE-- [fill = 00000000]
+                  80057a14    00000054                : ftell.obj (.text)
+                  80057a68    0000004c                : printf.obj (.text)
+                  80057ab4    0000004c                : fd_tos16.obj (.text)
+                  80057b00    00000048                : atoi.obj (.text)
+                  80057b48    00000048                : fd_toi16.obj (.text)
+                  80057b90    00000046                : fseek.obj (.text)
+                  80057bd6    0000002e                : strncpy.obj (.text)
+                  80057c04    0000002a                : i_tofd16.obj (.text)
+                  80057c2e    00000026                : strncmp.obj (.text)
+                  80057c54    0000001a                : memchr.obj (.text)
+                  80057c6e    0000001a                : memccpy.obj (.text)
+                  80057c88    00000018                : strrchr.obj (.text)
+                  80057ca0    00000018                : fflush.obj (.text:v$0)
+                  80057cb8    00000018                : memory.obj (.text:v$3)
+                  80057cd0    00000018                : memory.obj (.text:v$6)
+                  80057ce8    00000018                : ftell.obj (.text:v$0)
+                  80057d00    00000018                : fread.obj (.text:v$0)
+                  80057d18    00000018                : fopen.obj (.text:v$0)
+                  80057d30    00000018                : fseek.obj (.text:v$0)
+                  80057d48    00000018                : strncmp.obj (.text:v$0)
+                  80057d60    00000018                : _lock.obj (.text)
+                  80057d78    00000018                : fclose.obj (.text:v$0)
+                  80057d90    00000016                : i_div16.obj (.text)
+                  80057da6    00000016                : strchr.obj (.text)
+                  80057dbc    00000016                : strcmp.obj (.text)
+                  80057dd2    00000002     --HOLE-- [fill = 00000000]
+                  80057dd4    00000014     nandProg_main.obj (.text:v$0)
+                  80057de8    00000014     rts16e.lib : icall16.obj (.text)
+                  80057dfc    00000012                : strlen.obj (.text)
+                  80057e0e    00000012                : strcpy.obj (.text)
+                  80057e20    0000000c                : printf.obj (.text:v$0)
+                  80057e2c    0000000c                : fscanf.obj (.text:v$1)
+                  80057e38    00000008                : remove.obj (.text)
+
+.bss       0    80057e40    00000e0c     UNINITIALIZED
+                  80057e40    00000420     rts16e.lib : trgmsg.obj (.bss)
+                  80058260    00000374                : defs.obj (.bss)
+                  800585d4    00000190                : _printfi.obj (.bss)
+                  80058764    00000190                : fcvt.obj (.bss)
+                  800588f4    0000011c                : lowlev.obj (.bss)
+                  80058a10    000000d0                : trgdrv.obj (.bss)
+                  80058ae0    0000008c                : exit.obj (.bss)
+                  80058b6c    00000064                : ecvt.obj (.bss)
+                  80058bd0    00000050     nandProg.obj (.bss)
+                  80058c20    00000011     nand.obj (.bss)
+                  80058c34    00000008     rts16e.lib : memory.obj (.bss)
+                  80058c3c    00000008                : _lock.obj (.bss)
+                  80058c44    00000004                : errno.obj (.bss)
+                  80058c48    00000004                : boot.obj (.bss)
+
+.const     0    80058c4c    000004c0     
+                  80058c4c    00000200     nandProg.obj (.const)
+                  80058e4c    00000101     rts16e.lib : ctype.obj (.const)
+                  80058f4d    00000003     --HOLE-- [fill = 00000000]
+                  80058f50    000000ba     nand.obj (.const)
+                  8005900a    00000002     --HOLE-- [fill = 00000000]
+                  8005900c    00000080     rts16e.lib : strtold.obj (.const)
+                  8005908c    00000080                : strtod.obj (.const)
+
+.cinit     0    8005910c    000003a0     
+                  8005910c    00000244     rts16e.lib : defs.obj (.cinit)
+                  80059350    0000005c     nandProg.obj (.cinit)
+                  800593ac    0000005c     rts16e.lib : lowlev.obj (.cinit)
+                  80059408    00000024                : exit.obj (.cinit)
+                  8005942c    00000021     nand.obj (.cinit)
+                  8005944d    00000003     --HOLE-- [fill = 0]
+                  80059450    0000001c     rts16e.lib : sysmem.obj (.cinit)
+                  8005946c    00000018                : _lock.obj (.cinit)
+                  80059484    0000000c                : errno.obj (.cinit)
+                  80059490    0000000c                : boot.obj (.cinit)
+                  8005949c    0000000c                : memory.obj (.cinit)
+                  800594a8    00000004     --HOLE-- [fill = 0]
+
+.bss:csl_section:_CSL_intcEventHandlerRecord 
+*          0    00000000    00000000     UNINITIALIZED
+
+.bss:csl_section:intc 
+*          0    00000000    00000000     UNINITIALIZED
+
+.text:csl_section:intc 
+*          0    00000000    00000000     UNINITIALIZED
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+address    name
+--------   ----
+80055baa   $HOSTclock
+80055934   $HOSTclose
+80055a1e   $HOSTlseek
+800558dc   $HOSTopen
+80055976   $HOSTread
+80055ac0   $HOSTrename
+80055b68   $HOSTtime
+80055a80   $HOSTunlink
+800559ca   $HOSTwrite
+8005781c   $_buff_read
+800564da   $_cleanup
+80057654   $_doflush
+80057d60   $_nop
+80053e94   $_printfi
+80057290   $_rd_ok
+80057d62   $_register_lock
+80057d68   $_register_unlock
+80054914   $_scanfi
+800572d6   $_wrt_ok
+80057574   $abort
+800555f6   $add_device
+8005753c   $atexit
+80057b00   $atoi
+8005529a   $calloc
+80055802   $close
+8005603c   $ecvt
+800574fc   $exit
+800578f0   $fclose
+800561f0   $fcvt
+8005761c   $fflush
+800576ba   $fgetc
+8005638c   $fopen
+800575a2   $fputc
+80056c4a   $fputs
+80056fcc   $fread
+800553a6   $free
+800563a2   $freopen
+80056a10   $fscanf
+80057b90   $fseek
+80057a14   $ftell
+800576a8   $getc
+800576b0   $getchar
+80055b24   $getenv
+800557b6   $lseek
+800579b6   $ltoa
+80057dd4   $main
+80055238   $malloc
+80055470   $memalign
+80057c6e   $memccpy
+80057c54   $memchr
+80057954   $memset
+80055212   $minit
+80055696   $open
+80057a68   $printf
+80057590   $putc
+80057598   $putchar
+80056c30   $puts
+8005571e   $read
+800578bc   $readmsg
+800552c0   $realloc
+80057e38   $remove
+80055662   $remove_device
+80055882   $rename
+80056a40   $scanf
+80057148   $setvbuf
+80057da6   $strchr
+80057dbc   $strcmp
+80057e0e   $strcpy
+80057dfc   $strlen
+80057c2e   $strncmp
+80057bd6   $strncpy
+80057c88   $strrchr
+80055bfc   $strtod
+800567dc   $strtol
+80055e1c   $strtold
+800568f8   $strtoul
+800577a8   $ungetc
+80055858   $unlink
+8005576a   $write
+8005788c   $writemsg
+00000000   .bss
+80000200   .data
+00000000   .text
+80057538   C$$EXIT
+800578b8   C$$IO$$
+80057330   C$MEMCPY
+8005651c   C_MEMCPY
+800566a6   FD$ADD
+80057730   FD$CMP
+80056b24   FD$DIV
+80056e20   FD$MUL
+8005669c   FD$SUB
+80057ab4   FD$TOFS
+80057b48   FD$TOI
+80057d90   I$DIV
+80057d90   I$MOD
+80057c04   I$TOFD
+80057de8   IND$CALL
+80056d30   I_DIV
+80056d30   I_MOD
+80057464   U$DIV
+80057464   U$MOD
+80056ef8   U_DIV
+80056ef8   U_MOD
+80050200   _NANDCheckBadBlock
+80052dcc   _NANDECC4Bit10to8Syndrome
+80052c90   _NANDECC4Bit8to10Syndrome
+80052c64   _NANDECC4BitStart
+80052c78   _NANDECC4BitStop
+80052f20   _NANDECCFindAndCorrectError
+80053d40   _NANDEraseBlock
+800523a8   _NANDGetDetails
+800522b4   _NANDInit
+80050668   _NANDProg
+80052334   _NANDReadNBytes
+80052738   _NANDReadPage
+80053800   _NANDSetBadBlock
+80050354   _NANDVerifyPage
+80052b68   _NANDWaitRdy
+80052bc8   _NANDWaitRdyReg
+80053228   _NANDWritePage
+00000800   __A_STACK_SIZE
+80057e40   __CIOBUF_
+00000800   __F_STACK_SIZE
+00000800   __I_STACK_SIZE
+00010000   __STACK_SIZE
+00040000   __SYSMEM_SIZE
+00000800   __S_STACK_SIZE
+00000800   __U_STACK_SIZE
+00000800   __Y_STACK_SIZE
+ffffffff   ___binit__
+00000000   ___bss__
+ffffffff   ___c_args__
+8005910c   ___cinit__
+80000200   ___data__
+80000200   ___edata__
+00000000   ___end__
+00000000   ___etext__
+ffffffff   ___pinit__
+00000000   ___text__
+80058b64   __cleanup_ptr
+80058e4c   __ctypes_
+80058b68   __dtors_ptr
+800585d0   __ft_end
+80058260   __ftable
+80058c3c   __lock
+80058c34   __memory_size
+80040200   __stack
+80000200   __sys_memory
+80058490   __tmpnams
+80058c40   __unlock
+80058bf0   _appdesc
+800571f0   _c_int00
+80058c08   _diagdesc
+80058c44   _errno
+80057d78   _fclose
+80057ca0   _fflush
+80057d18   _fopen
+80057d00   _fread
+80057cd0   _free
+80057d30   _fseek
+80057ce8   _ftell
+80058c28   _gDMA
+80058c30   _gMakeBBT
+80058bd0   _gMakeBBT_yes_no
+80058f50   _gNandDevInfo
+80058c20   _gNandInfo
+80058c2c   _gTotalBlocks
+80057090   _main
+80057cb8   _malloc
+800573cc   _memset
+80057e20   _printf
+80057e2c   _scanf
+80058c48   _stkchk_called
+80057d48   _strncmp
+80058bdc   _ubldesc
+8005226c   _waitloop
+ffffffff   binit
+8005910c   cinit
+80000200   edata
+00000000   end
+00000000   etext
+ffffffff   pinit
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+address    name
+--------   ----
+00000000   ___end__
+00000000   end
+00000000   ___bss__
+00000000   etext
+00000000   .text
+00000000   .bss
+00000000   ___etext__
+00000000   ___text__
+00000800   __I_STACK_SIZE
+00000800   __F_STACK_SIZE
+00000800   __A_STACK_SIZE
+00000800   __Y_STACK_SIZE
+00000800   __U_STACK_SIZE
+00000800   __S_STACK_SIZE
+00010000   __STACK_SIZE
+00040000   __SYSMEM_SIZE
+80000200   edata
+80000200   ___edata__
+80000200   ___data__
+80000200   .data
+80000200   __sys_memory
+80040200   __stack
+80050200   _NANDCheckBadBlock
+80050354   _NANDVerifyPage
+80050668   _NANDProg
+8005226c   _waitloop
+800522b4   _NANDInit
+80052334   _NANDReadNBytes
+800523a8   _NANDGetDetails
+80052738   _NANDReadPage
+80052b68   _NANDWaitRdy
+80052bc8   _NANDWaitRdyReg
+80052c64   _NANDECC4BitStart
+80052c78   _NANDECC4BitStop
+80052c90   _NANDECC4Bit8to10Syndrome
+80052dcc   _NANDECC4Bit10to8Syndrome
+80052f20   _NANDECCFindAndCorrectError
+80053228   _NANDWritePage
+80053800   _NANDSetBadBlock
+80053d40   _NANDEraseBlock
+80053e94   $_printfi
+80054914   $_scanfi
+80055212   $minit
+80055238   $malloc
+8005529a   $calloc
+800552c0   $realloc
+800553a6   $free
+80055470   $memalign
+800555f6   $add_device
+80055662   $remove_device
+80055696   $open
+8005571e   $read
+8005576a   $write
+800557b6   $lseek
+80055802   $close
+80055858   $unlink
+80055882   $rename
+800558dc   $HOSTopen
+80055934   $HOSTclose
+80055976   $HOSTread
+800559ca   $HOSTwrite
+80055a1e   $HOSTlseek
+80055a80   $HOSTunlink
+80055ac0   $HOSTrename
+80055b24   $getenv
+80055b68   $HOSTtime
+80055baa   $HOSTclock
+80055bfc   $strtod
+80055e1c   $strtold
+8005603c   $ecvt
+800561f0   $fcvt
+8005638c   $fopen
+800563a2   $freopen
+800564da   $_cleanup
+8005651c   C_MEMCPY
+8005669c   FD$SUB
+800566a6   FD$ADD
+800567dc   $strtol
+800568f8   $strtoul
+80056a10   $fscanf
+80056a40   $scanf
+80056b24   FD$DIV
+80056c30   $puts
+80056c4a   $fputs
+80056d30   I_MOD
+80056d30   I_DIV
+80056e20   FD$MUL
+80056ef8   U_MOD
+80056ef8   U_DIV
+80056fcc   $fread
+80057090   _main
+80057148   $setvbuf
+800571f0   _c_int00
+80057290   $_rd_ok
+800572d6   $_wrt_ok
+80057330   C$MEMCPY
+800573cc   _memset
+80057464   U$MOD
+80057464   U$DIV
+800574fc   $exit
+80057538   C$$EXIT
+8005753c   $atexit
+80057574   $abort
+80057590   $putc
+80057598   $putchar
+800575a2   $fputc
+8005761c   $fflush
+80057654   $_doflush
+800576a8   $getc
+800576b0   $getchar
+800576ba   $fgetc
+80057730   FD$CMP
+800577a8   $ungetc
+8005781c   $_buff_read
+8005788c   $writemsg
+800578b8   C$$IO$$
+800578bc   $readmsg
+800578f0   $fclose
+80057954   $memset
+800579b6   $ltoa
+80057a14   $ftell
+80057a68   $printf
+80057ab4   FD$TOFS
+80057b00   $atoi
+80057b48   FD$TOI
+80057b90   $fseek
+80057bd6   $strncpy
+80057c04   I$TOFD
+80057c2e   $strncmp
+80057c54   $memchr
+80057c6e   $memccpy
+80057c88   $strrchr
+80057ca0   _fflush
+80057cb8   _malloc
+80057cd0   _free
+80057ce8   _ftell
+80057d00   _fread
+80057d18   _fopen
+80057d30   _fseek
+80057d48   _strncmp
+80057d60   $_nop
+80057d62   $_register_lock
+80057d68   $_register_unlock
+80057d78   _fclose
+80057d90   I$MOD
+80057d90   I$DIV
+80057da6   $strchr
+80057dbc   $strcmp
+80057dd4   $main
+80057de8   IND$CALL
+80057dfc   $strlen
+80057e0e   $strcpy
+80057e20   _printf
+80057e2c   _scanf
+80057e38   $remove
+80057e40   __CIOBUF_
+80058260   __ftable
+80058490   __tmpnams
+800585d0   __ft_end
+80058b64   __cleanup_ptr
+80058b68   __dtors_ptr
+80058bd0   _gMakeBBT_yes_no
+80058bdc   _ubldesc
+80058bf0   _appdesc
+80058c08   _diagdesc
+80058c20   _gNandInfo
+80058c28   _gDMA
+80058c2c   _gTotalBlocks
+80058c30   _gMakeBBT
+80058c34   __memory_size
+80058c3c   __lock
+80058c40   __unlock
+80058c44   _errno
+80058c48   _stkchk_called
+80058e4c   __ctypes_
+80058f50   _gNandDevInfo
+8005910c   cinit
+8005910c   ___cinit__
+ffffffff   pinit
+ffffffff   ___binit__
+ffffffff   ___c_args__
+ffffffff   ___pinit__
+ffffffff   binit
+
+[183 symbols]

@@ -1,19 +1,19 @@
 ******************************************************************************
-                  TI ARM Linker PC v5.0.1                      
+             TMS470 COFF Linker PC v4.1.4                      
 ******************************************************************************
->> Linked Sun Mar 02 21:59:22 2014
+>> Linked Sun Mar 02 23:49:11 2014
 
-OUTPUT FILE NAME:   <H:/Source_Debugging/IPNC_2.5.0_UBL_nandprogramer/ublNAND/build/ubldm355_debug_ipnc2.5.0/../../build/UBL_OBJ/ublDM350.out>
+OUTPUT FILE NAME:   <./UBL_OBJ/ublDM350.out>
 ENTRY POINT SYMBOL: "_c_intDM355"  address: 00000020
 
 
 MEMORY CONFIGURATION
 
-         name            origin    length      used     unused   attr    fill
-----------------------  --------  ---------  --------  --------  ----  --------
-  BOOT_IRAM_INIT        00000020   00000130  00000130  00000000  RWIX
-  BOOT_IRAM_CODE        00000150   00003600  00002b4c  00000ab4  RWIX
-  DDR_EMIF              80000000   10000000  00000000  10000000  RWIX
+                  name            origin    length      used    attr    fill
+         ----------------------  --------  ---------  --------  ----  --------
+         BOOT_IRAM_INIT          00000020   00000130  00000130  RWIX
+         BOOT_IRAM_CODE          00000150   00003600  00002bb8  RWIX
+         DDR_EMIF                80000000   10000000  00000000  RWIX
 
 
 SECTION ALLOCATION MAP
@@ -24,125 +24,129 @@ section   page    origin      length       input sections
 .boot      0    00000020    00000130     
                   00000020    00000130     ublboot.obj (.boot)
 
-.text      0    00000150    000021e0     
-                  00000150    00000ec0     nand.obj (.text)
-                  00001010    00000b00     dm355Init.obj (.text)
-                  00001b10    000004fc     nandboot.obj (.text)
-                  0000200c    00000324     armboot_main.obj (.text)
+.initTCM   0    00000150    00000000     UNINITIALIZED
 
 .data      0    00000150    00000000     UNINITIALIZED
 
-.bss       0    00002330    00000858     UNINITIALIZED
-                  00002330    00000840     nandboot.obj (.bss:_buff)
-                  00002b70    00000008     nand.obj (.bss)
-                  00002b78    00000005     armboot_main.obj (.bss)
-                  00002b7d    00000002     nandboot.obj (.bss)
-                  00002b7f    00000001     --HOLE--
-                  00002b80    00000004     dm355Init.obj (.bss)
-                  00002b84    00000004     ublboot.obj (.bss)
+.stack     0    00000150    00000000     UNINITIALIZED
 
-.const     0    00002b88    000000e0     
-                  00002b88    000000ba     nand.obj (.const:_gNandDevInfo)
-                  00002c42    00000002     --HOLE-- [fill = 0]
-                  00002c44    00000024     dm355Init.obj (.const)
+.sysmem    0    00000150    00000000     UNINITIALIZED
 
-.cinit     0    00002c68    00000034     
-                  00002c68    0000000c     dm355Init.obj (.cinit)
-                  00002c74    0000000c     ublboot.obj (.cinit)
-                  00002c80    00000009     armboot_main.obj (.cinit)
-                  00002c89    00000003     --HOLE-- [fill = 0]
-                  00002c8c    00000009     nandboot.obj (.cinit)
-                  00002c95    00000003     --HOLE-- [fill = 0]
-                  00002c98    00000004     (.pad.cinit) [fill = 0]
+.text      0    00000150    00002248     
+                  00000150    00000f10     nand.obj (.text)
+                  00001060    00000b10     dm355Init.obj (.text)
+                  00001b70    00000500     nandboot.obj (.text)
+                  00002070    00000328     armboot_main.obj (.text)
+
+.bss       0    00002398    0000085c     UNINITIALIZED
+                  00002398    00000844     nandboot.obj (.bss)
+                  00002bdc    00000008     nand.obj (.bss)
+                  00002be4    00000005     armboot_main.obj (.bss)
+                  00002bec    00000004     ublboot.obj (.bss)
+                  00002bf0    00000004     dm355Init.obj (.bss)
+
+.const     0    00002bf4    000000e0     
+                  00002bf4    000000ba     nand.obj (.const)
+                  00002cae    00000002     --HOLE-- [fill = 0]
+                  00002cb0    00000024     dm355Init.obj (.const)
+
+.cinit     0    00002cd4    00000034     
+                  00002cd4    0000000c     ublboot.obj (.cinit)
+                  00002ce0    0000000c     dm355Init.obj (.cinit)
+                  00002cec    00000009     armboot_main.obj (.cinit)
+                  00002cf5    00000003     --HOLE-- [fill = 0]
+                  00002cf8    00000009     nandboot.obj (.cinit)
+                  00002d01    00000007     --HOLE-- [fill = 0]
 
 
 GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
 
 address    name
 --------   ----
-00002330   .bss
+00002398   .bss
 00000150   .data
 00000150   .text
-00001884   _AEMIFInit
-0000167c   _DDR2Init
-00002c56   _DDR_Board_Delay
-00002c45   _DDR_CL
-00002c46   _DDR_IBANK
-00002c44   _DDR_NM
-00002c47   _DDR_PAGESIZE
-00002c57   _DDR_READ_Latency
-00002c54   _DDR_RR
-00002c53   _DDR_T_CKE
-00002c4c   _DDR_T_RAS
-00002c4d   _DDR_T_RC
-00002c4a   _DDR_T_RCD
-00002c48   _DDR_T_RFC
-00002c49   _DDR_T_RP
-00002c4e   _DDR_T_RRD
-00002c52   _DDR_T_RTP
-00002c4b   _DDR_T_WR
-00002c4f   _DDR_T_WTR
-00002c50   _DDR_T_XSNR
-00002c51   _DDR_T_XSRD
-000013bc   _DM355EvmInit
-000021e4   _DisableICache
-00001994   _EVMDM355_I2C_init
-000021b8   _EnableICache
-00001010   _GetStringLen
-0000200c   _LPSCEnable
-000012e4   _LPSCTransition
-00001b10   _MagicSwitch
-00001c1c   _NANDBoot
-00000b68   _NANDECC4Bit10to8Syndrome
-00000a2c   _NANDECC4Bit8to10Syndrome
-00000a00   _NANDECC4BitStart
-00000a14   _NANDECC4BitStop
-00000cbc   _NANDECCFindAndCorrectError
-00000310   _NANDGetDetails
+00001938   _AEMIFInit
+000016f8   _DDR2Init
+00002cc2   _DDR_Board_Delay
+00002cb1   _DDR_CL
+00002cb2   _DDR_IBANK
+00002cb0   _DDR_NM
+00002cb3   _DDR_PAGESIZE
+00002cc3   _DDR_READ_Latency
+00002cc0   _DDR_RR
+00002cbf   _DDR_T_CKE
+00002cb8   _DDR_T_RAS
+00002cb9   _DDR_T_RC
+00002cb6   _DDR_T_RCD
+00002cb4   _DDR_T_RFC
+00002cb5   _DDR_T_RP
+00002cba   _DDR_T_RRD
+00002cbe   _DDR_T_RTP
+00002cb7   _DDR_T_WR
+00002cbb   _DDR_T_WTR
+00002cbc   _DDR_T_XSNR
+00002cbd   _DDR_T_XSRD
+0000141c   _DM355EvmInit
+00002258   _DisableICache
+00001a4c   _EVMDM355_I2C_init
+0000222c   _EnableICache
+00001060   _GetStringLen
+00002070   _LPSCEnable
+00001338   _LPSCTransition
+00001b70   _MagicSwitch
+00001c8c   _NANDBoot
+00000bc0   _NANDECC4Bit10to8Syndrome
+00000a84   _NANDECC4Bit8to10Syndrome
+00000a58   _NANDECC4BitStart
+00000a6c   _NANDECC4BitStop
+00000d14   _NANDECCFindAndCorrectError
+00000320   _NANDGetDetails
 00000150   _NANDInit
-000001a0   _NANDReadNBytes
-000005bc   _NANDReadPage
-00000920   _NANDWaitRdy
-00000980   _NANDWaitRdyReg
-00001750   _PLL1Init
-00002c64   _PLL1_Mult
-00001584   _PLL2Init
-00002c5c   _PLL2_Div1
-00002c60   _PLL2_Div2
-00002c58   _PLL2_Mult
-00001534   _PSCInit
-00001244   _PSC_use_interrupt
-000018cc   _UARTInit
-00001070   _UARTSendData
-00001158   _UARTSendInt
+000001a4   _NANDReadNBytes
+000005d4   _NANDReadPage
+00000970   _NANDWaitRdy
+000009d0   _NANDWaitRdyReg
+000017ec   _PLL1Init
+00002cd0   _PLL1_Mult
+000015fc   _PLL2Init
+00002cc8   _PLL2_Div1
+00002ccc   _PLL2_Div2
+00002cc4   _PLL2_Mult
+000015ac   _PSCInit
+00001298   _PSC_use_interrupt
+00001980   _UARTInit
+000010c0   _UARTSendData
+000011ac   _UARTSendInt
 ffffffff   ___binit__
-00002330   ___bss__
+00002398   ___bss__
 ffffffff   ___c_args__
-00002c68   ___cinit__
+00002cd4   ___cinit__
 00000150   ___data__
 00000150   ___edata__
-00002b88   ___end__
-00002330   ___etext__
+00002bf4   ___end__
+00002398   ___etext__
 ffffffff   ___pinit__
 00000150   ___text__
-00002330   _buff
+0000239c   _buff
+UNDEFED _c_int00
 00000020   _c_intDM355
-00002b7e   _copygDMA
-00002b7d   _gDMA
-00002b78   _gEntryPoint
-00002b88   _gNandDevInfo
-00002b70   _gNandInfo
-00002b7c   _gToggle
-00002258   _main
-00002b84   _stkchk_called
-00002b80   _test_mode
-00001200   _wait
-00002210   _waitloop
+00002399   _copygDMA
+00002398   _gDMA
+00002be4   _gEntryPoint
+00002bf4   _gNandDevInfo
+00002bdc   _gNandInfo
+00002be8   _gToggle
+000022cc   _main
+00002bec   _stkchk_called
+00002bf0   _test_mode
+00001254   _wait
+00002284   _waitloop
 ffffffff   binit
-00002c68   cinit
+00002cd4   cinit
 00000150   edata
-00002b88   end
-00002330   etext
+00002bf4   end
+00002398   etext
 ffffffff   pinit
 
 
@@ -151,88 +155,89 @@ GLOBAL SYMBOLS: SORTED BY Symbol Address
 address    name
 --------   ----
 00000020   _c_intDM355
-00000150   .data
-00000150   .text
+00000150   ___edata__
 00000150   _NANDInit
 00000150   ___data__
-00000150   ___edata__
 00000150   ___text__
 00000150   edata
-000001a0   _NANDReadNBytes
-00000310   _NANDGetDetails
-000005bc   _NANDReadPage
-00000920   _NANDWaitRdy
-00000980   _NANDWaitRdyReg
-00000a00   _NANDECC4BitStart
-00000a14   _NANDECC4BitStop
-00000a2c   _NANDECC4Bit8to10Syndrome
-00000b68   _NANDECC4Bit10to8Syndrome
-00000cbc   _NANDECCFindAndCorrectError
-00001010   _GetStringLen
-00001070   _UARTSendData
-00001158   _UARTSendInt
-00001200   _wait
-00001244   _PSC_use_interrupt
-000012e4   _LPSCTransition
-000013bc   _DM355EvmInit
-00001534   _PSCInit
-00001584   _PLL2Init
-0000167c   _DDR2Init
-00001750   _PLL1Init
-00001884   _AEMIFInit
-000018cc   _UARTInit
-00001994   _EVMDM355_I2C_init
-00001b10   _MagicSwitch
-00001c1c   _NANDBoot
-0000200c   _LPSCEnable
-000021b8   _EnableICache
-000021e4   _DisableICache
-00002210   _waitloop
-00002258   _main
-00002330   .bss
-00002330   ___bss__
-00002330   ___etext__
-00002330   _buff
-00002330   etext
-00002b70   _gNandInfo
-00002b78   _gEntryPoint
-00002b7c   _gToggle
-00002b7d   _gDMA
-00002b7e   _copygDMA
-00002b80   _test_mode
-00002b84   _stkchk_called
-00002b88   ___end__
-00002b88   _gNandDevInfo
-00002b88   end
-00002c44   _DDR_NM
-00002c45   _DDR_CL
-00002c46   _DDR_IBANK
-00002c47   _DDR_PAGESIZE
-00002c48   _DDR_T_RFC
-00002c49   _DDR_T_RP
-00002c4a   _DDR_T_RCD
-00002c4b   _DDR_T_WR
-00002c4c   _DDR_T_RAS
-00002c4d   _DDR_T_RC
-00002c4e   _DDR_T_RRD
-00002c4f   _DDR_T_WTR
-00002c50   _DDR_T_XSNR
-00002c51   _DDR_T_XSRD
-00002c52   _DDR_T_RTP
-00002c53   _DDR_T_CKE
-00002c54   _DDR_RR
-00002c56   _DDR_Board_Delay
-00002c57   _DDR_READ_Latency
-00002c58   _PLL2_Mult
-00002c5c   _PLL2_Div1
-00002c60   _PLL2_Div2
-00002c64   _PLL1_Mult
-00002c68   ___cinit__
-00002c68   cinit
-ffffffff   ___binit__
-ffffffff   ___c_args__
-ffffffff   ___pinit__
-ffffffff   binit
+00000150   .data
+00000150   .text
+000001a4   _NANDReadNBytes
+00000320   _NANDGetDetails
+000005d4   _NANDReadPage
+00000970   _NANDWaitRdy
+000009d0   _NANDWaitRdyReg
+00000a58   _NANDECC4BitStart
+00000a6c   _NANDECC4BitStop
+00000a84   _NANDECC4Bit8to10Syndrome
+00000bc0   _NANDECC4Bit10to8Syndrome
+00000d14   _NANDECCFindAndCorrectError
+00001060   _GetStringLen
+000010c0   _UARTSendData
+000011ac   _UARTSendInt
+00001254   _wait
+00001298   _PSC_use_interrupt
+00001338   _LPSCTransition
+0000141c   _DM355EvmInit
+000015ac   _PSCInit
+000015fc   _PLL2Init
+000016f8   _DDR2Init
+000017ec   _PLL1Init
+00001938   _AEMIFInit
+00001980   _UARTInit
+00001a4c   _EVMDM355_I2C_init
+00001b70   _MagicSwitch
+00001c8c   _NANDBoot
+00002070   _LPSCEnable
+0000222c   _EnableICache
+00002258   _DisableICache
+00002284   _waitloop
+000022cc   _main
+00002398   etext
+00002398   ___bss__
+00002398   .bss
+00002398   ___etext__
+00002398   _gDMA
+00002399   _copygDMA
+0000239c   _buff
+00002bdc   _gNandInfo
+00002be4   _gEntryPoint
+00002be8   _gToggle
+00002bec   _stkchk_called
+00002bf0   _test_mode
+00002bf4   ___end__
+00002bf4   end
+00002bf4   _gNandDevInfo
+00002cb0   _DDR_NM
+00002cb1   _DDR_CL
+00002cb2   _DDR_IBANK
+00002cb3   _DDR_PAGESIZE
+00002cb4   _DDR_T_RFC
+00002cb5   _DDR_T_RP
+00002cb6   _DDR_T_RCD
+00002cb7   _DDR_T_WR
+00002cb8   _DDR_T_RAS
+00002cb9   _DDR_T_RC
+00002cba   _DDR_T_RRD
+00002cbb   _DDR_T_WTR
+00002cbc   _DDR_T_XSNR
+00002cbd   _DDR_T_XSRD
+00002cbe   _DDR_T_RTP
+00002cbf   _DDR_T_CKE
+00002cc0   _DDR_RR
+00002cc2   _DDR_Board_Delay
+00002cc3   _DDR_READ_Latency
+00002cc4   _PLL2_Mult
+00002cc8   _PLL2_Div1
+00002ccc   _PLL2_Div2
+00002cd0   _PLL1_Mult
+00002cd4   cinit
+00002cd4   ___cinit__
 ffffffff   pinit
+ffffffff   ___binit__
+ffffffff   ___pinit__
+UNDEFED _c_int00
+ffffffff   binit
+ffffffff   ___c_args__
 
-[84 symbols]
+[85 symbols]

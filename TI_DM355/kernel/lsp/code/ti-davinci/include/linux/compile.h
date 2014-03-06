@@ -1,7 +1,7 @@
-/* This file is auto generated, version 296 */
+/* This file is auto generated, version 304 */
 #define UTS_MACHINE "arm"
-#define UTS_VERSION "#296 Mon Mar 3 15:13:48 KST 2014"
-#define LINUX_COMPILE_TIME "15:13:48"
+#define UTS_VERSION "#304 Thu Mar 6 22:54:52 KST 2014"
+#define LINUX_COMPILE_TIME "22:54:52"
 #define LINUX_COMPILE_BY "nasopat"
 #define LINUX_COMPILE_HOST "nasopat-VirtualBox"
 #define LINUX_COMPILE_DOMAIN ""

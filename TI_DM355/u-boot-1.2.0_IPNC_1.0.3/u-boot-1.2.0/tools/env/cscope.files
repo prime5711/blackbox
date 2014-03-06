@@ -1,0 +1,6 @@
+./crc32.c
+./fw_env.c
+./fw_env.h
+./fw_env_main.c
+./Makefile
+../../lib_generic/crc32.c

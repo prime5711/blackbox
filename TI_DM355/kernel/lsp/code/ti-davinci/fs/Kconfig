@@ -4,6 +4,12 @@
 
 menu "File systems"
 
+#config YAFFS_FS
+#	tristate "yaffs2"
+#
+#config YAFFS1_FS
+#	tristate "yaffs1"
+
 config EXT2_FS
 	tristate "Second extended fs support"
 	help

@@ -13,6 +13,7 @@
 NAND_INFO	gNandInfo;
 Uint8 gDMA = 0;
 Uint32 gTotalBlocks = 0;
+Uint8 gMakeBBT = 0;
 
 /* Details of NAND device sizes supported */
 const NAND_DEVICE_INFO   gNandDevInfo[] = {

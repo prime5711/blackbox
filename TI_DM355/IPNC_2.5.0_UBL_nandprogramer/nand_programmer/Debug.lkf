@@ -1,0 +1,7 @@
+-z -q -c -m"./Debug/NAND_programmer.map" -o"./Debug/NAND_programmer.out" -x -i"C:/CCStudio_v3.3/TMS470/cgtools/lib"
+"D:\IPNC_UBL_nandprogramer\nand_programmer\DM355_emif.cmd"
+"D:\IPNC_UBL_nandprogramer\nand_programmer\Debug\nand.obj"
+"D:\IPNC_UBL_nandprogramer\nand_programmer\Debug\nandProg.obj"
+"D:\IPNC_UBL_nandprogramer\nand_programmer\Debug\nandProg_main.obj"
+"D:\IPNC_UBL_nandprogramer\nand_programmer\csl\lib\armcsl_dm350.lib"
+"D:\IPNC_UBL_nandprogramer\nand_programmer\lib\rts16e.lib"
