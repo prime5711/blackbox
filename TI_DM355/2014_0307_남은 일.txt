@@ -1,0 +1,13 @@
+1. /etc/fw_env.config 수정할 것
+# Configuration file for fw_(printenv/saveenv) utility.
+# Up to two entries are valid, in this case the redundand
+# environment sector is assumed present.
+
+# MTD device name       Device offset   Env. size       Flash sector size
+/dev/mtd0               0x1c0000        0x4000          0x20000
+#/dev/mtd2              0x0000          0x4000          0x4000
+
+2. fw_printenv rootfs에 cp
+    ln -s fw_printenv fw_setenv
+
+3. JFFS2 Error가 왜 계속 나오지?
