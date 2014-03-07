@@ -1,1 +1,1 @@
-cmd_arch/arm/boot/uImage := /bin/sh /media/workspace/svn/TI_DM355_NC1000/trunk/kernel/lsp/code/ti-davinci/scripts/mkuboot.sh -A arm -O linux -T kernel -C none -a 0x80008000 -e 0x80008000 -n 'Linux-2.6.10_mvl401_NC100M' -d arch/arm/boot/zImage arch/arm/boot/uImage
+cmd_arch/arm/boot/uImage := /bin/sh /media/disk1/Source_Debugging.shcho/blackbox/TI_DM355/kernel/lsp/code/ti-davinci/scripts/mkuboot.sh -A arm -O linux -T kernel -C none -a 0x80008000 -e 0x80008000 -n 'Linux-2.6.10_mvl401_NC100M' -d arch/arm/boot/zImage arch/arm/boot/uImage

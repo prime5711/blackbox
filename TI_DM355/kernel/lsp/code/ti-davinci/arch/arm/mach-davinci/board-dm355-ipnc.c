@@ -192,105 +192,86 @@ static inline void setup_usb(void)
 
 #define NAND_BLOCK_SIZE (SZ_16K)
 static struct mtd_partition nand_partitions[] = {
-#if 0
-	/* bootloader (UBL, U-Boot, BBT) in sectors: 0 - 14 */
+	/* bootloader (UBL, U-Boot, U-BOOT Parameter) */
 	{
-	      .name		= "bootloader",
+	      .name		= "ubl/u-boot",
 	      .offset		= 0,
-	      .size		= 24*NAND_BLOCK_SIZE,
-	      .mask_flags	= MTD_WRITEABLE, /* force read-only */
-	},
-	/* bootloader params in the next sector 15 */
-	{
-	      .name		= "params",
-	      .offset		= MTDPART_OFS_APPEND,
-	      .size		= 104*NAND_BLOCK_SIZE,
-	      .mask_flags	= MTD_WRITEABLE, /* force read-only */
-	},
-#else
-	/* bootloader (UBL, U-Boot, BBT) in sectors: 0 - 14 */
-	{
-	      .name		= "bootloader",
-	      .offset		= 0,
-	      .size			= SZ_2M,
+	      .size		= SZ_2M,
 	      .mask_flags	= 0//MTD_WRITEABLE/* force read-only */
 	},
-#endif
 	/* kernel_0 */
 	{
-	      .name		= "kernel_0",
+	      .name		= "1000S K1",
 	      .offset		= MTDPART_OFS_APPEND,
-            #ifdef CONFIG_MACH_DAVINCI_DM355_IPNC_WIFI_MTD
-	      .size			= SZ_2_5M,
-            #else
-	      .size			= SZ_2M,
-            #endif
+	      .size		= SZ_2M,
 	      .mask_flags	= 0//MTD_WRITEABLE
 	},
 	/* kernel_1 */
 	{
-	      .name		= "kernel_1",
+	      .name		= "1000S_K2",
 	      .offset		= MTDPART_OFS_APPEND,
-            #ifdef CONFIG_MACH_DAVINCI_DM355_IPNC_WIFI_MTD
-	      .size			= SZ_1_5M,
-            #else
-	      .size			= SZ_2M,
-            #endif
+	      .size		= SZ_2M,
 	      .mask_flags	= 0//MTD_WRITEABLE
 	},
-#if 0	// ramdisk  for  root filesystem
-	{
-	      .name		= "filesystem",
-	      .offset		= MTDPART_OFS_APPEND,
-	      .size		= SZ_16M+SZ_4M,
-	      .mask_flags	= 0
-	},
-#endif
 	/* filesystem_0 */
 	{
-	      .name		= "filesystem_0",
+	      .name		= "1000S R1",
 	      .offset		= MTDPART_OFS_APPEND,
-	      .size			= SZ_8M + SZ_2M,
+	      .size		= SZ_8M + SZ_2M,
 	      .mask_flags	= 0//MTD_WRITEABLE
 	},
 	/* filesystem_1 */
 	{
-	      .name		= "filesystem_1",
+	      .name		= "1000S R2",
 	      .offset		= MTDPART_OFS_APPEND,
-	      .size			= SZ_8M + SZ_2M,
+	      .size		= SZ_8M + SZ_2M,
 	      .mask_flags	= 0//MTD_WRITEABLE
 	},
-    /*
-    {
-	      .name		= "data",	//"data"  6 MBytes
-	      .offset		= MTDPART_OFS_APPEND,
-	      //Yun .size			= MTDPART_SIZ_FULL,
-	      .size			= SZ_2M + SZ_2M + SZ_2M,
-	      .mask_flags	= 0
-	},
-    */
-//  	{
-//  	      .name		= "data",	//"spare"  32 MBytes
-//  	      .offset		= MTDPART_OFS_APPEND,
-//  	      .size			= MTDPART_SIZ_FULL,
-//  	      .mask_flags	= 0
-//  	},
+	#ifdef NAND_IS_K9F1G08 //128Mbyte
+	#else
 	{
 	      .name		= "data",	//"spare"  32 MBytes
 	      .offset		= MTDPART_OFS_APPEND,
-		  #ifdef NAND_IS_K9F1G08 //128Mbyte
-		  //shcho : 2014-02-25 : booting?쒓컙??以꾩씠湲??꾪빐??: 留롮? ?곸뿭?먯꽌 JFFS2 ECC error
-//  	      .size			= SZ_101M,
-	      .size			= SZ_8M+SZ_2M,
-		  #else // K9F5608 32MByte
-	      .size			= SZ_5M,
-		  #endif
+	      .size		= SZ_5M,
+	      .mask_flags	= 0
+	},
+	#endif
+	#ifdef NAND_IS_1G08U0B
+	{
+	      .name		= "1000W K1",	//"spare"  32 MBytes
+	      .offset		= MTDPART_OFS_APPEND,
+	      .size		= SZ_1M *3,
 	      .mask_flags	= 0
 	},
 	{
+	      .name		= "1000W K2",	//"spare"  32 MBytes
+	      .offset		= MTDPART_OFS_APPEND,
+	      .size		= SZ_1M *3,
+	      .mask_flags	= 0
+	},
+	{
+	      .name		= "1000W R1",	//"spare"  32 MBytes
+	      .offset		= MTDPART_OFS_APPEND,
+	      .size		= SZ_10M *3,
+	      .mask_flags	= 0
+	},
+	{
+	      .name		= "1000W R2",	//"spare"  32 MBytes
+	      .offset		= MTDPART_OFS_APPEND,
+	      .size		= SZ_10M *3,
+	      .mask_flags	= 0
+	},
+	{
+	      .name		= "Reserved",	//"spare"  32 MBytes
+	      .offset		= MTDPART_OFS_APPEND,
+	      .size		= SZ_10M *3 + SZ_4M,
+	      .mask_flags	= 0
+	},
+	#endif
+	{
 	      .name		= "bbt",	//"spare"  1M MBytes
 	      .offset		= MTDPART_OFS_APPEND,
-	      .size			= MTDPART_SIZ_FULL,
+	      .size		= MTDPART_SIZ_FULL,
 	      .mask_flags	= 0
 	},
 
