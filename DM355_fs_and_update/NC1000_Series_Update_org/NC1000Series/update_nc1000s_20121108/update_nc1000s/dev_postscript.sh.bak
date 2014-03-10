@@ -1,0 +1,10 @@
+#!/bin/sh
+
+
+script='/mnt/mmc/update/dev_prescript.sh.bak'
+
+if [ -f $script ]
+then
+	cp $script /mnt/mmc/update/dev_prescript.sh
+fi
+

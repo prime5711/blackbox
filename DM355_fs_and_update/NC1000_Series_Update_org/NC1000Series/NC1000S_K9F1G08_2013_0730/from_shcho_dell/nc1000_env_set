@@ -1,0 +1,22 @@
+nand erase 0x200000 0x1800000;nand write 0x80700000 0x200000 0x200000;nand write 0x82000000 0x600000 0xA00000
+
+tesecase1 (K9F1G08 kernel Offset수정)
+nand erase 0x300000 0x100000;nand write 0x80700000 0x300000 0x100000;
+
+tesecase2 (K9F1G08: u-boot 수정)
+-	kernel Only
+nand erase 0x200000 0x200000;nand write 0x80700000 0x200000 0x200000;
+-	Filesystem Only
+nand erase 0x600000 0xa00000;nand write 0x82000000 0x600000 0xa00000;
+
+
+   setenv bootcmd 'nand read 0x82000000 0x600000 0xA00000;nboot 0x80700000 0 0x200000;bootm 0x80700000';setenv bootargs 'mem=72M console=ttyS1,115200n8 root=/dev/ram0 rw initrd=0x82000000,10M ip=off v4l2_video_capture=:device=MT9M131 video=davincifb:vid1=720x576x16,2500K:osd0=720x576x16,2025K';setenv bootdelay 1;saveenv
+
+   tesecase1 (K9F1G08)
+   setenv bootcmd 'nand read 0x82000000 0x600000 0xA00000;nand read 0x80700000 0x300000 0x100000 ;bootm 0x80700000';setenv bootargs 'quiet mem=72M console=ttyS1,115200n8 root=/dev/ram0 rw initrd=0x82000000,10M ip=off v4l2_video_capture=:device=MT9M131 video=davincifb:vid1=720x576x16,2500K:osd0=720x576x16,2025K';setenv bootdelay 1;      saveenv
+
+   echo 8 > /proc/sys/kernel/printk
+
+   testcase2
+   nand read 0x82000000 0x600000 0xA00000; bootm 0x80700000
+

@@ -1,0 +1,11 @@
+# Configuration file for fw_(printenv/saveenv) utility.
+# Up to two entries are valid, in this case the redundand
+# environment sector is assumed present.
+
+# MTD device name   Device offset   Env. size   Flash sector size
+#K9F5608
+#/dev/mtd0       0x50000        0x4000      0x4000
+#K9F1G08
+/dev/mtd0       0x1C0000        0x4000      0x20000
+#/dev/mtd2      0x0000      0x4000      0x4000
+

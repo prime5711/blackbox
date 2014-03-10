@@ -1,0 +1,414 @@
+//
+//
+//  1,$ s/REG=1\, 0x/err |= i2c_write_reg(&mt9m131_i2c_client\, 0x1/g
+//  1,$ s/REG=2\, 0x/err |= i2c_write_reg(&mt9m131_i2c_client\, 0x2/g
+//  1,$ s/REG= 1\, 0x/err |= i2c_write_reg(&mt9m131_i2c_client\, 0x1/g
+//  1,$ s/REG= 2\, 0x/err |= i2c_write_reg(&mt9m131_i2c_client\, 0x2/g
+
+//  [MT9D111 (SOC2010) Register]
+err |= i2c_write_reg(REG= 0, 0xmt9m131_i2c_client, 0x005, 0x011E        //HBLANK (B) = 286
+err |= i2c_write_reg(REG= 0, 0xmt9m131_i2c_client, 0x006, 0x00BD        //VBLANK (B) = 189
+err |= i2c_write_reg(REG= 0, 0xmt9m131_i2c_client, 0x007, 0x011E        //HBLANK (A) = 286
+err |= i2c_write_reg(REG= 0, 0xmt9m131_i2c_client, 0x008, 0x0073        //VBLANK (A) = 115
+err |= i2c_write_reg(REG= 0, 0xmt9m131_i2c_client, 0x020, 0x0300        //Read Mode (B) = 768
+err |= i2c_write_reg(REG= 0, 0xmt9m131_i2c_client, 0x021, 0x0000        //Read Mode (A) = 0
+err |= i2c_write_reg(REG= 0, 0xmt9m131_i2c_client, 0x066, 0x1402        //PLL Control 1 = 5122
+err |= i2c_write_reg(REG= 0, 0xmt9m131_i2c_client, 0x067, 0x500         //PLL Control 2 = 1280
+err |= i2c_write_reg(REG= 0, 0xmt9m131_i2c_client, 0x065, 0xA000        //Clock CNTRL: PLL ON = 40960
+mdelay(1); //DELAY= 1
+err |= i2c_write_reg(REG= 0, 0xmt9m131_i2c_client, 0x065, 0x2000        //Clock CNTRL: USE PLL = 8192
+
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0x2717		//Extra Delay (A)
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x01C2		//		= 450
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0x2719		//Row Speed (A)
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x0011		// 	 = 17
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0x2723		//Extra Delay (B)
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x01C2		//		= 450
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0x2725		//Row Speed (B)
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x0011		// 	 = 17
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0x276D		//FIFO_Conf1 (A)
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0xE0E1		// 	 = 57569
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0xA76F		//FIFO_Conf2 (A)
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x00E1 	        //	   = 225
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0x2774		//FIFO_Conf1 (B)
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0xE0E1		// 	 = 57569
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0xA776		//FIFO_Conf2 (B)
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x00E1 	        //	   = 225
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0x220B		//Max R12 (B)(Shutter Delay)
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x0459		// 	 = 1113
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0xA217		//IndexTH23
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x0008 	        //	   = 8
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0x2228		//RowTime (msclk per)/4
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x0187		// 	 = 391
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0x222F		//R9 Step
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x00B8		// 	 = 184
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0xA408		//search_f1_50
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x002B 	        //	   = 43
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0xA409		//search_f2_50
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x002D 	        //	   = 45
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0xA40A		//search_f1_60
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x0023 	        //	   = 35
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0xA40B		//search_f2_60
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x0025 	        //	   = 37
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0x2411		//R9_Step_60
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x00B8		// 	 = 184
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0x2413		//R9_Step_50
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x00DD		// 	 = 221
+
+//; 720p30 Settings
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0x2703		 //Output Width (A)
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x0500		 // 	 = 1280
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0x2705		 //Output Height (A)
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x02D0		 // 	 = 720
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0x2707		 //Output Width (B)
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x0500		 // 	 = 1280
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0x2709		 //Output Height (B)
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x02D0		 // 	 = 720
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0x270B		 //mode_config
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x0030		 // 	 = 48
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0x270F		 //Row Start (A)
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x010C		//		= 28+240
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0x2711		 //Column Start (A)
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x00DC		//		= 60+160
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0x2713		 //Row Height (A)
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x02D0		//		= 720
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0x2715		 //Column Width (A)
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x0500		//		= 1280
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0x271B		 //Row Start (B)
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x010C		 // 	 = 28+240
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0x271D		 //Column Start (B)
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x00DC		//		= 60+160
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0x271F		 //Row Height (B)
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x02D0		//		= 720
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0x2721		 //Column Width (B)
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x0500		//		= 1280
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0x2727      	//Crop_X0 (A)
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x0000		 // 	 = 0
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0x2729		 //Crop_X1 (A)
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x0500		 // 	 = 1280
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0x272B		 //Crop_Y0 (A)
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x0000		 // 	 = 0
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0x272D		 //Crop_Y1 (A)
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x02D0		 // 	 = 720
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0x2735		 //Crop_X0 (B)
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x0000		 // 	 = 0
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0x2737		 //Crop_X1 (B)
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x0500		 // 	 = 1280
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0x2739		 //Crop_Y0 (B)
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x0000		 // 	 = 0
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0x273B		 //Crop_Y1 (B)
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x02D0		 // 	 = 720
+
+//[Max 30fps]
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C6, 0xA20E 	// MCU_ADDRESS
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C8, 0x0004 	// MCU_DATA_0
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C6, 0xA217 	// MCU_ADDRESS
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C8, 0x0004 	// MCU_DATA_0
+
+//;Slow down AE & Increase Gate & AE target
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0xA208 	// MCU_ADDRESS [AE_SKIP_FRAMES]
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x0000     // 1 	// MCU_DATA_0
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0xA107 	// MCU_ADDRESS [SEQ_AE_CONTBUFF]
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x0001     // 6 	// MCU_DATA_0
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0xA108 	// MCU_ADDRESS [SEQ_AE_CONTSTEP]
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x0004     // 3 	// MCU_DATA_0
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0xA206 	// MCU_ADDRESS [AE_TARGET]
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x0037     // 3B     // 37     // 3C     // 40     // 45    // 44   // 40  // MCU_DATA_0
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0xA207 	// MCU_ADDRESS [AE_GATE]
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x0010     // 16     // 0A   // 0F  // MCU_DATA_0
+//AE window size&position
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C6, 0xA202 	// MCU_ADDRESS [AE_WINDOW_POS]
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C8, 0x0000    // 11 	// MCU_DATA_0
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C6, 0xA203 	// MCU_ADDRESS [AE_WINDOW_SIZE]
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C8, 0x00DF    // CD 	// MCU_DATA_0
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C6, 0xA219 	// MCU_ADDRESS [AE_WEIGHTS]
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C8, 0x002F    //0F 8F 	// MCU_DATA_0
+//AE Analog/Digital Gain
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C6, 0xA210 	// MCU_ADDRESS [AE_MAX_VIRTGAIN]
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C8, 0x0080    // 90 	// MCU_DATA_0
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C6, 0xA216 	// MCU_ADDRESS [AE_MAX_DGAIN_AE2]
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C8, 0x0025    // 48    // 3F    // 34   // 2C   // 28   // 20   // 30   // 40    // 70 // MCU_DATA_0
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C6, 0xA218 	// MCU_ADDRESS [AE_MAXGAIN23]
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C8, 0x0070 	// MCU_DATA_0
+
+//;slow down AWB
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0xA10B	// MCU_ADDRESS [SEQ_AWB_CONTBUFF]
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x0004	// MCU_DATA_0
+//To control registers at low light
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C6, 0xA115 	// MCU_ADDRESS [SEQ_LLMODE]
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C8, 0x006F 	// MCU_DATA_0
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C6, 0xA116 	// MCU_ADDRESS [SEQ_LLVIRTGAIN1]
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C8, 0x0038    // 20 	// MCU_DATA_0
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C6, 0xA117 	// MCU_ADDRESS [SEQ_LLVIRTGAIN2]
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C8, 0x0052    // 60 	// MCU_DATA_0
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C6, 0xA118 	// MCU_ADDRESS [SEQ_LLSAT1]
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C8, 0x0080 	// MCU_DATA_0
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C6, 0xA119 	// MCU_ADDRESS [SEQ_LLSAT2]
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C8, 0x0000 	// MCU_DATA_0
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C6, 0xA11A 	// MCU_ADDRESS [SEQ_LLINTERPTHRESH1]
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C8, 0x0010    // 30    // 20   // 10 	// MCU_DATA_0
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C6, 0xA11B 	// MCU_ADDRESS [SEQ_LLINTERPTHRESH2]
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C8, 0x0020    // 40 	// MCU_DATA_0
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C6, 0xA11C 	// MCU_ADDRESS [SEQ_LLAPCORR1]
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C8, 0x0005    // 6   // 6   // 7 	// MCU_DATA_0
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C6, 0xA11D 	// MCU_ADDRESS [SEQ_LLAPCORR2]
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C8, 0x0003    // 2   // 1   // 3 	// MCU_DATA_0
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C6, 0xA11E 	// MCU_ADDRESS [SEQ_LLAPTHRESH1]
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C8, 0x0003    // 2   // MCU_DATA_0
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C6, 0xA11F 	// MCU_ADDRESS [SEQ_LLAPTHRESH2]
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C8, 0x0006    // 7    // 6   // 8  // MCU_DATA_0
+
+//; Tunning
+//;Sequencer States...
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0xA122	 //Enter Preview: Auto Exposure
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x0001	 //	   = 1
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0xA123	 //Enter Preview: Flicker Detection
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x0000	 //	   = 0
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0xA124	 //Enter Preview: Auto White Balance
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x0001	 //	   = 1
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0xA125	 //Enter Preview: Auto Focus
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x0000	 //	   = 0
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0xA126	 //Enter Preview: Histogram
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x0001	 //	   = 1
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0xA127	 //Enter Preview: Strobe Control
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x0000	 //	   = 0
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0xA128	 //Enter Preview: Skip Control
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x0000	 //	   = 0
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0xA129	 //In Preview: Auto Exposure
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x0003	 //	   = 3
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0xA12A	 //In Preview: Flicker Detection
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x0002	 //	   = 2
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0xA12B	 //In Preview: Auto White Balance
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x0003	 //	   = 3
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0xA12C	 //In Preview: Auto Focus
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x0000	 //	   = 0
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0xA12D	 //In Preview: Histogram
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x0003	 //	   = 3
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0xA12E	 //In Preview: Strobe Control
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x0000	 //	   = 0
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0xA12F		 //In Preview: Skip Control
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x0000	   //	   = 0
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0xA130	 //Exit Preview: Auto Exposure
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x0001	   //	   = 1
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0xA131	 //Exit Preview: Flicker Detection
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x0000	   //	   = 0
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0xA132	 //Exit Preview: Auto White Balance
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x0001	   //	   = 1
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0xA133	 //Exit Preview: Auto Focus
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x0000	   //	   = 0
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0xA134	 //Exit Preview: Histogram
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x0001	   //	   = 1
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0xA135	 //Exit Preview: Strobe Control
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x0000	   //	   = 0
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0xA136	 //Exit Preview: Skip Control
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x0000	   //	   = 0
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0xA137	 //Capture: Auto Exposure
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x0000	   //	   = 0
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0xA138	 //Capture: Flicker Detection
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x0000	   //	   = 0
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0xA139	 //Capture: Auto White Balance
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x0000	   //	   = 0
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0xA13A	 //Capture: Auto Focus
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x0000	   //	   = 0
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0xA13B		 //Capture: Histogram
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x0000	   //	   = 0
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0xA13C	 //Capture: Strobe Control
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x0000	   //	   = 0
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0xA13D		 //Capture: Skip Control
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x0000	   //	   = 0
+
+//[No1_D111_LSC_85]
+err |= i2c_write_reg(REG= 2, 0xmt9m131_i2c_client, 0x280, 0x01F8 	// LENS_CORRECTION_CONTROL
+err |= i2c_write_reg(REG= 2, 0xmt9m131_i2c_client, 0x281, 0x6432 	// ZONE_BOUNDS_X1_X2
+err |= i2c_write_reg(REG= 2, 0xmt9m131_i2c_client, 0x282, 0x3296 	// ZONE_BOUNDS_X0_X3
+err |= i2c_write_reg(REG= 2, 0xmt9m131_i2c_client, 0x283, 0x9664 	// ZONE_BOUNDS_X4_X5
+err |= i2c_write_reg(REG= 2, 0xmt9m131_i2c_client, 0x284, 0x5028 	// ZONE_BOUNDS_Y1_Y2
+err |= i2c_write_reg(REG= 2, 0xmt9m131_i2c_client, 0x285, 0x2878 	// ZONE_BOUNDS_Y0_Y3
+err |= i2c_write_reg(REG= 2, 0xmt9m131_i2c_client, 0x286, 0x7850 	// ZONE_BOUNDS_Y4_Y5
+err |= i2c_write_reg(REG= 2, 0xmt9m131_i2c_client, 0x287, 0x0000 	// CENTER_OFFSET
+err |= i2c_write_reg(REG= 2, 0xmt9m131_i2c_client, 0x288, 0x0013 	// FX_RED
+err |= i2c_write_reg(REG= 2, 0xmt9m131_i2c_client, 0x28B, 0x000A 	// FY_RED
+err |= i2c_write_reg(REG= 2, 0xmt9m131_i2c_client, 0x28E, 0x00A1 	// DF_DX_RED
+err |= i2c_write_reg(REG= 2, 0xmt9m131_i2c_client, 0x291, 0x0F28 	// DF_DY_RED
+err |= i2c_write_reg(REG= 2, 0xmt9m131_i2c_client, 0x294, 0x2DD4 	// SECOND_DERIV_ZONE_0_RED
+err |= i2c_write_reg(REG= 2, 0xmt9m131_i2c_client, 0x297, 0xDED2 	// SECOND_DERIV_ZONE_1_RED
+err |= i2c_write_reg(REG= 2, 0xmt9m131_i2c_client, 0x29A, 0x1517 	// SECOND_DERIV_ZONE_2_RED
+err |= i2c_write_reg(REG= 2, 0xmt9m131_i2c_client, 0x29D, 0x0830 	// SECOND_DERIV_ZONE_3_RED
+err |= i2c_write_reg(REG= 2, 0xmt9m131_i2c_client, 0x2A0, 0x1037 	// SECOND_DERIV_ZONE_4_RED
+err |= i2c_write_reg(REG= 2, 0xmt9m131_i2c_client, 0x2A3, 0x1302 	// SECOND_DERIV_ZONE_5_RED
+err |= i2c_write_reg(REG= 2, 0xmt9m131_i2c_client, 0x2A6, 0xD5A9 	// SECOND_DERIV_ZONE_6_RED
+err |= i2c_write_reg(REG= 2, 0xmt9m131_i2c_client, 0x2A9, 0x030D 	// SECOND_DERIV_ZONE_7_RED
+err |= i2c_write_reg(REG= 2, 0xmt9m131_i2c_client, 0x289, 0x0004 	// FX_GREEN
+err |= i2c_write_reg(REG= 2, 0xmt9m131_i2c_client, 0x28C, 0x0002 	// FY_GREEN
+err |= i2c_write_reg(REG= 2, 0xmt9m131_i2c_client, 0x28F, 0x021A 	// DF_DX_GREEN
+err |= i2c_write_reg(REG= 2, 0xmt9m131_i2c_client, 0x292, 0x0F89 	// DF_DY_GREEN
+err |= i2c_write_reg(REG= 2, 0xmt9m131_i2c_client, 0x295, 0x3BDB 	// SECOND_DERIV_ZONE_0_GREEN
+err |= i2c_write_reg(REG= 2, 0xmt9m131_i2c_client, 0x298, 0xD1B7 	// SECOND_DERIV_ZONE_1_GREEN
+err |= i2c_write_reg(REG= 2, 0xmt9m131_i2c_client, 0x29B, 0x0C0B 	// SECOND_DERIV_ZONE_2_GREEN
+err |= i2c_write_reg(REG= 2, 0xmt9m131_i2c_client, 0x29E, 0x0913 	// SECOND_DERIV_ZONE_3_GREEN
+err |= i2c_write_reg(REG= 2, 0xmt9m131_i2c_client, 0x2A1, 0x1031 	// SECOND_DERIV_ZONE_4_GREEN
+err |= i2c_write_reg(REG= 2, 0xmt9m131_i2c_client, 0x2A4, 0x0DF5 	// SECOND_DERIV_ZONE_5_GREEN
+err |= i2c_write_reg(REG= 2, 0xmt9m131_i2c_client, 0x2A7, 0xAF88 	// SECOND_DERIV_ZONE_6_GREEN
+err |= i2c_write_reg(REG= 2, 0xmt9m131_i2c_client, 0x2AA, 0x158A 	// SECOND_DERIV_ZONE_7_GREEN
+err |= i2c_write_reg(REG= 2, 0xmt9m131_i2c_client, 0x28A, 0x0002 	// FX_BLUE
+err |= i2c_write_reg(REG= 2, 0xmt9m131_i2c_client, 0x28D, 0x0009 	// FY_BLUE
+err |= i2c_write_reg(REG= 2, 0xmt9m131_i2c_client, 0x290, 0x01A4 	// DF_DX_BLUE
+err |= i2c_write_reg(REG= 2, 0xmt9m131_i2c_client, 0x293, 0x009F 	// DF_DY_BLUE
+err |= i2c_write_reg(REG= 2, 0xmt9m131_i2c_client, 0x296, 0x1207 	// SECOND_DERIV_ZONE_0_BLUE
+err |= i2c_write_reg(REG= 2, 0xmt9m131_i2c_client, 0x299, 0xD1BC 	// SECOND_DERIV_ZONE_1_BLUE
+err |= i2c_write_reg(REG= 2, 0xmt9m131_i2c_client, 0x29C, 0x0EFE 	// SECOND_DERIV_ZONE_2_BLUE
+err |= i2c_write_reg(REG= 2, 0xmt9m131_i2c_client, 0x29F, 0xFF0A 	// SECOND_DERIV_ZONE_3_BLUE
+err |= i2c_write_reg(REG= 2, 0xmt9m131_i2c_client, 0x2A2, 0x0A15 	// SECOND_DERIV_ZONE_4_BLUE
+err |= i2c_write_reg(REG= 2, 0xmt9m131_i2c_client, 0x2A5, 0x0DEB 	// SECOND_DERIV_ZONE_5_BLUE
+err |= i2c_write_reg(REG= 2, 0xmt9m131_i2c_client, 0x2A8, 0xC59B 	// SECOND_DERIV_ZONE_6_BLUE
+err |= i2c_write_reg(REG= 2, 0xmt9m131_i2c_client, 0x2AB, 0x0FA0 	// SECOND_DERIV_ZONE_7_BLUE
+err |= i2c_write_reg(REG= 2, 0xmt9m131_i2c_client, 0x2AC, 0x0000 	// X2_FACTORS
+err |= i2c_write_reg(REG= 2, 0xmt9m131_i2c_client, 0x2AD, 0x0000 	// GLOBAL_OFFSET_FXY_FUNCTION
+err |= i2c_write_reg(REG= 2, 0xmt9m131_i2c_client, 0x2AE, 0x0000 	// K_FACTOR_IN_K_FX_FY
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x108, 0x01FC 	// COLOR_PIPELINE_CONTROL
+
+//[No1_D111_AWB&CCM]
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C6, 0x2306 	// MCU_ADDRESS [AWB_CCM_L_0]
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C8, 0x01B8 	// MCU_DATA_0
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C6, 0x2308 	// MCU_ADDRESS [AWB_CCM_L_1]
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C8, 0xFF2B 	// MCU_DATA_0
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C6, 0x230A 	// MCU_ADDRESS [AWB_CCM_L_2]
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C8, 0x0020 	// MCU_DATA_0
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C6, 0x230C 	// MCU_ADDRESS [AWB_CCM_L_3]
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C8, 0xFF6A 	// MCU_DATA_0
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C6, 0x230E 	// MCU_ADDRESS [AWB_CCM_L_4]
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C8, 0x014E 	// MCU_DATA_0
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C6, 0x2310 	// MCU_ADDRESS [AWB_CCM_L_5]
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C8, 0x0050 	// MCU_DATA_0
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C6, 0x2312 	// MCU_ADDRESS [AWB_CCM_L_6]
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C8, 0xFF65 	// MCU_DATA_0
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C6, 0x2314 	// MCU_ADDRESS [AWB_CCM_L_7]
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C8, 0xFDD7 	// MCU_DATA_0
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C6, 0x2316 	// MCU_ADDRESS [AWB_CCM_L_8]
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C8, 0x03F5 	// MCU_DATA_0
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C6, 0x2318 	// MCU_ADDRESS [AWB_CCM_L_9]
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C8, 0x0020 	// MCU_DATA_0
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C6, 0x231A 	// MCU_ADDRESS [AWB_CCM_L_10]
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C8, 0x0035 	// MCU_DATA_0
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C6, 0x231C 	// MCU_ADDRESS [AWB_CCM_RL_0]
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C8, 0x002C 	// MCU_DATA_0
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C6, 0x231E 	// MCU_ADDRESS [AWB_CCM_RL_1]
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C8, 0x001C 	// MCU_DATA_0
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C6, 0x2320 	// MCU_ADDRESS [AWB_CCM_RL_2]
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C8, 0xFFC4 	// MCU_DATA_0
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C6, 0x2322 	// MCU_ADDRESS [AWB_CCM_RL_3]
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C8, 0x002B 	// MCU_DATA_0
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C6, 0x2324 	// MCU_ADDRESS [AWB_CCM_RL_4]
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C8, 0x0061 	// MCU_DATA_0
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C6, 0x2326 	// MCU_ADDRESS [AWB_CCM_RL_5]
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C8, 0xFF74 	// MCU_DATA_0
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C6, 0x2328 	// MCU_ADDRESS [AWB_CCM_RL_6]
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C8, 0x007D 	// MCU_DATA_0
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C6, 0x232A 	// MCU_ADDRESS [AWB_CCM_RL_7]
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C8, 0x016C 	// MCU_DATA_0
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C6, 0x232C 	// MCU_ADDRESS [AWB_CCM_RL_8]
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C8, 0xFDEC 	// MCU_DATA_0
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C6, 0x232E 	// MCU_ADDRESS [AWB_CCM_RL_9]
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C8, 0x000A 	// MCU_DATA_0
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C6, 0x2330 	// MCU_ADDRESS [AWB_CCM_RL_10]
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C8, 0xFFEE 	// MCU_DATA_0
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C6, 0xA348 	// MCU_ADDRESS [AWB_GAIN_BUFFER_SPEED]
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C8, 0x0004 	// MCU_DATA_0
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C6, 0xA349 	// MCU_ADDRESS [AWB_JUMP_DIVISOR]
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C8, 0x0002 	// MCU_DATA_0
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C6, 0xA34A 	// MCU_ADDRESS [AWB_GAIN_MIN]
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C8, 0x0053 	// MCU_DATA_0
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C6, 0xA34B 	// MCU_ADDRESS [AWB_GAIN_MAX]
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C8, 0x00C0 	// MCU_DATA_0
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C6, 0xA34F 	// MCU_ADDRESS [AWB_CCM_POSITION_MIN]
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C8, 0x0000 	// MCU_DATA_0
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C6, 0xA350 	// MCU_ADDRESS [AWB_CCM_POSITION_MAX]
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C8, 0x007F 	// MCU_DATA_0
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C6, 0xA35B 	// MCU_ADDRESS [AWB_STEADY_BGAIN_OUT_MIN]
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C8, 0x0073 	// MCU_DATA_0
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C6, 0xA35C 	// MCU_ADDRESS [AWB_STEADY_BGAIN_OUT_MAX]
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C8, 0x008C 	// MCU_DATA_0
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C6, 0xA35D 	// MCU_ADDRESS [AWB_STEADY_BGAIN_IN_MIN]
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C8, 0x007C 	// MCU_DATA_0
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C6, 0xA35E 	// MCU_ADDRESS [AWB_STEADY_BGAIN_IN_MAX]
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C8, 0x0083 	// MCU_DATA_0
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C6, 0x235F 	// MCU_ADDRESS [AWB_CNT_PXL_TH]
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C8, 0x0064 	// MCU_DATA_0
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C6, 0xA361 	// MCU_ADDRESS [AWB_TG_MIN0]
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C8, 0x00DB 	// MCU_DATA_0
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C6, 0xA362 	// MCU_ADDRESS [AWB_TG_MAX0]
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C8, 0x00F6 	// MCU_DATA_0
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C6, 0xA302 	// MCU_ADDRESS [AWB_WINDOW_POS]
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C8, 0x0000 	// MCU_DATA_0
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C6, 0xA303 	// MCU_ADDRESS [AWB_WINDOW_SIZE]
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C8, 0x00EF 	// MCU_DATA_0
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C6, 0xA364 	// MCU_ADDRESS [AWB_KR_L]
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C8, 0x0086 	// MCU_DATA_0
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C6, 0xA365 	// MCU_ADDRESS [AWB_KG_L]
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C8, 0x0080 	// MCU_DATA_0
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C6, 0xA366 	// MCU_ADDRESS [AWB_KB_L]
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C8, 0x0080 	// MCU_DATA_0
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C6, 0xA367 	// MCU_ADDRESS [AWB_KR_R]
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C8, 0x0088 	// MCU_DATA_0
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C6, 0xA368 	// MCU_ADDRESS [AWB_KG_R]
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C8, 0x0080 	// MCU_DATA_0
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C6, 0xA369 	// MCU_ADDRESS [AWB_KB_R]
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C8, 0x0080 	// MCU_DATA_0
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C6, 0xA103 	// MCU_ADDRESS [SEQ_CMD]
+err |= i2c_write_reg(REG= 1, 0xmt9m131_i2c_client, 0x1C8, 0x0005 	// MCU_DATA_0
+
+//;Gamma settings
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0xA743	// MCU_ADDRESS [MODE_GAM_CONT_A]
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x0003	// MCU_DATA_0
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0xA743	// MCU_ADDRESS [MODE_GAM_CONT_A]
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x0003	// MCU_DATA_0
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0xA745 	// MCU_ADDRESS [MODE_GAM_TABLE_A_0]
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x0000 	// MCU_DATA_0
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0xA746 	// MCU_ADDRESS [MODE_GAM_TABLE_A_1]
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x0012 	// MCU_DATA_0
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0xA747 	// MCU_ADDRESS [MODE_GAM_TABLE_A_2]
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x0027 	// MCU_DATA_0
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0xA748 	// MCU_ADDRESS [MODE_GAM_TABLE_A_3]
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x003D 	// MCU_DATA_0
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0xA749 	// MCU_ADDRESS [MODE_GAM_TABLE_A_4]
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x005C 	// MCU_DATA_0
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0xA74A 	// MCU_ADDRESS [MODE_GAM_TABLE_A_5]
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x0073 	// MCU_DATA_0
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0xA74B 	// MCU_ADDRESS [MODE_GAM_TABLE_A_6]
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x0088 	// MCU_DATA_0
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0xA74C 	// MCU_ADDRESS [MODE_GAM_TABLE_A_7]
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x0099 	// MCU_DATA_0
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0xA74D 	// MCU_ADDRESS [MODE_GAM_TABLE_A_8]
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x00A7 	// MCU_DATA_0
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0xA74E 	// MCU_ADDRESS [MODE_GAM_TABLE_A_9]
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x00B4 	// MCU_DATA_0
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0xA74F 	// MCU_ADDRESS [MODE_GAM_TABLE_A_10]
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x00C0 	// MCU_DATA_0
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0xA750 	// MCU_ADDRESS [MODE_GAM_TABLE_A_11]
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x00CA 	// MCU_DATA_0
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0xA751 	// MCU_ADDRESS [MODE_GAM_TABLE_A_12]
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x00D3 	// MCU_DATA_0
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0xA752 	// MCU_ADDRESS [MODE_GAM_TABLE_A_13]
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x00DC 	// MCU_DATA_0
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0xA753 	// MCU_ADDRESS [MODE_GAM_TABLE_A_14]
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x00E4 	// MCU_DATA_0
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0xA754 	// MCU_ADDRESS [MODE_GAM_TABLE_A_15]
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x00EB 	// MCU_DATA_0
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0xA755 	// MCU_ADDRESS [MODE_GAM_TABLE_A_16]
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x00F2 	// MCU_DATA_0
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0xA756 	// MCU_ADDRESS [MODE_GAM_TABLE_A_17]
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x00F9 	// MCU_DATA_0
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0xA757 	// MCU_ADDRESS [MODE_GAM_TABLE_A_18]
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x00FF 	// MCU_DATA_0
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0xA103	// MCU_ADDRESS [SEQ_CMD]
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x0005	// MCU_DATA_0
+
+mdelay(250); //DELAY = 250
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0xA103		 //Refresh Sequencer Mode
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x0006 	         //	   = 6
+mdelay(250); //DELAY = 250
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C6, 0xA103		 //Refresh Sequencer
+err |= i2c_write_reg(REG=1, 0xmt9m131_i2c_client, 0x1C8, 0x0005 	         //	   = 5
+
+
+
