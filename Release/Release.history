@@ -1,0 +1,12 @@
+2013_0304_Before_1G08U0B_Japan   
+								:2014_0307_1G08U0B이 완성되지 전에 2014_0307_1G08U0B 이전에  내보낸 것.
+2014_0307_1G08U0B                
+								:K9F1G08U0B지원 정식 Release               
+update_kurefa_japan_1G08U0B_old_to_new_Release_2014_0307_1G08U0B 
+								: 2014_0307_1G08U0B이전에 내보낸 2013_0304_Before_1G08U0B_Japan를 2014_0307_1G08U0B로 만드는 Version
+								: dev_prescipt.sh이 Kernel Version정보를 보고 동작함 
+
+update_greencam_nc1000s_5608_no_mirror_always_setto_nc1000w 
+								: WizWin(Greencam) NC1000S와 NC1000W를 모두 NC1000W로 Update하는 Version
+                                : CMOS Sensor가 이제 정상으로 쪽보드가 없이동작하기 때문에 Mirror를 없애서 Kernel만  다시 Compile
+								: dev_prescipt.sh이 Kernel Version정보를 보고 동작함 
