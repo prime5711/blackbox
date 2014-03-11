@@ -1,0 +1,34 @@
+SD Card에는
+dev_prescript.sh
+dev_postscript.bak
+uImage
+rootfs
+nc100_blackbox.conf
+PC_Viewer.exe_
+가 있다.
+
+/opt/blackbox/executeUpdate.sh는
+	/mnt/mmc/update/dev_prescript.sh을 실행한다.
+		dev_prescript.sh 은 자신을 dev_prescript.sh.bak로 복사한다.
+		dev_posetscript.sh.bak를  dev_postscrit.sh로 복사한다.
+	/mnt/mmc/update/dev_prescript.sh을 지운다.(이미 자신을 복사했다.)
+
+	자신의 Script를 실행한다.
+
+	/mnt/mmc/update/dev_postscript.sh을 실행한다.(dev_prescript.sh에서 dev_postscript.sh.bak를 dev_postscript.sh로 복사했었다.)
+		dev_prescript.sh.bak 를  dev_prescript.sh로 복사한다.
+	/mnt/mmc/update/dev_postscript.sh을 지운다.(dev_postscript.sh.bak는 남아있다.)
+
+
+dev_prescript.sh설명
+		
+ 24 UNAME_VERSION_MATCH=`uname -v | grep 306`
+ 25
+ 26 if [ -z "$UNAME_VERSION_MATCH" ]  : string이 Zero length이면 "따옴표 반드시 하고"
+ 27 then
+ 28
+ 29 if [ -f $Kernel_image_file -a -f $Rootfs_image_file ]
+ 30 then
+ 31     echo "Change to NC1000S_japan_Release_2014_0307_1G08U0B"
+ 32
+
