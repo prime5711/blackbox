@@ -1,7 +1,7 @@
 /*
  * Automatically generated C config: don't edit
  * Linux kernel version: 2.6.10_mvl401
- * Thu Mar  6 22:53:48 2014
+ * Wed Mar 12 01:23:33 2014
  */
 #define AUTOCONF_INCLUDED
 #define CONFIG_ARM 1
@@ -109,7 +109,7 @@
  */
 #undef CONFIG_MACH_DAVINCI_DM355_EVM
 #define CONFIG_MACH_DAVINCI_DM355_IPNC 1
-#undef CONFIG_MACH_DAVINCI_DM355_IPNC_WIFI_MTD
+#define CONFIG_MACH_DAVINCI_DM355_IPNC_WIFI_MTD 1
 #define CONFIG_DAVINCI_MCBSP 1
 
 /*

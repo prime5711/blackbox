@@ -1,7 +1,7 @@
 #
 # Automatically generated make config: don't edit
 # Linux kernel version: 2.6.10_mvl401
-# Thu Feb 14 22:16:35 2013
+# Thu Mar  6 22:53:48 2014
 #
 CONFIG_ARM=y
 CONFIG_MMU=y
@@ -770,7 +770,9 @@ CONFIG_MSDOS_FS=y
 CONFIG_VFAT_FS=y
 CONFIG_FAT_DEFAULT_CODEPAGE=437
 CONFIG_FAT_DEFAULT_IOCHARSET="iso8859-1"
-# CONFIG_NTFS_FS is not set
+CONFIG_NTFS_FS=m
+CONFIG_NTFS_DEBUG=y
+CONFIG_NTFS_RW=y
 
 #
 # Pseudo filesystems

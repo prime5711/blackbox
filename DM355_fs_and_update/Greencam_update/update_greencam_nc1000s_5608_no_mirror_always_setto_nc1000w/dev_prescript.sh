@@ -140,14 +140,18 @@ CheckDebugBootenv()
 InitSystem()
 {
     # mdt5 initiallize
+    echo "----> InitSystem 1"
     flash_eraseall -j /dev/mtd5
+    echo "----> InitSystem 2"
     mount -t jffs2 /dev/mtdblock5 /mnt/nand
 
 
+    echo "----> InitSystem 3"
     mkdir -p /mnt/nand/configuration/
     mkdir -p /mnt/nand/pc_viewer/
     mkdir -p /mnt/nand/Info/
 
+    echo "----> InitSystem 4"
     if [ -f $Config_file ]
     then
         cp $Config_file /mnt/nand/configuration/
@@ -228,6 +232,10 @@ then
             
 					InitSystem
             
+					#jffs2 umount is done. However, filesystem is not writed yet. Filesystem table is not located in NAND
+					# so sleep 3
+					sync
+					sleep 3
 					sync
             
 					reboot &
@@ -245,6 +253,11 @@ then
 			/opt/blackbox/fw_setenv bootcmd $UBOOTBootcmd
 
 			InitSystem
+
+			#jffs2 umount is done. However, filesystem is not writed yet. Filesystem table is not located in NAND
+			# so sleep 3
+			sync
+			sleep 3
 			sync
 		
 			reboot &

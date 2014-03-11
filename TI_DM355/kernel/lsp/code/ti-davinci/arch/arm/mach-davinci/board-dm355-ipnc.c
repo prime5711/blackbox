@@ -187,8 +187,9 @@ static inline void setup_usb(void)
  * size.  We support NAND components with either a 128KB or 256KB block size.
  */
 
+ // this definition is set by menuconfig
  //  #define CONFIG_MACH_DAVINCI_DM355_IPNC_WIFI_MTD
-#define NAND_IS_K9F1G08
+//  #define NAND_IS_K9F1G08
 
 #define NAND_BLOCK_SIZE (SZ_16K)
 static struct mtd_partition nand_partitions[] = {
@@ -203,14 +204,22 @@ static struct mtd_partition nand_partitions[] = {
 	{
 	      .name		= "1000S K1",
 	      .offset		= MTDPART_OFS_APPEND,
+		  #ifdef CONFIG_MACH_DAVINCI_DM355_IPNC_WIFI_MTD
+		  .size     = SZ_2_5M,
+		  #else
 	      .size		= SZ_2M,
+		  #endif
 	      .mask_flags	= 0//MTD_WRITEABLE
 	},
 	/* kernel_1 */
 	{
 	      .name		= "1000S_K2",
 	      .offset		= MTDPART_OFS_APPEND,
+		  #ifdef CONFIG_MACH_DAVINCI_DM355_IPNC_WIFI_MTD
+		  .size     = SZ_1_5M,
+		  #else
 	      .size		= SZ_2M,
+		  #endif
 	      .mask_flags	= 0//MTD_WRITEABLE
 	},
 	/* filesystem_0 */
@@ -232,7 +241,7 @@ static struct mtd_partition nand_partitions[] = {
 	{
 	      .name		= "data",	//"spare"  32 MBytes
 	      .offset		= MTDPART_OFS_APPEND,
-	      .size		= SZ_5M,
+	      .size		= SZ_2_5M*2,
 	      .mask_flags	= 0
 	},
 	#endif
